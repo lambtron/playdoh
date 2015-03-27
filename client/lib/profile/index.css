@@ -22,6 +22,10 @@
 }
 
 .Profile-role {
+  display: block;
+  font-size: var(--text-small);
+  font-family: var(--text-caps);
+  text-transform: lowercase;
   color: var(--text-secondary);
   margin-bottom: var(--size-small);
 }
@@ -30,7 +34,6 @@
   display: none;
   margin-bottom: var(--size-small);
 }
-
 
 /**
  * Twitter button.

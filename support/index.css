@@ -1717,7 +1717,7 @@ html {
 
 .Article-date {
   display: block;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   color: #A49581;
   font-size: 20px;
 }
@@ -1798,6 +1798,10 @@ html {
 }
 
 .Profile-role {
+  display: block;
+  font-size: 18px;
+  font-family: 'Freight Sans Small Caps', 'Verdana', 'Geneva', sans-serif;
+  text-transform: lowercase;
   color: #A49581;
   margin-bottom: 20px;
 }
