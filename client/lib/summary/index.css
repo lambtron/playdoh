@@ -34,12 +34,11 @@
   line-height: 1;
   font-family: var(--text-caps);
   display: inline-block;
-  margin-left: .5em;
-  padding-left: 19px;
+  padding-left: 25px;
   height: 16px;
   background-image: url('images/link@2x.png');
   background-size: contain;
-  background-position: left center;
+  background-position: 7px center;
   background-repeat: no-repeat;
   text-indent: -9999px;
 }

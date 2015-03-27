@@ -220,7 +220,7 @@
   left: 0;
   top: .33em;
   bottom: .33em;
-  border-left: 4px solid color(var(--text-secondary) alpha(0.8));
+  border-left: 1px solid var(--text-secondary);
 }
 
 .Prose blockquote small {
@@ -306,8 +306,8 @@
  */
 
 .Prose hr {
-  width: calc(var(--column-whole) / 4);
+  width: calc(var(--size-huge));
   margin: 3em auto;
   border: none;
-  border-bottom: 2px solid var(--text-tertiary);
+  border-bottom: 1px solid var(--text-tertiary);
 }
