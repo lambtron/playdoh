@@ -11,7 +11,11 @@
   {{#each articles}}
   <entry>
     <title>{{title}}</title>
+    {{#if link}}
+    <link href="{{link}}"/>
+    {{else}}
     <link href="{{@root.url}}/{{path}}"/>
+    {{/if}}
     <id>{{@root.url}}/{{path}}</id>
     <updated>{{timestamp date}}</updated>
     <author>

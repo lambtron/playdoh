@@ -87,6 +87,10 @@
 })({
 1: [function(require, module, exports) {
 
+/**
+ * Code highlighting.
+ */
+
 require('segmentio/highlight')()
   .use(require('segmentio/highlight-bash'))
   .use(require('segmentio/highlight-csharp'))

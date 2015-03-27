@@ -31,6 +31,14 @@
  */
 
 /**
+ * Eggplant.
+ */
+
+/**
+ * Blueberry.
+ */
+
+/**
  * Text colors.
  */
 
@@ -60,14 +68,14 @@
 
 @font-face {
   font-family: 'Freight Sans';
-  src: url('client/ui/base/typography/freight-sans/woff/freight-sans-light.woff') format('woff');
+  src: url('client/ui/base/freight-sans/woff/freight-sans-light.woff') format('woff');
   font-style: normal;
   font-weight: 200;
 }
 
 @font-face {
   font-family: 'Freight Sans Small Caps';
-  src: url('client/ui/base/typography/freight-sans/woff/freight-sans-light-small-caps.woff') format('woff');
+  src: url('client/ui/base/freight-sans/woff/freight-sans-light-small-caps.woff') format('woff');
   font-style: normal;
   font-weight: 200;
 }
@@ -78,21 +86,21 @@
 
 @font-face {
   font-family: 'Freight Sans';
-  src: url('client/ui/base/typography/freight-sans/woff/freight-sans-book.woff') format('woff');
+  src: url('client/ui/base/freight-sans/woff/freight-sans-book.woff') format('woff');
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Freight Sans';
-  src: url('client/ui/base/typography/freight-sans/woff/freight-sans-book-italic.woff') format('woff');
+  src: url('client/ui/base/freight-sans/woff/freight-sans-book-italic.woff') format('woff');
   font-style: italic;
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Freight Sans Small Caps';
-  src: url('client/ui/base/typography/freight-sans/woff/freight-sans-book-small-caps.woff') format('woff');
+  src: url('client/ui/base/freight-sans/woff/freight-sans-book-small-caps.woff') format('woff');
   font-style: normal;
   font-weight: 400;
 }
@@ -103,14 +111,14 @@
 
 @font-face {
   font-family: 'Freight Sans';
-  src: url('client/ui/base/typography/freight-sans/woff/freight-sans-medium.woff') format('woff');
+  src: url('client/ui/base/freight-sans/woff/freight-sans-medium.woff') format('woff');
   font-style: normal;
   font-weight: 500;
 }
 
 @font-face {
   font-family: 'Freight Sans Small Caps';
-  src: url('client/ui/base/typography/freight-sans/woff/freight-sans-medium-small-caps.woff') format('woff');
+  src: url('client/ui/base/freight-sans/woff/freight-sans-medium-small-caps.woff') format('woff');
   font-style: normal;
   font-weight: 500;
 }
@@ -121,7 +129,7 @@
 
 @font-face {
   font-family: 'Freight Sans';
-  src: url('client/ui/base/typography/freight-sans/woff/freight-sans-bold.woff') format('woff');
+  src: url('client/ui/base/freight-sans/woff/freight-sans-bold.woff') format('woff');
   font-style: normal;
   font-weight: 700;
 }
@@ -134,7 +142,7 @@
 
 @font-face {
   font-family: 'Droid Sans Mono';
-  src: url('client/ui/base/typography/droid-sans-mono/woff/droid-sans-mono.woff2') format('woff2');
+  src: url('client/ui/base/droid-sans-mono/woff/droid-sans-mono.woff2') format('woff2');
   font-style: normal;
   font-weight: 400;
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;

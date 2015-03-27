@@ -25,6 +25,7 @@ program.on('--help', function(){
   console.log('    plato deploy       deploy the blog to github');
   console.log('    plato install      install a blog for the first time');
   console.log('    plato preview      start a server to preview your blog');
+  console.log('    plato save         save your current progress to github');
   console.log();
 });
 

@@ -6,14 +6,15 @@
 
   <url>
     <loc>{{url}}</loc>
-    <changefreq>daily</changefreq>
+    <lastmod>{{timestamp date}}</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   {{#each articles}}
     <url>
-      <loc>{{@root.url}}/{{path}}/</loc>
-      <lastmod>{{timestamp date}}</lastmod>
+      <loc>{{@root.url}}/{{path}}</loc>
+      <lastmod>{{timestamp @root.date}}</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
     </url>
