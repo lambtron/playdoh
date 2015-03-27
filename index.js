@@ -1,5 +1,12 @@
 
 /**
+ * Dependencies.
+ */
+
+require('./client/lib/profile');
+require('./client/lib/summary');
+
+/**
  * Code highlighting.
  */
 

@@ -88,6 +88,13 @@
 1: [function(require, module, exports) {
 
 /**
+ * Dependencies.
+ */
+
+require('./client/lib/profile');
+require('./client/lib/summary');
+
+/**
  * Code highlighting.
  */
 
@@ -107,8 +114,44 @@ require('segmentio/highlight')()
   .use(require('segmentio/highlight-xml'))
   .use(require('segmentio/highlight-yaml'))
   .all();
-}, {"segmentio/highlight":2,"segmentio/highlight-bash":3,"segmentio/highlight-csharp":4,"segmentio/highlight-css":5,"segmentio/highlight-go":6,"segmentio/highlight-java":7,"segmentio/highlight-javascript":8,"segmentio/highlight-json":9,"segmentio/highlight-objective-c":10,"segmentio/highlight-php":11,"segmentio/highlight-python":12,"segmentio/highlight-ruby":13,"segmentio/highlight-sql":14,"segmentio/highlight-xml":15,"segmentio/highlight-yaml":16}],
+
+}, {"./client/lib/profile":2,"./client/lib/summary":3,"segmentio/highlight":4,"segmentio/highlight-bash":5,"segmentio/highlight-csharp":6,"segmentio/highlight-css":7,"segmentio/highlight-go":8,"segmentio/highlight-java":9,"segmentio/highlight-javascript":10,"segmentio/highlight-json":11,"segmentio/highlight-objective-c":12,"segmentio/highlight-php":13,"segmentio/highlight-python":14,"segmentio/highlight-ruby":15,"segmentio/highlight-sql":16,"segmentio/highlight-xml":17,"segmentio/highlight-yaml":18}],
 2: [function(require, module, exports) {
+
+/**
+ * Analytics.
+ */
+
+var links = document.querySelectorAll('.Profile-link');
+var re = /Profile-(\w+)-link/;
+
+analytics.trackLink(links, 'Clicked Profile Link', function(el){
+  return {
+    type: re.exec(el.className)[1],
+    href: el.href
+  }
+});
+
+}, {}],
+3: [function(require, module, exports) {
+
+/**
+ * Analytics.
+ */
+
+var links = document.querySelector('.Summary-link');
+
+analytics.trackLink(links, 'Clicked Article Link', function(el){
+  return {
+    name: el.textContent,
+    date: el.parentNode.parentNode.querySelector('.Summary-date').getAttribute('datetime'),
+    href: el.href,
+    external: el.classList.contains('Summary-external-link')
+  };
+});
+
+}, {}],
+4: [function(require, module, exports) {
 
 var escape = require('escape-html');
 
@@ -305,8 +348,8 @@ function lang(el){
   if (m = matcher.exec(el.className)) return m[1];
   return language(el.parentNode);
 }
-}, {"escape-html":17}],
-17: [function(require, module, exports) {
+}, {"escape-html":19}],
+19: [function(require, module, exports) {
 /**
  * Escape special characters in the given string of html.
  *
@@ -325,7 +368,7 @@ module.exports = function(html) {
 }
 
 }, {}],
-3: [function(require, module, exports) {
+5: [function(require, module, exports) {
 
 /**
  * Expose `bash`
@@ -376,7 +419,7 @@ bash.operator = /(;|&&?|\|\||=[=~]?|!=?|&lt;|&gt;|\|)/;
 
 bash.builtin = /\b(alias|bg|bind|break|builtin|caller|cd|command|compgen|complete|dirs|disown|echo|enable|eval|exec|exit|false|fc|fg|getopts|hash|help|history|jobs|kill|let|logout|popd|printf|pushd|pwd|read|readonly|set|shift|shopt|source|suspend|test|times|trap|true|type|ulimit|umask|unalias|unset|wait)\b/;
 }, {}],
-4: [function(require, module, exports) {
+6: [function(require, module, exports) {
 
 /**
  * Expose `csharp`
@@ -453,7 +496,7 @@ csharp.operator = /(await|as|is|new|typeof|checked|unchecked|default|delegate|si
 
 csharp.punctuation = /[{}[\];(),.:]/;
 }, {}],
-5: [function(require, module, exports) {
+7: [function(require, module, exports) {
 
 /**
  * Expose `plugin`.
@@ -558,7 +601,7 @@ grammar.punctuation = /[{}(),:;]/;
 grammar.constant = /(?!\d)(ch|cm|deg|dpcm|dpi|dppx|em|ex|grad|Hz|kHz|in|mm|pc|pt|px|rad|rem|s|ms|turn|vh|vmax|vmin|vw)\b/;
 
 }, {}],
-6: [function(require, module, exports) {
+8: [function(require, module, exports) {
 
 /**
  * Expose `plugin`.
@@ -639,7 +682,7 @@ grammar.operator = /([-+]{1,2}|!|&lt;=?|>=?|={1,3}|&lt;{1,2}|>{1,2}|(&amp;){1,2}
 
 grammar.punctuation = /[{}[\];(),.:]/;
 }, {}],
-7: [function(require, module, exports) {
+9: [function(require, module, exports) {
 
 /**
  * Expose `java`
@@ -714,7 +757,7 @@ java.operator = /([-+]{1,2}|!|&lt;=?|>=?|={1,3}|&lt;{1,2}|>{1,2}|(&amp;){1,2}|\|
 
 java.punctuation = /[{}[\];(),.:]/;
 }, {}],
-8: [function(require, module, exports) {
+10: [function(require, module, exports) {
 
 /**
  * Expose `plugin`.
@@ -803,7 +846,7 @@ grammar.operator = /([-+]{1,2}|!|&lt;=?|>=?|={1,3}|&lt;{1,2}|>{1,2}|(&amp;){1,2}
 
 grammar.punctuation = /[{}[\];(),.:]/;
 }, {}],
-9: [function(require, module, exports) {
+11: [function(require, module, exports) {
 
 /**
  * Expose `json`
@@ -846,7 +889,7 @@ json.punctuation = /[{}[\]:]/;
 
 json.number = /\b-?(\d+\.?\d*([eE]-?\d+)?)\b/;
 }, {}],
-10: [function(require, module, exports) {
+12: [function(require, module, exports) {
 
 /**
  * Expose `objectiveC`
@@ -922,7 +965,7 @@ objectiveC.operator = /([-+]{1,2}|!|&lt;=?|>=?|={1,3}|&lt;{1,2}|>{1,2}|(&amp;){1
 
 objectiveC.punctuation = /[{}[\];(),.:]/;
 }, {}],
-11: [function(require, module, exports) {
+13: [function(require, module, exports) {
 
 /**
  * Expose `php`
@@ -998,7 +1041,7 @@ php.operator = /([-+]{1,2}|!|&lt;=?|>=?|={1,3}|&lt;{1,2}|>{1,2}|(&amp;){1,2}|\|{
 
 php.punctuation = /[{}[\];(),.]/;
 }, {}],
-12: [function(require, module, exports) {
+14: [function(require, module, exports) {
 
 /**
  * Expose `python`
@@ -1073,7 +1116,7 @@ python.operator = /([-+]{1,2}|!|&lt;=?|>=?|={1,3}|&lt;{1,2}|>{1,2}|(&amp;){1,2}|
 
 python.punctuation = /[{}[\];(),.:]/;
 }, {}],
-13: [function(require, module, exports) {
+15: [function(require, module, exports) {
 
 /**
  * Expose `ruby`
@@ -1149,7 +1192,7 @@ ruby.operator = /([-+]{1,2}|!|&lt;=?|>=?|={1,3}|&lt;{1,2}|>{1,2}|(&amp;){1,2}|\|
 ruby.punctuation = /[{}[\];(),.:]/;
 
 }, {}],
-14: [function(require, module, exports) {
+16: [function(require, module, exports) {
 
 /**
  * Expose `plugin`.
@@ -1227,7 +1270,7 @@ grammar.function = {
 
 grammar.punctuation = /[,.()]/;
 }, {}],
-15: [function(require, module, exports) {
+17: [function(require, module, exports) {
 
 /**
  * Expose `plugin`.
@@ -1299,7 +1342,7 @@ grammar.tag = {
   children: children
 };
 }, {}],
-16: [function(require, module, exports) {
+18: [function(require, module, exports) {
 
 /**
  * Expose `yaml`
