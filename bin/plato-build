@@ -11,25 +11,23 @@ var resolve = require('path').resolve;
  */
 
 program
-  .option('-c, --config <file>', 'the configuration yaml file', 'config.yml')
-  .option('-S, --source <dir>', 'the source directory to build from', 'articles')
-  .option('-D, --destination <dir>', 'the destination directory to build to', 'build')
-  .option('-d, --drafts', 'whether to include drafts in the output', false)
+  .option('-d, --directory <dir>', 'the blog\'s root directory', process.cwd())
   .parse(process.argv);
 
 /**
  * Settings.
  */
 
-var cwd = process.cwd();
-var src = program.source;
-var dest = program.destination;
+var dir = program.directory;
+var conf = program.config = 'config.yaml';
+var src = program.source = 'articles';
+var dest = program.destination = 'build';
 
 /**
  * Metalsmith.
  */
 
-var metalsmith = new Metalsmith(cwd)
+var metalsmith = new Metalsmith(dir)
   .source(src)
   .destination(dest);
 
@@ -48,5 +46,5 @@ plugins.forEach(function(plugin){
 
 metalsmith.build(function(err){
   if (err) logger.fatal(err, err.stack);
-  logger.success('Success! Built your blog to: ' + resolve(cwd, dest));
+  logger.success('Success! Built your blog to: ' + resolve(dir, dest));
 });

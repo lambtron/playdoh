@@ -12,15 +12,18 @@ var resolve = require('path').resolve;
 
 program
   .option('-p, --port <port>', 'the port to run the server on', 4242)
-  .option('-d, --directory <dir>', 'the directory to serve built files from', 'build')
+  .option('-d, --directory <dir>', 'the blog\'s root directory', process.cwd())
+  .option('-r, --rebuild', 'whether to rebuild the components', false)
   .parse(process.argv);
 
 /**
  * Settings.
  */
 
-var dir = resolve(process.cwd(), program.directory);
+var dir = program.directory;
 var port = program.port;
+var rebuild = program.rebuild;
+var dest = program.destination = resolve(dir, 'build');
 
 /**
  * Server.
@@ -28,7 +31,7 @@ var port = program.port;
 
 express()
   .use(build)
-  .use(express.static(dir))
+  .use(express.static(dest))
   .listen(port, log);
 
 /**
@@ -43,11 +46,15 @@ function build(req, res, next) {
   var accept = req.get('accept');
   if (0 != accept.indexOf('text/html')) return next();
 
-  var cmd = resolve(__dirname, 'plato-build');
-  var opts = { cwd: process.cwd };
-  exec(cmd, opts, function(err){
+  var cmd = resolve(__dirname, 'plato-build -d ' + dir);
+  exec(cmd, { cwd: process.cwd }, function(err){
     if (err) return next(err);
-    next();
+    if (!rebuild) return next();
+
+    exec('make support', { cwd: resolve(__dirname, '..') }, function(err){
+      if (err) return next(err);
+      next();
+    });
   });
 }
 
