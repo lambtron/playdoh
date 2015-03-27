@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "commander": "^2.6.0",
+    "gh-pages": "^0.2.0",
     "handlebars": "^3.0.1",
     "helper-date": "^0.2.1",
     "indent": "0.0.1",

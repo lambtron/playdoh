@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+
+var deploy = require('gh-pages').publish;
+var exec = require('child_process').exec;
+var logger = require('../lib/logger');
+var program = require('commander');
+var resolve = require('path').resolve;
+
+/**
+ * Program.
+ */
+
+program
+  .option('-b, --branch <name>', 'the branch to deploy to', 'master')
+  .parse(process.argv);
+
+/**
+ * Settings.
+ */
+
+var branch = program.branch;
+var dir = resolve(process.cwd(), 'build');
+
+/**
+ * Deploy the current working files to GitHub.
+ */
+
+var opts = {
+  branch: branch,
+  message: 'plato deploy'
+};
+
+deploy(dir, opts, function(err){
+  if (err) logger.fatal(err, err.stack);
+  logger.success('Success! Deploy your blog to GitHub!');
+});

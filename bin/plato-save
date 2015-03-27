@@ -19,7 +19,7 @@ program
 var branch = program.branch;
 
 /**
- * Deploy the current working files to GitHub.
+ * Save the current working files to GitHub.
  */
 
 var cmds = [
