@@ -13,12 +13,7 @@
 
 .Article-date {
   display: block;
+  margin-bottom: var(--size-large);
   color: var(--text-secondary);
   font-size: var(--text-medium);
-  margin-bottom: var(--size-large);
-}
-
-.Article-date::after {
-  content: '—';
-  margin: 0 .3em;
 }

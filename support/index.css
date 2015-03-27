@@ -1757,14 +1757,9 @@ html {
 
 .Article-date {
   display: block;
+  margin-bottom: 60px;
   color: #A49581;
   font-size: 20px;
-  margin-bottom: 60px;
-}
-
-.Article-date::after {
-  content: '—';
-  margin: 0 .3em;
 }
 
 /**

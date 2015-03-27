@@ -21,6 +21,8 @@
     <a class="Profile-link Profile-rss-link" href="/atom.xml">RSS<a>
   </ul>
 
+  {{#if twitter}}
   <a class="Profile-twitter-button twitter-follow-button" href="https://twitter.com/{{twitter}}" data-show-count="false">Follow @{{twitter}}</a>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  {{/if}}
 </div>
