@@ -40,5 +40,4 @@
   left: 0;
   top: var(--size-huge);
   bottom: var(--size-huge);
-  border-left: 2px solid var(--text-tertiary);
 }

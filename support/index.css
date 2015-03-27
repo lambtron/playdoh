@@ -157,10 +157,6 @@
  */
 
 /**
- * Headings.
- */
-
-/**
  * Leadings.
  */
 
@@ -1255,7 +1251,7 @@ html {
 }
 
 .Copy--huge {
-  font-size: 30px;
+  font-size: 36px;
   line-height: 44px;
 }
 
@@ -1273,7 +1269,7 @@ html {
  */
 
 .Heading--small {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 22px;
   font-family: 'Freight Sans Small Caps', 'Verdana', 'Geneva', sans-serif;
   text-transform: lowercase;
@@ -1285,40 +1281,15 @@ html {
 }
 
 .Heading--large {
-  font-size: 30px;
+  font-size: 24px;
   line-height: 36px;
-  margin-bottom: 22px;
+  margin-bottom: 21.599999999999998px;
 }
 
 .Heading--huge {
-  font-size: 42px;
+  font-size: 36px;
   line-height: 44px;
-  margin-bottom: 28px;
-}
-
-/**
- * Section heading.
- *
- * TODO: refactor to be a modifier that can apply to any heading instead.
- */
-
-.Heading--section {
-  position: relative;
-  margin-bottom: 30px;
-  padding-bottom: 15px;
-  font-size: 18px;
-  line-height: 22px;
-  font-family: 'Freight Sans Small Caps', 'Verdana', 'Geneva', sans-serif;
-  text-transform: lowercase;
-  color: #A49581;
-}
-
-.Heading--section::after {
-  content: '—';
-  color: #A49581;
-  position: absolute;
-  bottom: -.5em;
-  left: 0;
+  margin-bottom: 26.4px;
 }
 
 /**
@@ -1397,22 +1368,11 @@ html {
 .Prose--small {
   font-size: 18px;
   line-height: 22px;
-  color: #A49581;
 }
 
 .Prose--medium {
   font-size: 20px;
   line-height: 30px;
-}
-
-.Prose--large {
-  font-size: 24px;
-  line-height: 36px;
-}
-
-.Prose--huge {
-  font-size: 30px;
-  line-height: 44px;
 }
 
 /**
@@ -1425,14 +1385,6 @@ html {
 
 .Prose--medium > * + * {
   margin-top: 19.98px;
-}
-
-.Prose--large > * + * {
-  margin-top: 23.976000000000003px;
-}
-
-.Prose--huge > * + * {
-  margin-top: 29.304000000000002px;
 }
 
 /**
@@ -1468,28 +1420,6 @@ html {
   font-weight: 400;
 }
 
-.Prose h1 {
-  font-size: 42px;
-  line-height: 44px;
-  margin-top: 120px;
-}
-
-.Prose h2 {
-  font-size: 30px;
-  line-height: 36px;
-  margin-top: 60px;
-}
-
-.Prose h3,
-.Prose h4,
-.Prose h5,
-.Prose h6 {
-  margin-top: 30px;
-  font-family: 'Freight Sans Small Caps', 'Verdana', 'Geneva', sans-serif;
-  text-transform: lowercase;
-  margin-bottom: -22px;
-}
-
 .Prose h1 a,
 .Prose h2 a,
 .Prose h3 a,
@@ -1497,6 +1427,61 @@ html {
 .Prose h5 a,
 .Prose h6 a {
   color: inherit;
+}
+
+.Prose--small h1 {
+  font-size: 24px;
+  line-height: 36px;
+  margin-top: 33px;
+}
+
+.Prose--medium h1 {
+  font-size: 36px;
+  line-height: 44px;
+  margin-top: 45px;
+}
+
+.Prose--small h2 {
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 33px;
+}
+
+.Prose--medium h2 {
+  font-size: 24px;
+  line-height: 36px;
+  margin-top: 45px;
+}
+
+.Prose h3,
+.Prose h4,
+.Prose h5,
+.Prose h6 {
+  font-family: 'Freight Sans Small Caps', 'Verdana', 'Geneva', sans-serif;
+  text-transform: lowercase;
+}
+
+.Prose > h3 + *,
+.Prose > h4 + *,
+.Prose > h5 + *,
+.Prose > h6 + * {
+  margin-top: 0;
+}
+
+.Prose--small h3,
+.Prose--small h4,
+.Prose--small h5,
+.Prose--small h6 {
+  font-size: 20px;
+  margin-top: 22px;
+}
+
+.Prose--medium h3,
+.Prose--medium h4,
+.Prose--medium h5,
+.Prose--medium h6 {
+  font-size: 24px;
+  margin-top: 30px;
 }
 
 /**
@@ -1547,12 +1532,6 @@ html {
   margin-top: 7.333333333333333px;
   font-size: 18px;
   line-height: 22px;
-}
-
-.Prose--large small {
-  margin-top: 10px;
-  font-size: 20px;
-  line-height: 30px;
 }
 
 /**
@@ -1628,24 +1607,6 @@ html {
 
 .Prose ol ol ol {
   list-style-type: lower-roman;
-}
-
-.Prose--medium ul,
-.Prose--medium ol {
-  font-size: 18px;
-  line-height: 22px;
-}
-
-.Prose--large ul,
-.Prose--large ol {
-  font-size: 20px;
-  line-height: 30px;
-}
-
-.Prose--huge ul,
-.Prose--huge ol {
-  font-size: 24px;
-  line-height: 36px;
 }
 
 .Prose li {
@@ -1740,7 +1701,6 @@ html {
   left: 0;
   top: 120px;
   bottom: 120px;
-  border-left: 2px solid #CDC0AC;
 }
 
 /**
@@ -1809,6 +1769,10 @@ html {
 .Summary-external-link[data-domain="segment.com"]::after {
   color: #70BF5A;
   background-image: url('client/lib/summary/images/link-green@2x.png');
+}
+
+.Summary-excerpt p a {
+  color: inherit;
 }
 
 /**

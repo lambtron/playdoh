@@ -24,22 +24,11 @@
 .Prose--small {
   font-size: var(--text-small);
   line-height: var(--leading-small);
-  color: var(--text-secondary);
 }
 
 .Prose--medium {
   font-size: var(--text-medium);
   line-height: var(--leading-medium);
-}
-
-.Prose--large {
-  font-size: var(--text-large);
-  line-height: var(--leading-large);
-}
-
-.Prose--huge {
-  font-size: var(--text-huge);
-  line-height: var(--leading-huge);
 }
 
 /**
@@ -52,14 +41,6 @@
 
 .Prose--medium > * + * {
   margin-top: calc(var(--leading-medium) * .666);
-}
-
-.Prose--large > * + * {
-  margin-top: calc(var(--leading-large) * .666);
-}
-
-.Prose--huge > * + * {
-  margin-top: calc(var(--leading-huge) * .666);
 }
 
 /**
@@ -95,28 +76,6 @@
   font-weight: var(--weight-book);
 }
 
-.Prose h1 {
-  font-size: var(--heading-huge);
-  line-height: var(--leading-huge);
-  margin-top: var(--size-huge);
-}
-
-.Prose h2 {
-  font-size: var(--heading-large);
-  line-height: var(--leading-large);
-  margin-top: var(--size-large);
-}
-
-.Prose h3,
-.Prose h4,
-.Prose h5,
-.Prose h6 {
-  margin-top: var(--leading-medium);
-  font-family: var(--text-caps);
-  text-transform: lowercase;
-  margin-bottom: calc(-1 * var(--leading-small));
-}
-
 .Prose h1 a,
 .Prose h2 a,
 .Prose h3 a,
@@ -124,6 +83,61 @@
 .Prose h5 a,
 .Prose h6 a {
   color: inherit;
+}
+
+.Prose--small h1 {
+  font-size: var(--text-large);
+  line-height: var(--leading-large);
+  margin-top: calc(var(--leading-small) * 1.5);
+}
+
+.Prose--medium h1 {
+  font-size: var(--text-huge);
+  line-height: var(--leading-huge);
+  margin-top: calc(var(--leading-medium) * 1.5);
+}
+
+.Prose--small h2 {
+  font-size: var(--text-medium);
+  line-height: var(--leading-medium);
+  margin-top: calc(var(--leading-small) * 1.5);
+}
+
+.Prose--medium h2 {
+  font-size: var(--text-large);
+  line-height: var(--leading-large);
+  margin-top: calc(var(--leading-medium) * 1.5);
+}
+
+.Prose h3,
+.Prose h4,
+.Prose h5,
+.Prose h6 {
+  font-family: var(--text-caps);
+  text-transform: lowercase;
+}
+
+.Prose > h3 + *,
+.Prose > h4 + *,
+.Prose > h5 + *,
+.Prose > h6 + * {
+  margin-top: 0;
+}
+
+.Prose--small h3,
+.Prose--small h4,
+.Prose--small h5,
+.Prose--small h6 {
+  font-size: var(--text-medium);
+  margin-top: var(--leading-small);
+}
+
+.Prose--medium h3,
+.Prose--medium h4,
+.Prose--medium h5,
+.Prose--medium h6 {
+  font-size: var(--text-large);
+  margin-top: var(--leading-medium);
 }
 
 /**
@@ -174,12 +188,6 @@
   margin-top: calc(var(--leading-small) / 3);
   font-size: var(--text-small);
   line-height: var(--leading-small);
-}
-
-.Prose--large small {
-  margin-top: calc(var(--leading-medium) / 3);
-  font-size: var(--text-medium);
-  line-height: var(--leading-medium);
 }
 
 /**
@@ -255,24 +263,6 @@
 
 .Prose ol ol ol {
   list-style-type: lower-roman;
-}
-
-.Prose--medium ul,
-.Prose--medium ol {
-  font-size: var(--text-small);
-  line-height: var(--leading-small);
-}
-
-.Prose--large ul,
-.Prose--large ol {
-  font-size: var(--text-medium);
-  line-height: var(--leading-medium);
-}
-
-.Prose--huge ul,
-.Prose--huge ol {
-  font-size: var(--text-large);
-  line-height: var(--leading-large);
 }
 
 .Prose li {

@@ -23,18 +23,7 @@
   --text-small: 18px;
   --text-medium: 20px;
   --text-large: 24px;
-  --text-huge: 30px;
-}
-
-/**
- * Headings.
- */
-
-:root {
-  --heading-small: 18px;
-  --heading-medium: 20px;
-  --heading-large: 30px;
-  --heading-huge: 42px;
+  --text-huge: 36px;
 }
 
 /**

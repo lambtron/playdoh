@@ -13,50 +13,25 @@
  */
 
 .Heading--small {
-  font-size: var(--heading-small);
+  font-size: var(--text-medium);
   line-height: var(--leading-small);
   font-family: var(--text-caps);
   text-transform: lowercase;
 }
 
 .Heading--medium {
-  font-size: var(--heading-medium);
+  font-size: var(--text-medium);
   line-height: var(--leading-medium);
 }
 
 .Heading--large {
-  font-size: var(--heading-large);
+  font-size: var(--text-large);
   line-height: var(--leading-large);
-  margin-bottom: 22px;
+  margin-bottom: calc(0.6 * var(--leading-large));
 }
 
 .Heading--huge {
-  font-size: var(--heading-huge);
+  font-size: var(--text-huge);
   line-height: var(--leading-huge);
-  margin-bottom: 28px;
-}
-
-/**
- * Section heading.
- *
- * TODO: refactor to be a modifier that can apply to any heading instead.
- */
-
-.Heading--section {
-  position: relative;
-  margin-bottom: var(--size-medium);
-  padding-bottom: var(--size-smaller);
-  font-size: var(--heading-small);
-  line-height: var(--leading-small);
-  font-family: var(--text-caps);
-  text-transform: lowercase;
-  color: var(--text-secondary);
-}
-
-.Heading--section::after {
-  content: '—';
-  color: var(--text-secondary);
-  position: absolute;
-  bottom: -.5em;
-  left: 0;
+  margin-bottom: calc(0.6 * var(--leading-huge));
 }

@@ -47,3 +47,7 @@
   color: var(--fern-1);
   background-image: url('images/link-green@2x.png');
 }
+
+.Summary-excerpt p a {
+  color: inherit;
+}
