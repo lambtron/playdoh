@@ -5,11 +5,7 @@
 
 .Layout {
   position: relative;
-}
-
-.Layout-main,
-.Layout-sidebar {
-  padding: calc(var(--size-huge) * 2) 0;
+  margin: var(--size-huge) 0;
 }
 
 /**
@@ -34,14 +30,15 @@
   position: fixed;
   width: 25%;
   top: 0;
-  right: 0;
   bottom: 0;
+  right: 0;
 }
 
-.Layout-sidebar > * {
-  width: var(--size-quarter);
-}
-
-.Layout-sidebar-section + .Layout-sidebar-section {
-  margin-top: var(--size-large);
+.Layout-sidebar::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: var(--size-huge);
+  bottom: var(--size-huge);
+  border-left: 2px solid var(--text-tertiary);
 }

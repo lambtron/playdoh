@@ -1705,11 +1705,7 @@ html {
 
 .Layout {
   position: relative;
-}
-
-.Layout-main,
-.Layout-sidebar {
-  padding: 240px 0;
+  margin: 120px 0;
 }
 
 /**
@@ -1734,16 +1730,17 @@ html {
   position: fixed;
   width: 25%;
   top: 0;
-  right: 0;
   bottom: 0;
+  right: 0;
 }
 
-.Layout-sidebar > * {
-  width: 210px;
-}
-
-.Layout-sidebar-section + .Layout-sidebar-section {
-  margin-top: 60px;
+.Layout-sidebar::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 120px;
+  bottom: 120px;
+  border-left: 2px solid #CDC0AC;
 }
 
 /**
@@ -1755,13 +1752,19 @@ html {
 }
 
 .Article-title {
-  position: absolute;
-  bottom: 100%;
   margin-bottom: 10px;
 }
 
 .Article-date {
   display: block;
+  color: #A49581;
+  font-size: 20px;
+  margin-bottom: 60px;
+}
+
+.Article-date::after {
+  content: '—';
+  margin: 0 .3em;
 }
 
 /**
@@ -1769,7 +1772,7 @@ html {
  */
 
 .Summaries-list-item + .Summaries-list-item {
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 /**
@@ -1818,24 +1821,30 @@ html {
  */
 
 .Profile {
-  position: relative;
-}
-
-.Profile-name {
   position: absolute;
-  bottom: 100%;
+  top: 50%;
+  margin-top: -60px;
+  width: 100%;
+  text-align: center;
 }
 
 .Profile-avatar {
-  position: absolute;
-  bottom: 100%;
-  margin-bottom: 35px;
+  display: inline-block;
   width: 120px;
   height: 120px;
-  border-radius: 4px;
+  border-radius: 120px;
+  background: url('/avatar.png');
+  background-size: contain;
+  box-shadow: inset 2px 2px 4px rgba(0,0,0,.5);
+}
+
+.Profile-role {
+  color: #A49581;
+  margin-bottom: 20px;
 }
 
 .Profile-bio {
+  display: none;
   margin-bottom: 20px;
 }
 
@@ -1865,7 +1874,7 @@ html {
   background-position: center center;
   background-repeat: none;
   background-size: contain;
-  opacity: .75;
+  opacity: .7;
   transition: opacity .2s;
 }
 

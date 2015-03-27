@@ -8,11 +8,17 @@
 }
 
 .Article-title {
-  position: absolute;
-  bottom: 100%;
   margin-bottom: var(--size-tiny);
 }
 
 .Article-date {
   display: block;
+  color: var(--text-secondary);
+  font-size: var(--text-medium);
+  margin-bottom: var(--size-large);
+}
+
+.Article-date::after {
+  content: '—';
+  margin: 0 .3em;
 }

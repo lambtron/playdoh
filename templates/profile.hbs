@@ -1,13 +1,13 @@
 <div class="Profile">
-  <img class="Profile-avatar" src="/avatar.png">
-  <h1 class="Profile-name Heading Heading--medium">{{name}}</h4>
-  <h2 class="Profile-role Heading Heading--section">{{role}} at <a class="Link" href="https://segment.com">Segment</a></h2>
+  <a class="Profile-avatar" href="/"></a>
+  <h1 class="Profile-name Heading Heading--medium"><a href="/">{{name}}</a></h4>
+  <h2 class="Profile-role Heading Heading--small">{{role}} at <a class="Link" href="https://segment.com">Segment</a></h2>
 
-  {{#if bio}}
+{{!--   {{#if bio}}
   <div class="Profile-bio Prose Prose--small">
     {{{markdown bio}}}
   </div>
-  {{/if}}
+  {{/if}} --}}
 
   <ul class="Profile-links">
     {{#if dribbble}}<a class="Profile-link Profile-dribbble-link" href="https://dribbble.com/{{dribbble}}">Dribbble</a>{{/if}}
@@ -21,8 +21,6 @@
     <a class="Profile-link Profile-rss-link" href="/atom.xml">RSS<a>
   </ul>
 
-  <!-- Twitter button -->
   <a class="Profile-twitter-button twitter-follow-button" href="https://twitter.com/{{twitter}}" data-show-count="false">Follow @{{twitter}}</a>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-  <!-- End Twitter button -->
 </div>

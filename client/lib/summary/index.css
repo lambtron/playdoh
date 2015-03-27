@@ -4,7 +4,7 @@
  */
 
 .Summaries-list-item + .Summaries-list-item {
-  margin-top: var(--size-medium);
+  margin-top: var(--size-large);
 }
 
 /**
