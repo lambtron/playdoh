@@ -14,28 +14,25 @@
 }
 
 /**
- * Grid.
+ * Columns.
  */
 
 :root {
-  --size-gutter: 60px;
-  --size-column: 210px;
-  --size-column-third: 290px;
-
-  --size-quarter: calc(var(--size-column) * 1 + var(--size-gutter) * 0);
-  --size-two-quarters: calc(var(--size-column) * 2 + var(--size-gutter) * 1);
-  --size-three-quarters: calc(var(--size-column) * 3 + var(--size-gutter) * 2);
-  --size-four-quarters: calc(var(--size-column) * 4 + var(--size-gutter) * 3);
-
-  --size-third: calc(var(--size-column-third) * 1 + var(--size-gutter) * 0);
-  --size-two-thirds: calc(var(--size-column-third) * 2 + var(--size-gutter) * 1);
-  --size-three-thirds: calc(var(--size-column-third) * 3 + var(--size-gutter) * 2);
+  --column-gutter: 60px;
+  --column-whole: 1020px;
+  --column-half: 480px;
+  --column-third: 300px;
+  --column-two-thirds: 660px;
+  --column-quarter: 210px;
+  --column-three-quarters: 750px;
 }
 
 /**
- * Radius.
+ * Borders.
  */
 
 :root {
-  --size-radius: 4px;
+  --border-thin: 1px;
+  --border-medium: 2px;
+  --border-radius: 4px;
 }

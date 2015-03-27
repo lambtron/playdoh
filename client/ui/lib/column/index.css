@@ -4,10 +4,11 @@
  */
 
 .Columns {
+  box-sizing: content-box;
   width: 100%;
-  max-width: calc(var(--size-column) * 4 + var(--size-gutter) * 3);
+  max-width: var(--column-whole);
   margin: 0 auto;
-  padding: 0 calc(var(--size-gutter) / 2);
+  padding: 0 calc(var(--column-gutter) / 2);
 }
 
 /**
@@ -18,44 +19,37 @@
   float: left;
   width: 100%;
   margin-right: 60px;
+  position: relative;
 }
 
 .Column:last-child {
-  margin-right: none;
+  margin-right: 0;
 }
 
 /**
- * By 4.
+ * Sizes.
  */
 
-.Column--1 {
-  max-width: var(--size-quarter);
+.Column--whole {
+  max-width: var(--column-whole);
 }
 
-.Column--2 {
-  max-width: var(--size-two-quarters);
+.Column--half {
+  max-width: var(--column-half);
 }
 
-.Column--3 {
-  max-width: var(--size-three-quarters);
+.Column--third {
+  max-width: var(--column-third);
 }
 
-.Column--4 {
-  max-width: var(--size-four-quarters);
+.Column--two-thirds {
+  max-width: var(--column-two-thirds);
 }
 
-/**
- * By 3.
- */
+.Column--quarter {
+  max-width: var(--column-quarter);
+};
 
-.Column--13 {
-  max-width: var(--size-third);
-}
-
-.Column--23 {
-  max-width: var(--size-two-thirds);
-}
-
-.Column--33 {
-  max-width: var(--size-three-thirds);
+.Column--three-quarters {
+  max-width: var(--column-three-quarters);
 }

@@ -22,7 +22,7 @@
 }
 
 .Summary-date::after {
-  content: '—';
+  content: '·';
   margin: 0 .3em;
 }
 
@@ -41,6 +41,11 @@
   background-size: contain;
   background-position: left center;
   background-repeat: no-repeat;
+  text-indent: -9999px;
+}
+
+.Summary-external-link:hover::after {
+  text-indent: 0px;
 }
 
 .Summary-external-link[data-domain="segment.com"]::after {

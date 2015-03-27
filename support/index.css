@@ -51,11 +51,11 @@
  */
 
 /**
- * Grid.
+ * Columns.
  */
 
 /**
- * Radius.
+ * Borders.
  */
 
 /**
@@ -1170,6 +1170,7 @@ html {
  */
 
 .Columns {
+  box-sizing: content-box;
   width: 100%;
   max-width: 1020px;
   margin: 0 auto;
@@ -1184,46 +1185,41 @@ html {
   float: left;
   width: 100%;
   margin-right: 60px;
+  position: relative;
 }
 
 .Column:last-child {
-  margin-right: none;
+  margin-right: 0;
 }
 
 /**
- * By 4.
+ * Sizes.
  */
 
-.Column--1 {
-  max-width: 210px;
-}
-
-.Column--2 {
-  max-width: 480px;
-}
-
-.Column--3 {
-  max-width: 750px;
-}
-
-.Column--4 {
+.Column--whole {
   max-width: 1020px;
 }
 
-/**
- * By 3.
- */
-
-.Column--13 {
-  max-width: 290px;
+.Column--half {
+  max-width: 480px;
 }
 
-.Column--23 {
-  max-width: 640px;
+.Column--third {
+  max-width: 300px;
 }
 
-.Column--33 {
-  max-width: 990px;
+.Column--two-thirds {
+  max-width: 660px;
+}
+
+.Column--quarter {
+  max-width: 210px;
+}
+
+;
+
+.Column--three-quarters {
+  max-width: 750px;
 }
 
 /**
@@ -1650,7 +1646,7 @@ html {
  */
 
 .Prose hr {
-  width: 210px;
+  width: 255px;
   margin: 3em auto;
   border: none;
   border-bottom: 2px solid #CDC0AC;
@@ -1664,43 +1660,8 @@ html {
  * Layout.
  */
 
-.Layout {
-  position: relative;
-  margin: 120px 0;
-}
-
-/**
- * Main.
- */
-
 .Layout-main {
-  width: 100%;
-  padding-right: 25%;
-}
-
-.Layout-main > * {
-  width: 640px;
-  margin: 0 auto;
-}
-
-/**
- * Sidebar.
- */
-
-.Layout-sidebar {
-  position: fixed;
-  width: 25%;
-  top: 0;
-  bottom: 0;
-  right: 0;
-}
-
-.Layout-sidebar::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 120px;
-  bottom: 120px;
+  padding: 120px 0;
 }
 
 /**
@@ -1763,7 +1724,7 @@ html {
 }
 
 .Summary-date::after {
-  content: '—';
+  content: '·';
   margin: 0 .3em;
 }
 
@@ -1782,6 +1743,11 @@ html {
   background-size: contain;
   background-position: left center;
   background-repeat: no-repeat;
+  text-indent: -9999px;
+}
+
+.Summary-external-link:hover::after {
+  text-indent: 0px;
 }
 
 .Summary-external-link[data-domain="segment.com"]::after {
@@ -1799,9 +1765,9 @@ html {
 
 .Profile {
   position: absolute;
-  top: 50%;
-  margin-top: -60px;
   width: 100%;
+  top: 50vh;
+  margin-top: -60px;
   text-align: center;
 }
 

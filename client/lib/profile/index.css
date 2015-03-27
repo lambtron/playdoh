@@ -5,9 +5,9 @@
 
 .Profile {
   position: absolute;
-  top: 50%;
-  margin-top: calc(-1 * var(--size-huge) / 2);
   width: 100%;
+  top: 50vh;
+  margin-top: calc(-1 * var(--size-huge) / 2);
   text-align: center;
 }
 

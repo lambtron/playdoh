@@ -3,41 +3,8 @@
  * Layout.
  */
 
-.Layout {
-  position: relative;
-  margin: var(--size-huge) 0;
-}
-
-/**
- * Main.
- */
+.Layout {}
 
 .Layout-main {
-  width: 100%;
-  padding-right: 25%;
-}
-
-.Layout-main > * {
-  width: var(--size-two-thirds);
-  margin: 0 auto;
-}
-
-/**
- * Sidebar.
- */
-
-.Layout-sidebar {
-  position: fixed;
-  width: 25%;
-  top: 0;
-  bottom: 0;
-  right: 0;
-}
-
-.Layout-sidebar::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: var(--size-huge);
-  bottom: var(--size-huge);
+  padding: var(--size-huge) 0;
 }

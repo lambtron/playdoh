@@ -281,7 +281,7 @@
 .Prose pre {
   background-color: var(--ground-secondary);
   border: 1px solid var(--birch-35);
-  border-radius: var(--size-radius);
+  border-radius: var(--border-radius);
 }
 
 .Prose :not(pre) > code {
@@ -306,7 +306,7 @@
  */
 
 .Prose hr {
-  width: var(--size-column);
+  width: calc(var(--column-whole) / 4);
   margin: 3em auto;
   border: none;
   border-bottom: 2px solid var(--text-tertiary);
