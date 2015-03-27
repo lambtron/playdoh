@@ -7,6 +7,24 @@
   position: relative;
 }
 
+.Article-home {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 16px;
+  top: 16px;
+  right: 100%;
+  margin-right: var(--size-small);
+  text-indent: -9999px;
+  background-image: url('images/home@2x.png');
+  background-size: contain;
+}
+
+.Article-home:hover {
+  background-image: url('images/home-green@2x.png');
+}
+
 .Article-title {
   margin-bottom: var(--size-tiny);
 }

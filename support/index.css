@@ -1711,15 +1711,33 @@ html {
   position: relative;
 }
 
+.Article-home {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 16px;
+  top: 16px;
+  right: 100%;
+  margin-right: 20px;
+  text-indent: -9999px;
+  background-image: url('client/lib/article/images/home@2x.png');
+  background-size: contain;
+}
+
+.Article-home:hover {
+  background-image: url('client/lib/article/images/home-green@2x.png');
+}
+
 .Article-title {
   margin-bottom: 10px;
 }
 
 .Article-date {
   display: block;
-  margin-bottom: 30px;
-  color: #A49581;
   font-size: 20px;
+  color: #A49581;
+  margin-bottom: 30px;
 }
 
 /**
