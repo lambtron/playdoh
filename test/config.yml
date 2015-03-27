@@ -1,0 +1,23 @@
+
+#
+# Config
+#
+
+url: http://ianstormtaylor.com
+segment: ye39di6
+
+#
+# Bio
+#
+
+name: Ian Storm Taylor
+role: Co-founder
+bio: "I work at [Segment](https://segment.com) on design, engineering and marketing things. As long as systems are involved, I'm happy."
+
+#
+# Social
+#
+
+twitter: ianstormtaylor
+dribbble: ianstormtaylor
+github: ianstormtaylor

@@ -1,5 +1,8 @@
 {
   "name": "plato",
+  "bin": {
+    "plato": "bin/plato"
+  },
   "dependencies": {
     "commander": "^2.6.0",
     "handlebars": "^3.0.1",
