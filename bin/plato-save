@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+var exec = require('child_process').exec;
+var logger = require('../lib/logger');
+var program = require('commander');
+
+/**
+ * Program.
+ */
+
+program
+  .option('-b, --branch <name>', 'the branch to save to', 'dev')
+  .parse(process.argv);
+
+/**
+ * Settings.
+ */
+
+var branch = program.branch;
+
+/**
+ * Deploy the current working files to GitHub.
+ */
+
+var cmds = [
+  'git checkout ' + branch,
+  'git add .',
+  'git commit -am "plato save"',
+  'git push origin ' + branch
+];
+
+exec(cmds.join(' && '), { cwd: process.cwd() }, function(err){
+  if (err) logger.fatal(err, err.stack);
+  logger.success('Success! Saved your blog to GitHub.');
+});
