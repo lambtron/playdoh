@@ -47,6 +47,10 @@
  */
 
 /**
+ * Media queries.
+ */
+
+/**
  * Sizes.
  */
 
@@ -1527,7 +1531,7 @@ html {
 .Prose--medium small {
   margin-top: 7.333333333333333px;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 25.5px;
 }
 
 /**
@@ -1660,8 +1664,75 @@ html {
  * Layout.
  */
 
+.Layout {
+  box-sizing: content-box;
+}
+
+.Layout-main,
+.Layout-nav {
+  width: 100%;
+}
+
 .Layout-main {
-  padding: 120px 0;
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+/**
+ * Tiny screens.
+ */
+
+@media screen and (max-width: 479px) {
+  .Layout {
+    padding: 30px;
+  }
+}
+
+/**
+ * Small screens.
+ */
+
+@media screen and (min-width: 480px) and (max-width: 719px) {
+  .Layout {
+    padding: 60px;
+  }
+}
+
+/**
+ * Medium screens.
+ */
+
+@media screen and (min-width: 720px) and (max-width: 1019px) {
+  .Layout {
+    padding: 60px;
+  }
+}
+
+/**
+ * Large screens.
+ */
+
+@media (min-width: 1020px) {
+  .Layout {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1020px;
+    padding: 120px;
+  }
+
+  .Layout-main {
+    max-width: 660px;
+    margin: 0;
+  }
+
+  .Layout-nav {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: 220px;
+    margin-top: -60px;
+    max-width: 300px;
+  }
 }
 
 /**
@@ -1672,6 +1743,10 @@ html {
   position: relative;
 }
 
+/**
+ * Home link.
+ */
+
 .Article-home {
   content: '';
   position: absolute;
@@ -1680,15 +1755,25 @@ html {
   height: 16px;
   top: 16px;
   right: 100%;
-  margin-right: 20px;
+  margin-right: 5px;
   text-indent: -9999px;
   background-image: url('client/lib/article/images/home@2x.png');
   background-size: contain;
 }
 
+@media (min-width: 480px) {
+  .Article-home {
+    margin-right: 20px;
+  }
+}
+
 .Article-home:hover {
   background-image: url('client/lib/article/images/home-green@2x.png');
 }
+
+/**
+ * Title.
+ */
 
 .Article-title {
   margin-bottom: 10px;
@@ -1706,16 +1791,31 @@ html {
  */
 
 .Summaries-list-item + .Summaries-list-item {
-  margin-top: 60px;
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 720px) and (max-width: 1019px),
+@media (--large) {
+  .Summaries-list-item + .Summaries-list-item {
+    margin-top: 60px;
+  }
 }
 
 /**
  * Summary.
  */
 
+/**
+ * Title.
+ */
+
 .Summary-title {
   position: relative;
 }
+
+/**
+ * Date.
+ */
 
 .Summary-date {
   float: left;
@@ -1727,6 +1827,10 @@ html {
   content: '·';
   margin: 0 .3em;
 }
+
+/**
+ * Link.
+ */
 
 .Summary-external-link::after {
   content: attr(data-domain);
@@ -1745,14 +1849,21 @@ html {
   text-indent: -9999px;
 }
 
-.Summary-external-link:hover::after {
-  text-indent: 0px;
+@media screen and (min-width: 720px) and (max-width: 1019px),
+@media (--large) {
+  .Summary-external-link:hover::after {
+    text-indent: 0px;
+  }
 }
 
 .Summary-external-link[data-domain="segment.com"]::after {
   color: #70BF5A;
   background-image: url('client/lib/summary/images/link-green@2x.png');
 }
+
+/**
+ * Excerpt.
+ */
 
 .Summary-excerpt p a {
   color: inherit;
@@ -1763,22 +1874,49 @@ html {
  */
 
 .Profile {
-  position: absolute;
-  width: 100%;
-  top: 50vh;
-  margin-top: -60px;
   text-align: center;
+  margin-bottom: 30px;
 }
+
+@media (min-width: 720px) {
+  .Profile {
+    margin-bottom: 60px;
+  }
+}
+
+/**
+ * Avatar.
+ */
 
 .Profile-avatar {
   display: inline-block;
-  width: 120px;
-  height: 120px;
-  border-radius: 120px;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
   background: url('/avatar.png');
   background-size: contain;
   box-shadow: inset 2px 2px 4px rgba(0,0,0,.5);
 }
+
+@media screen and (min-width: 480px) and (max-width: 719px) {
+  .Profile-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 90px;
+  }
+}
+
+@media (min-width: 720px) {
+  .Profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 120px;
+  }
+}
+
+/**
+ * Name & role.
+ */
 
 .Profile-role {
   display: block;
@@ -1786,11 +1924,6 @@ html {
   font-family: 'Freight Sans Small Caps', 'Verdana', 'Geneva', sans-serif;
   text-transform: lowercase;
   color: #A49581;
-  margin-bottom: 20px;
-}
-
-.Profile-bio {
-  display: none;
   margin-bottom: 20px;
 }
 
@@ -1802,6 +1935,12 @@ html {
   margin-bottom: 20px;
 }
 
+@media (max-width: 1019px) {
+  .Profile-twitter-button {
+    display: none;
+  }
+}
+
 /**
  * Links.
  */
@@ -1810,6 +1949,12 @@ html {
   margin-bottom: 20px;
   font-size: 18px;
   line-height: 30px;
+}
+
+@media (max-width: 1019px) {
+  .Profile-links {
+    display: none;
+  }
 }
 
 .Profile-link {

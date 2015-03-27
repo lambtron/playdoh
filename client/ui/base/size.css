@@ -1,5 +1,23 @@
 
 /**
+ * Media queries.
+ */
+
+@custom-media --tiny screen and (max-width: 479px);
+@custom-media --small screen and (min-width: 480px) and (max-width: 719px);
+@custom-media --medium screen and (min-width: 720px) and (max-width: 1019px);
+@custom-media --large screen and (min-width: 1020px) and (max-width: 1399px);
+@custom-media --huge screen and (min-width: 1400px);
+
+@custom-media --small-and-above (min-width: 480px);
+@custom-media --medium-and-above (min-width: 720px);
+@custom-media --large-and-above (min-width: 1020px);
+
+@custom-media --large-and-below (max-width: 1399px);
+@custom-media --medium-and-below (max-width: 1019px);
+@custom-media --small-and-below (max-width: 719px);
+
+/**
  * Sizes.
  */
 

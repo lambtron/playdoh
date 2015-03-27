@@ -7,6 +7,10 @@
   position: relative;
 }
 
+/**
+ * Home link.
+ */
+
 .Article-home {
   content: '';
   position: absolute;
@@ -15,15 +19,25 @@
   height: 16px;
   top: 16px;
   right: 100%;
-  margin-right: var(--size-small);
+  margin-right: 5px;
   text-indent: -9999px;
   background-image: url('images/home@2x.png');
   background-size: contain;
 }
 
+@media (--small-and-above) {
+  .Article-home {
+    margin-right: var(--size-small);
+  }
+}
+
 .Article-home:hover {
   background-image: url('images/home-green@2x.png');
 }
+
+/**
+ * Title.
+ */
 
 .Article-title {
   margin-bottom: var(--size-tiny);

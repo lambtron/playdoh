@@ -4,22 +4,51 @@
  */
 
 .Profile {
-  position: absolute;
-  width: 100%;
-  top: 50vh;
-  margin-top: calc(-1 * var(--size-huge) / 2);
   text-align: center;
+  margin-bottom: var(--size-medium);
 }
+
+@media (--medium-and-above) {
+  .Profile {
+    margin-bottom: var(--size-large);
+  }
+}
+
+/**
+ * Avatar.
+ */
 
 .Profile-avatar {
   display: inline-block;
-  width: var(--size-huge);
-  height: var(--size-huge);
-  border-radius: var(--size-huge);
+  width: var(--size-large);
+  height: var(--size-large);
+  border-radius: var(--size-large);
   background: url('/avatar.png');
   background-size: contain;
   box-shadow: inset 2px 2px 4px rgba(0,0,0,.5);
 }
+
+@media (--small) {
+  .Profile-avatar {
+    width: var(--size-larger);
+    height: var(--size-larger);
+    border-radius: var(--size-larger);
+  }
+}
+
+@media (--medium-and-above) {
+  .Profile-avatar {
+    width: var(--size-huge);
+    height: var(--size-huge);
+    border-radius: var(--size-huge);
+  }
+}
+
+/**
+ * Name & role.
+ */
+
+.Profile-name {}
 
 .Profile-role {
   display: block;
@@ -27,11 +56,6 @@
   font-family: var(--text-caps);
   text-transform: lowercase;
   color: var(--text-secondary);
-  margin-bottom: var(--size-small);
-}
-
-.Profile-bio {
-  display: none;
   margin-bottom: var(--size-small);
 }
 
@@ -43,6 +67,12 @@
   margin-bottom: var(--size-small);
 }
 
+@media (--medium-and-below) {
+  .Profile-twitter-button {
+    display: none;
+  }
+}
+
 /**
  * Links.
  */
@@ -51,6 +81,12 @@
   margin-bottom: var(--size-small);
   font-size: var(--text-small);
   line-height: var(--leading-medium);
+}
+
+@media (--medium-and-below) {
+  .Profile-links {
+    display: none;
+  }
 }
 
 .Profile-link {
