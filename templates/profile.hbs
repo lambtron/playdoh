@@ -1,0 +1,28 @@
+<div class="Profile">
+  <img class="Profile-avatar" src="/avatar.png">
+  <h1 class="Profile-name Heading Heading--medium">{{name}}</h4>
+  <h2 class="Profile-role Heading Heading--section">{{role}} at <a class="Link" href="https://segment.com">Segment</a></h2>
+
+  {{#if bio}}
+  <div class="Profile-bio Prose Prose--small">
+    {{{markdown bio}}}
+  </div>
+  {{/if}}
+
+  <ul class="Profile-links">
+    {{#if dribbble}}<a class="Profile-link Profile-dribbble-link" href="https://dribbble.com/{{dribbble}}">Dribbble</a>{{/if}}
+    {{#if email}}<a class="Profile-link Profile-email-link" href="mailto:{{email}}">Email</a>{{/if}}
+    {{#if facebook}}<a class="Profile-link Profile-facebook-link" href="https://facebook.com/{{facebook}}">Dribbble</a>{{/if}}
+    {{#if github}}<a class="Profile-link Profile-github-link" href="https://github.com/{{github}}">GitHub</a>{{/if}}
+    {{#if instagram}}<a class="Profile-link Profile-instagram-link" href="https://instagram.com/{{instagram}}">Dribbble</a>{{/if}}
+    {{#if linkedin}}<a class="Profile-link Profile-linkedin-link" href="https://linkedin.com/in/{{linkedin}}">Dribbble</a>{{/if}}
+    {{#if tumblr}}<a class="Profile-link Profile-tumblr-link" href="https://tumblr.com/{{tumblr}}">Dribbble</a>{{/if}}
+    {{#if twitter}}<a class="Profile-link Profile-twitter-link" href="https://twitter.com/{{twitter}}">Twitter</a>{{/if}}
+    <a class="Profile-link Profile-rss-link" href="/atom.xml">RSS<a>
+  </ul>
+
+  <!-- Twitter button -->
+  <a class="Profile-twitter-button twitter-follow-button" href="https://twitter.com/{{twitter}}" data-show-count="false">Follow @{{twitter}}</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <!-- End Twitter button -->
+</div>

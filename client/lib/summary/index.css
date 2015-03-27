@@ -1,0 +1,49 @@
+
+/**
+ * Summaries.
+ */
+
+.Summaries-list-item + .Summaries-list-item {
+  margin-top: var(--size-medium);
+}
+
+/**
+ * Summary.
+ */
+
+.Summary-title {
+  position: relative;
+}
+
+.Summary-date {
+  float: left;
+  line-height: var(--leading-medium);
+  color: var(--text-secondary);
+}
+
+.Summary-date::after {
+  content: '—';
+  margin: 0 .3em;
+}
+
+.Summary-external-link::after {
+  content: attr(data-domain);
+  font-size: var(--text-small);
+  color: var(--text-secondary);
+  font-weight: var(--weight-light);
+  line-height: 1;
+  font-family: var(--text-caps);
+  display: inline-block;
+  margin-left: .5em;
+  padding-left: 19px;
+  height: 16px;
+  background-image: url('images/link@2x.png');
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.Summary-external-link[data-domain="segment.com"]::after {
+  color: var(--fern-1);
+  background-image: url('images/link-green@2x.png');
+}

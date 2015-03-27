@@ -1,0 +1,647 @@
+{
+  "client/index.js": {
+    "id": "client/index.js",
+    "type": "js",
+    "mtime": 1427333078000,
+    "src": "",
+    "deps": {},
+    "entry": true
+  },
+  "client/index.css": {
+    "id": "client/index.css",
+    "type": "css",
+    "mtime": 1427395920000,
+    "src": "",
+    "deps": {}
+  },
+  "client/summary/index.css": {
+    "id": "client/summary/index.css",
+    "type": "css",
+    "mtime": 1427347033000,
+    "src": "\n/**\n * Summary.\n */\n\n.Summary {\n  margin-bottom: var(--size-huge);\n}",
+    "deps": {}
+  },
+  "client/ui/index.css": {
+    "id": "client/ui/index.css",
+    "type": "css",
+    "mtime": 1427424882000,
+    "src": "\n/**\n * Base.\n */\n\n@import './base/color';\n@import './base/size';\n@import './base/typography';\n@import './base/reset';\n\n/**\n * Components.\n */\n\n@import './lib/column';\n@import './lib/copy';\n@import './lib/heading';\n@import './lib/highlight';\n@import './lib/link';\n@import './lib/prose';",
+    "deps": {
+      "./base/color": "client/ui/base/color/index.css",
+      "./base/size": "client/ui/base/size/index.css",
+      "./base/typography": "client/ui/base/typography/index.css",
+      "./base/reset": "client/ui/base/reset/index.css",
+      "./lib/column": "client/ui/lib/column/index.css",
+      "./lib/copy": "client/ui/lib/copy/index.css",
+      "./lib/heading": "client/ui/lib/heading/index.css",
+      "./lib/highlight": "client/ui/lib/highlight/index.css",
+      "./lib/link": "client/ui/lib/link/index.css",
+      "./lib/prose": "client/ui/lib/prose/index.css"
+    }
+  },
+  "client/ui/variables/colors.css": {
+    "id": "client/ui/variables/colors.css",
+    "type": "css",
+    "mtime": 1427333009000,
+    "src": "\n/**\n * Base colors.\n */\n\n:root {\n\n  --fern-1: #70BF5A;\n  --fern-2: #45A13F;\n  --fern-3: #358A2F;\n\n  --pine-1: #089972;\n  --pine-2: #268069;\n  --pine-3: #156B54;\n\n  --birch-1: #FFFFFF;\n  --birch-15: #FCFBF7;\n  --birch-2: #FAF6ED;\n  --birch-25: #F7F2E9;\n  --birch-3: #F2ECDF;\n  --birch-35: #EBE4D3;\n\n  --wenge-1: #343331;\n  --wenge-15: #403E3C;\n  --wenge-2: #4D4946;\n  --wenge-25: #5A5550;\n  --wenge-3: #6D665C;\n  --wenge-35: #897E70;\n  --wenge-4: #A49581;\n  --wenge-45: #BFB09A;\n  --wenge-5: #CDC0AC;\n  --wenge-55: #DDD0BC;\n\n  --banana-1: #FAC54B;\n  --banana-2: #E8B02E;\n  --banana-3: #D39B18;\n\n  --tomato-1: #EB5C2D;\n  --tomato-2: #D95026;\n  --tomato-3: #CA461E;\n\n}",
+    "deps": {}
+  },
+  "client/ui/variables/typography.css": {
+    "id": "client/ui/variables/typography.css",
+    "type": "css",
+    "mtime": 1427333006000,
+    "src": "\n/**\n * Base typography.\n */\n\n:root {\n\n  --text-small: 18px;\n  --text-medium: 20px;\n  --text-large: 24px;\n  --text-huge: 30px;\n\n  --line-height-small: 22px;\n  --line-height-medium: 30px;\n  --line-height-large: 38px;\n  --line-height-huge: 46px;\n\n  --heading-small: 18px;\n  --heading-medium: 20px;\n  --heading-large: 30px;\n  --heading-huge: 42px;\n\n}",
+    "deps": {}
+  },
+  "client/ui/components/column/index.css": {
+    "id": "client/ui/components/column/index.css",
+    "type": "css",
+    "mtime": 1427332450000,
+    "src": "\n/**\n * Container.\n */\n\n.Container {\n  width: 100%;\n  max-width: calc(var(--size-column) * 4 + var(--size-gutter) * 3);\n  margin: 0 auto;\n  padding: 0 calc(var(--size-gutter) / 2);\n}\n\n/**\n * Column.\n */\n\n.Column,\n[class*=\"Column--\"] {\n  float: left;\n  width: 100%;\n  margin-right: 60px;\n}\n\n.Column:last-child,\n[class*=\"Column--\"]:last-child {\n  margin-right: none;\n}\n\n/**\n * By 4.\n */\n\n.Column--1 {\n  max-width: calc(var(--size-column) * 1 + var(--size-gutter) * 0);\n}\n\n.Column--2 {\n  max-width: calc(var(--size-column) * 2 + var(--size-gutter) * 1);\n}\n\n.Column--3 {\n  max-width: calc(var(--size-column) * 3 + var(--size-gutter) * 2);\n}\n\n.Column--4 {\n  max-width: calc(var(--size-column) * 4 + var(--size-gutter) * 3);\n}\n\n/**\n * By 3.\n */\n\n.Column--13 {\n  max-width: calc(var(--size-column-third) * 1 + var(--size-gutter) * 0);\n}\n\n.Column--23 {\n  max-width: calc(var(--size-column-third) * 2 + var(--size-gutter) * 1);\n}\n\n.Column--33 {\n  max-width: calc(var(--size-column-third) * 3 + var(--size-gutter) * 2);\n}",
+    "deps": {}
+  },
+  "client/ui/components/heading/index.css": {
+    "id": "client/ui/components/heading/index.css",
+    "type": "css",
+    "mtime": 1427333076000,
+    "src": "\n/**\n * Heading.\n */\n\n.Heading,\n[class*=\"Heading--\"] {\n  color: var(--wenge-2);\n}\n\n/**\n * Sizes.\n */\n\n.Heading--small {\n  font-size: var(--heading-small);\n  line-height: var(--line-height-small);\n}\n\n.Heading--medium {\n  font-size: var(--heading-medium);\n  line-height: var(--line-height-medium);\n}\n\n.Heading--large {\n  font-size: var(--heading-large);\n  line-height: var(--line-height-large);\n  margin-bottom: 22px;\n}\n\n.Heading--huge {\n  font-size: var(--heading-huge);\n  line-height: var(--line-height-huge);\n  margin-bottom: 28px;\n}",
+    "deps": {}
+  },
+  "client/ui/variables/sizes.css": {
+    "id": "client/ui/variables/sizes.css",
+    "type": "css",
+    "mtime": 1427333008000,
+    "src": "\n/**\n * Base sizes.\n */\n\n:root {\n\n  --size-gutter: 60px;\n  --size-column: 210px;\n  --size-column-third: 290px;\n\n}",
+    "deps": {}
+  },
+  "components/necolas-normalize.css@3.0.2/normalize.css": {
+    "id": "components/necolas-normalize.css@3.0.2/normalize.css",
+    "type": "css",
+    "mtime": 1412451573000,
+    "src": "/*! normalize.css v3.0.2 | MIT License | git.io/normalize */\n\n/**\n * 1. Set default font family to sans-serif.\n * 2. Prevent iOS text size adjust after orientation change, without disabling\n *    user zoom.\n */\n\nhtml {\n  font-family: sans-serif; /* 1 */\n  -ms-text-size-adjust: 100%; /* 2 */\n  -webkit-text-size-adjust: 100%; /* 2 */\n}\n\n/**\n * Remove default margin.\n */\n\nbody {\n  margin: 0;\n}\n\n/* HTML5 display definitions\n   ========================================================================== */\n\n/**\n * Correct `block` display not defined for any HTML5 element in IE 8/9.\n * Correct `block` display not defined for `details` or `summary` in IE 10/11\n * and Firefox.\n * Correct `block` display not defined for `main` in IE 11.\n */\n\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block;\n}\n\n/**\n * 1. Correct `inline-block` display not defined in IE 8/9.\n * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.\n */\n\naudio,\ncanvas,\nprogress,\nvideo {\n  display: inline-block; /* 1 */\n  vertical-align: baseline; /* 2 */\n}\n\n/**\n * Prevent modern browsers from displaying `audio` without controls.\n * Remove excess height in iOS 5 devices.\n */\n\naudio:not([controls]) {\n  display: none;\n  height: 0;\n}\n\n/**\n * Address `[hidden]` styling not present in IE 8/9/10.\n * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.\n */\n\n[hidden],\ntemplate {\n  display: none;\n}\n\n/* Links\n   ========================================================================== */\n\n/**\n * Remove the gray background color from active links in IE 10.\n */\n\na {\n  background-color: transparent;\n}\n\n/**\n * Improve readability when focused and also mouse hovered in all browsers.\n */\n\na:active,\na:hover {\n  outline: 0;\n}\n\n/* Text-level semantics\n   ========================================================================== */\n\n/**\n * Address styling not present in IE 8/9/10/11, Safari, and Chrome.\n */\n\nabbr[title] {\n  border-bottom: 1px dotted;\n}\n\n/**\n * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.\n */\n\nb,\nstrong {\n  font-weight: bold;\n}\n\n/**\n * Address styling not present in Safari and Chrome.\n */\n\ndfn {\n  font-style: italic;\n}\n\n/**\n * Address variable `h1` font-size and margin within `section` and `article`\n * contexts in Firefox 4+, Safari, and Chrome.\n */\n\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\n\n/**\n * Address styling not present in IE 8/9.\n */\n\nmark {\n  background: #ff0;\n  color: #000;\n}\n\n/**\n * Address inconsistent and variable font size in all browsers.\n */\n\nsmall {\n  font-size: 80%;\n}\n\n/**\n * Prevent `sub` and `sup` affecting `line-height` in all browsers.\n */\n\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\nsup {\n  top: -0.5em;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\n/* Embedded content\n   ========================================================================== */\n\n/**\n * Remove border when inside `a` element in IE 8/9/10.\n */\n\nimg {\n  border: 0;\n}\n\n/**\n * Correct overflow not hidden in IE 9/10/11.\n */\n\nsvg:not(:root) {\n  overflow: hidden;\n}\n\n/* Grouping content\n   ========================================================================== */\n\n/**\n * Address margin not present in IE 8/9 and Safari.\n */\n\nfigure {\n  margin: 1em 40px;\n}\n\n/**\n * Address differences between Firefox and other browsers.\n */\n\nhr {\n  -moz-box-sizing: content-box;\n  box-sizing: content-box;\n  height: 0;\n}\n\n/**\n * Contain overflow in all browsers.\n */\n\npre {\n  overflow: auto;\n}\n\n/**\n * Address odd `em`-unit font size rendering in all browsers.\n */\n\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, monospace;\n  font-size: 1em;\n}\n\n/* Forms\n   ========================================================================== */\n\n/**\n * Known limitation: by default, Chrome and Safari on OS X allow very limited\n * styling of `select`, unless a `border` property is set.\n */\n\n/**\n * 1. Correct color not being inherited.\n *    Known issue: affects color of disabled elements.\n * 2. Correct font properties not being inherited.\n * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.\n */\n\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  color: inherit; /* 1 */\n  font: inherit; /* 2 */\n  margin: 0; /* 3 */\n}\n\n/**\n * Address `overflow` set to `hidden` in IE 8/9/10/11.\n */\n\nbutton {\n  overflow: visible;\n}\n\n/**\n * Address inconsistent `text-transform` inheritance for `button` and `select`.\n * All other form control elements do not inherit `text-transform` values.\n * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.\n * Correct `select` style inheritance in Firefox.\n */\n\nbutton,\nselect {\n  text-transform: none;\n}\n\n/**\n * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`\n *    and `video` controls.\n * 2. Correct inability to style clickable `input` types in iOS.\n * 3. Improve usability and consistency of cursor style between image-type\n *    `input` and others.\n */\n\nbutton,\nhtml input[type=\"button\"], /* 1 */\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  -webkit-appearance: button; /* 2 */\n  cursor: pointer; /* 3 */\n}\n\n/**\n * Re-set default cursor for disabled elements.\n */\n\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default;\n}\n\n/**\n * Remove inner padding and border in Firefox 4+.\n */\n\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  border: 0;\n  padding: 0;\n}\n\n/**\n * Address Firefox 4+ setting `line-height` on `input` using `!important` in\n * the UA stylesheet.\n */\n\ninput {\n  line-height: normal;\n}\n\n/**\n * It's recommended that you don't attempt to style these elements.\n * Firefox's implementation doesn't respect box-sizing, padding, or width.\n *\n * 1. Address box sizing set to `content-box` in IE 8/9/10.\n * 2. Remove excess padding in IE 8/9/10.\n */\n\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n  box-sizing: border-box; /* 1 */\n  padding: 0; /* 2 */\n}\n\n/**\n * Fix the cursor style for Chrome's increment/decrement buttons. For certain\n * `font-size` values of the `input`, it causes the cursor style of the\n * decrement button to change from `default` to `text`.\n */\n\ninput[type=\"number\"]::-webkit-inner-spin-button,\ninput[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto;\n}\n\n/**\n * 1. Address `appearance` set to `searchfield` in Safari and Chrome.\n * 2. Address `box-sizing` set to `border-box` in Safari and Chrome\n *    (include `-moz` to future-proof).\n */\n\ninput[type=\"search\"] {\n  -webkit-appearance: textfield; /* 1 */\n  -moz-box-sizing: content-box;\n  -webkit-box-sizing: content-box; /* 2 */\n  box-sizing: content-box;\n}\n\n/**\n * Remove inner padding and search cancel button in Safari and Chrome on OS X.\n * Safari (but not Chrome) clips the cancel button when the search input has\n * padding (and `textfield` appearance).\n */\n\ninput[type=\"search\"]::-webkit-search-cancel-button,\ninput[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n/**\n * Define consistent border, margin, and padding.\n */\n\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em;\n}\n\n/**\n * 1. Correct `color` not being inherited in IE 8/9/10/11.\n * 2. Remove padding so people aren't caught out if they zero out fieldsets.\n */\n\nlegend {\n  border: 0; /* 1 */\n  padding: 0; /* 2 */\n}\n\n/**\n * Remove default vertical scrollbar in IE 8/9/10/11.\n */\n\ntextarea {\n  overflow: auto;\n}\n\n/**\n * Don't inherit the `font-weight` (applied by a rule above).\n * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.\n */\n\noptgroup {\n  font-weight: bold;\n}\n\n/* Tables\n   ========================================================================== */\n\n/**\n * Remove most spacing between table cells.\n */\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n\ntd,\nth {\n  padding: 0;\n}\n",
+    "deps": {}
+  },
+  "components/ianstormtaylor-reset@0.2.0/index.css": {
+    "id": "components/ianstormtaylor-reset@0.2.0/index.css",
+    "type": "css",
+    "mtime": 1387252256000,
+    "src": "@import \"necolas-normalize.css@v2.1.3:normalize.css\";\n\n/**\n * Add a few more `block` elements, since they're mostly treated that way.\n */\n\naudio,\ncanvas,\nimg,\nvideo {\n  display: block;\n}\n\n/**\n * Reset line-height, since it makes aligning elements way easier.\n */\n\nhtml {\n  line-height: 1;\n}\n\n/**\n * Remove default heading styles.\n */\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  margin: 0;\n  padding: 0;\n  font-size: inherit;\n  line-height: 1;\n  font-weight: inherit;\n}\n\n/**\n * Remove default link styles, since they get used for buttons, etc.\n */\n\na {\n  color: inherit;\n  text-decoration: none;\n}\n\n/**\n * Remove outline for links. You should style it, but not necessarily outline.\n */\n\na:focus {\n  outline: 0;\n}\n\n/**\n * Remove default paragraph styles.\n */\n\np,\nsmall {\n  margin: 0;\n  padding: 0;\n}\n\n/**\n * Remove default list styles, since they get used for navs, etc.\n */\n\nol,\nul,\nmenu {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n/**\n * Remove default blockquote and quote styles.\n */\n\nblockquote,\nq {\n  margin: 0;\n}\n\n/**\n * Remove default cite styles.\n */\n\ncite {\n  font-style: inherit;\n}\n\n/**\n * Remove default form styles.\n */\n\nform {\n  margin: 0;\n}\n\n/**\n * Remove default fieldset styles.\n */\n\nfieldset {\n  border: none;\n  margin: 0;\n  padding: 0;\n}\n\n/**\n * Remove default pre styles.\n */\n\npre {\n  margin: 0;\n}",
+    "deps": {
+      "necolas-normalize.css@v2.1.3:normalize.css": "components/necolas-normalize.css@v2.1.3/normalize.css"
+    }
+  },
+  "components/necolas-normalize.css@v2.1.3/normalize.css": {
+    "id": "components/necolas-normalize.css@v2.1.3/normalize.css",
+    "type": "css",
+    "mtime": 1377542238000,
+    "src": "/*! normalize.css v2.1.3 | MIT License | git.io/normalize */\n\n/* ==========================================================================\n   HTML5 display definitions\n   ========================================================================== */\n\n/**\n * Correct `block` display not defined in IE 8/9.\n */\n\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nnav,\nsection,\nsummary {\n    display: block;\n}\n\n/**\n * Correct `inline-block` display not defined in IE 8/9.\n */\n\naudio,\ncanvas,\nvideo {\n    display: inline-block;\n}\n\n/**\n * Prevent modern browsers from displaying `audio` without controls.\n * Remove excess height in iOS 5 devices.\n */\n\naudio:not([controls]) {\n    display: none;\n    height: 0;\n}\n\n/**\n * Address `[hidden]` styling not present in IE 8/9.\n * Hide the `template` element in IE, Safari, and Firefox < 22.\n */\n\n[hidden],\ntemplate {\n    display: none;\n}\n\n/* ==========================================================================\n   Base\n   ========================================================================== */\n\n/**\n * 1. Set default font family to sans-serif.\n * 2. Prevent iOS text size adjust after orientation change, without disabling\n *    user zoom.\n */\n\nhtml {\n    font-family: sans-serif; /* 1 */\n    -ms-text-size-adjust: 100%; /* 2 */\n    -webkit-text-size-adjust: 100%; /* 2 */\n}\n\n/**\n * Remove default margin.\n */\n\nbody {\n    margin: 0;\n}\n\n/* ==========================================================================\n   Links\n   ========================================================================== */\n\n/**\n * Remove the gray background color from active links in IE 10.\n */\n\na {\n    background: transparent;\n}\n\n/**\n * Address `outline` inconsistency between Chrome and other browsers.\n */\n\na:focus {\n    outline: thin dotted;\n}\n\n/**\n * Improve readability when focused and also mouse hovered in all browsers.\n */\n\na:active,\na:hover {\n    outline: 0;\n}\n\n/* ==========================================================================\n   Typography\n   ========================================================================== */\n\n/**\n * Address variable `h1` font-size and margin within `section` and `article`\n * contexts in Firefox 4+, Safari 5, and Chrome.\n */\n\nh1 {\n    font-size: 2em;\n    margin: 0.67em 0;\n}\n\n/**\n * Address styling not present in IE 8/9, Safari 5, and Chrome.\n */\n\nabbr[title] {\n    border-bottom: 1px dotted;\n}\n\n/**\n * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.\n */\n\nb,\nstrong {\n    font-weight: bold;\n}\n\n/**\n * Address styling not present in Safari 5 and Chrome.\n */\n\ndfn {\n    font-style: italic;\n}\n\n/**\n * Address differences between Firefox and other browsers.\n */\n\nhr {\n    -moz-box-sizing: content-box;\n    box-sizing: content-box;\n    height: 0;\n}\n\n/**\n * Address styling not present in IE 8/9.\n */\n\nmark {\n    background: #ff0;\n    color: #000;\n}\n\n/**\n * Correct font family set oddly in Safari 5 and Chrome.\n */\n\ncode,\nkbd,\npre,\nsamp {\n    font-family: monospace, serif;\n    font-size: 1em;\n}\n\n/**\n * Improve readability of pre-formatted text in all browsers.\n */\n\npre {\n    white-space: pre-wrap;\n}\n\n/**\n * Set consistent quote types.\n */\n\nq {\n    quotes: \"\\201C\" \"\\201D\" \"\\2018\" \"\\2019\";\n}\n\n/**\n * Address inconsistent and variable font size in all browsers.\n */\n\nsmall {\n    font-size: 80%;\n}\n\n/**\n * Prevent `sub` and `sup` affecting `line-height` in all browsers.\n */\n\nsub,\nsup {\n    font-size: 75%;\n    line-height: 0;\n    position: relative;\n    vertical-align: baseline;\n}\n\nsup {\n    top: -0.5em;\n}\n\nsub {\n    bottom: -0.25em;\n}\n\n/* ==========================================================================\n   Embedded content\n   ========================================================================== */\n\n/**\n * Remove border when inside `a` element in IE 8/9.\n */\n\nimg {\n    border: 0;\n}\n\n/**\n * Correct overflow displayed oddly in IE 9.\n */\n\nsvg:not(:root) {\n    overflow: hidden;\n}\n\n/* ==========================================================================\n   Figures\n   ========================================================================== */\n\n/**\n * Address margin not present in IE 8/9 and Safari 5.\n */\n\nfigure {\n    margin: 0;\n}\n\n/* ==========================================================================\n   Forms\n   ========================================================================== */\n\n/**\n * Define consistent border, margin, and padding.\n */\n\nfieldset {\n    border: 1px solid #c0c0c0;\n    margin: 0 2px;\n    padding: 0.35em 0.625em 0.75em;\n}\n\n/**\n * 1. Correct `color` not being inherited in IE 8/9.\n * 2. Remove padding so people aren't caught out if they zero out fieldsets.\n */\n\nlegend {\n    border: 0; /* 1 */\n    padding: 0; /* 2 */\n}\n\n/**\n * 1. Correct font family not being inherited in all browsers.\n * 2. Correct font size not being inherited in all browsers.\n * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.\n */\n\nbutton,\ninput,\nselect,\ntextarea {\n    font-family: inherit; /* 1 */\n    font-size: 100%; /* 2 */\n    margin: 0; /* 3 */\n}\n\n/**\n * Address Firefox 4+ setting `line-height` on `input` using `!important` in\n * the UA stylesheet.\n */\n\nbutton,\ninput {\n    line-height: normal;\n}\n\n/**\n * Address inconsistent `text-transform` inheritance for `button` and `select`.\n * All other form control elements do not inherit `text-transform` values.\n * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.\n * Correct `select` style inheritance in Firefox 4+ and Opera.\n */\n\nbutton,\nselect {\n    text-transform: none;\n}\n\n/**\n * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`\n *    and `video` controls.\n * 2. Correct inability to style clickable `input` types in iOS.\n * 3. Improve usability and consistency of cursor style between image-type\n *    `input` and others.\n */\n\nbutton,\nhtml input[type=\"button\"], /* 1 */\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n    -webkit-appearance: button; /* 2 */\n    cursor: pointer; /* 3 */\n}\n\n/**\n * Re-set default cursor for disabled elements.\n */\n\nbutton[disabled],\nhtml input[disabled] {\n    cursor: default;\n}\n\n/**\n * 1. Address box sizing set to `content-box` in IE 8/9/10.\n * 2. Remove excess padding in IE 8/9/10.\n */\n\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n    box-sizing: border-box; /* 1 */\n    padding: 0; /* 2 */\n}\n\n/**\n * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.\n * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome\n *    (include `-moz` to future-proof).\n */\n\ninput[type=\"search\"] {\n    -webkit-appearance: textfield; /* 1 */\n    -moz-box-sizing: content-box;\n    -webkit-box-sizing: content-box; /* 2 */\n    box-sizing: content-box;\n}\n\n/**\n * Remove inner padding and search cancel button in Safari 5 and Chrome\n * on OS X.\n */\n\ninput[type=\"search\"]::-webkit-search-cancel-button,\ninput[type=\"search\"]::-webkit-search-decoration {\n    -webkit-appearance: none;\n}\n\n/**\n * Remove inner padding and border in Firefox 4+.\n */\n\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n    border: 0;\n    padding: 0;\n}\n\n/**\n * 1. Remove default vertical scrollbar in IE 8/9.\n * 2. Improve readability and alignment in all browsers.\n */\n\ntextarea {\n    overflow: auto; /* 1 */\n    vertical-align: top; /* 2 */\n}\n\n/* ==========================================================================\n   Tables\n   ========================================================================== */\n\n/**\n * Remove most spacing between table cells.\n */\n\ntable {\n    border-collapse: collapse;\n    border-spacing: 0;\n}\n",
+    "deps": {}
+  },
+  "client/ui/components/prose/index.css": {
+    "id": "client/ui/components/prose/index.css",
+    "type": "css",
+    "mtime": 1427333660000,
+    "src": "\n/**\n * Prose.\n */\n\n.Prose,\n[class*=\"Prose--\"] {\n  color: var(--wenge-3);\n}\n\n/**\n * Sizes.\n */\n\n.Prose--small {\n  font-size: var(--text-small);\n  line-height: var(--line-height-small);\n}\n\n.Prose--medium {\n  font-size: var(--text-medium);\n  line-height: var(--line-height-medium);\n}\n\n.Prose--large {\n  font-size: var(--text-large);\n  line-height: var(--line-height-large);\n}\n\n.Prose--huge {\n  font-size: var(--text-huge);\n  line-height: var(--line-height-huge);\n}\n\n/**\n * Links.\n */\n\n.Prose a,\n[class*=\"Prose--\"] a {\n  color: var(--fern-1);\n}\n\n.Prose a:hover,\n[class*=\"Prose--\"] a:hover {\n  color: var(--fern-2);\n}\n\n.Prose a:active,\n.Prose a:visited,\n[class*=\"Prose--\"] a:active,\n[class*=\"Prose--\"] a:visited {\n  color: var(--fern-3);\n}\n\n/**\n * Headings.\n */\n\n.Prose h1,\n.Prose h2,\n.Prose h3,\n.Prose h4,\n[class*=\"Prose--\"] h1,\n[class*=\"Prose--\"] h2,\n[class*=\"Prose--\"] h3,\n[class*=\"Prose--\"] h4 {\n  color: var(--wenge-2);\n}\n\n.Prose h1,\n[class*=\"Prose--\"] h1 {\n  font-size: var(--heading-huge);\n  line-height: var(--line-height-huge);\n  margin-bottom: 28px;\n}\n\n.Prose h2,\n[class*=\"Prose--\"] h2 {\n  font-size: var(--heading-large);\n  line-height: var(--line-height-large);\n  margin-bottom: 22px;\n}\n\n.Prose h3,\n[class*=\"Prose--\"] h3 {\n  font-size: var(--heading-medium);\n  line-height: var(--line-height-medium);\n}\n\n.Prose h4,\n[class*=\"Prose--\"] h4 {\n  font-size: var(--heading-small);\n  line-height: var(--line-height-small);\n}",
+    "deps": {}
+  },
+  "client/ui/lib/color/index.css": {
+    "id": "client/ui/lib/color/index.css",
+    "type": "css",
+    "mtime": 1427397509000,
+    "src": "\n/**\n * Fern.\n */\n\n:root {\n  --fern-1: #70BF5A;\n  --fern-2: #45A13F;\n  --fern-3: #358A2F;\n}\n\n/**\n * Pine.\n */\n\n:root {\n  --pine-1: #089972;\n  --pine-2: #268069;\n  --pine-3: #156B54;\n}\n\n/**\n * Birch.\n */\n\n:root {\n  --birch-1: #FFFFFF;\n  --birch-15: #FCFBF7;\n  --birch-2: #FAF6ED;\n  --birch-25: #F7F2E9;\n  --birch-3: #F2ECDF;\n  --birch-35: #EBE4D3;\n}\n\n/**\n * Wenge.\n */\n\n:root {\n  --wenge-1: #343331;\n  --wenge-15: #403E3C;\n  --wenge-2: #4D4946;\n  --wenge-25: #5A5550;\n  --wenge-3: #6D665C;\n  --wenge-35: #897E70;\n  --wenge-4: #A49581;\n  --wenge-45: #BFB09A;\n  --wenge-5: #CDC0AC;\n  --wenge-55: #DDD0BC;\n}\n\n/**\n * Banana.\n */\n\n:root {\n  --banana-1: #FAC54B;\n  --banana-2: #E8B02E;\n  --banana-3: #D39B18;\n}\n\n/**\n * Tomato.\n */\n\n:root {\n  --tomato-1: #EB5C2D;\n  --tomato-2: #D95026;\n  --tomato-3: #CA461E;\n}\n\n/**\n * Text colors.\n */\n\n:root {\n  --text-emphasized: var(--wenge-2);\n  --text-primary: var(--wenge-3);\n  --text-secondary: var(--wenge-4);\n  --text-tertiary: var(--wenge-5);\n\n  --dark-text-emphasized: var(--birch-2);\n  --dark-text-primary: var(--birch-3);\n  --dark-text-secondary: var(--wenge-4);\n  --dark-text-tertiary: var(--wenge-5);\n}\n\n/**\n * Ground colors.\n */\n\n:root {\n  --ground-primary: var(--birch-1);\n  --ground-secondary: var(--birch-15);\n  --ground-tertiary: var(--birch-2);\n\n  --dark-ground-primary: var(--wenge-1);\n  --dark-ground-secondary: var(--wenge-2);\n  --dark-ground-tertiary: var(--wenge-3);\n}",
+    "deps": {}
+  },
+  "client/ui/lib/size/index.css": {
+    "id": "client/ui/lib/size/index.css",
+    "type": "css",
+    "mtime": 1427394166000,
+    "src": "\n/**\n * Sizes.\n */\n\n:root {\n  --size-tiny: 10px;\n  --size-smaller: 10px;\n  --size-small: 15px;\n  --size-medium: 30px;\n  --size-large: 60px;\n  --size-larger: 90px;\n  --size-huge: 120px;\n}\n\n/**\n * Grid.\n */\n\n:root {\n  --size-gutter: 60px;\n  --size-column: 210px;\n  --size-column-third: 290px;\n\n  --size-quarter: calc(var(--size-column) * 1 + var(--size-gutter) * 0);\n  --size-two-quarters: calc(var(--size-column) * 2 + var(--size-gutter) * 1);\n  --size-three-quarters: calc(var(--size-column) * 3 + var(--size-gutter) * 2);\n  --size-four-quarters: calc(var(--size-column) * 4 + var(--size-gutter) * 3);\n\n  --size-third: calc(var(--size-column-third) * 1 + var(--size-gutter) * 0);\n  --size-two-thirds: calc(var(--size-column-third) * 2 + var(--size-gutter) * 1);\n  --size-three-thirds: calc(var(--size-column-third) * 3 + var(--size-gutter) * 2);\n}\n",
+    "deps": {}
+  },
+  "client/ui/lib/column/index.css": {
+    "id": "client/ui/lib/column/index.css",
+    "type": "css",
+    "mtime": 1427424838000,
+    "src": "\n/**\n * Columns container.\n */\n\n.Columns {\n  width: 100%;\n  max-width: calc(var(--size-column) * 4 + var(--size-gutter) * 3);\n  margin: 0 auto;\n  padding: 0 calc(var(--size-gutter) / 2);\n}\n\n/**\n * Column.\n */\n\n.Column {\n  float: left;\n  width: 100%;\n  margin-right: 60px;\n}\n\n.Column:last-child {\n  margin-right: none;\n}\n\n/**\n * By 4.\n */\n\n.Column--1 {\n  max-width: var(--size-quarter);\n}\n\n.Column--2 {\n  max-width: var(--size-two-quarters);\n}\n\n.Column--3 {\n  max-width: var(--size-three-quarters);\n}\n\n.Column--4 {\n  max-width: var(--size-four-quarters);\n}\n\n/**\n * By 3.\n */\n\n.Column--13 {\n  max-width: var(--size-third);\n}\n\n.Column--23 {\n  max-width: var(--size-two-thirds);\n}\n\n.Column--33 {\n  max-width: var(--size-three-thirds);\n}",
+    "deps": {}
+  },
+  "client/ui/lib/heading/index.css": {
+    "id": "client/ui/lib/heading/index.css",
+    "type": "css",
+    "mtime": 1427424815000,
+    "src": "\n/**\n * Heading.\n */\n\n.Heading {\n  color: var(--text-emphasized);\n  font-weight: var(--weight-book);\n}\n\n/**\n * Sizes.\n */\n\n.Heading--small {\n  font-size: var(--heading-small);\n  line-height: var(--leading-small);\n  font-family: var(--text-caps);\n  text-transform: lowercase;\n}\n\n.Heading--medium {\n  font-size: var(--heading-medium);\n  line-height: var(--leading-medium);\n}\n\n.Heading--large {\n  font-size: var(--heading-large);\n  line-height: var(--leading-large);\n  margin-bottom: 22px;\n}\n\n.Heading--huge {\n  font-size: var(--heading-huge);\n  line-height: var(--leading-huge);\n  margin-bottom: 28px;\n}\n\n/**\n * Section heading.\n *\n * TODO: refactor to be a modifier that can apply to any heading instead.\n */\n\n.Heading--section {\n  position: relative;\n  margin-bottom: var(--size-medium);\n  padding-bottom: var(--size-smaller);\n  font-size: var(--heading-small);\n  line-height: var(--leading-small);\n  font-family: var(--text-caps);\n  text-transform: lowercase;\n  color: var(--text-secondary);\n}\n\n.Heading--section::after {\n  content: '—';\n  color: var(--text-secondary);\n  position: absolute;\n  bottom: -.5em;\n  left: 0;\n}",
+    "deps": {}
+  },
+  "client/ui/lib/prose/index.css": {
+    "id": "client/ui/lib/prose/index.css",
+    "type": "css",
+    "mtime": 1427427500000,
+    "src": "\n/**\n * Prose.\n *\n * This should only be used for longer sections of running text, especially\n * when you want to present Markdown-formatted content, where people have no\n * control over classes.\n *\n * We purposely duplicate styles between other resuable classes and the `.Prose`\n * class, because it has slightly different cases, and re-using isn't worth it.\n */\n\n.Prose {\n  color: var(--text-primary);\n}\n\n/**\n * Sizes.\n *\n * The basic idea here is that whatever size we choose, all of the child\n * elements should render nicely.\n */\n\n.Prose--small {\n  font-size: var(--text-small);\n  line-height: var(--leading-small);\n  color: var(--text-secondary);\n}\n\n.Prose--medium {\n  font-size: var(--text-medium);\n  line-height: var(--leading-medium);\n}\n\n.Prose--large {\n  font-size: var(--text-large);\n  line-height: var(--leading-large);\n}\n\n.Prose--huge {\n  font-size: var(--text-huge);\n  line-height: var(--leading-huge);\n}\n\n/**\n * Spacing.\n */\n\n.Prose--small > * + * {\n  margin-top: calc(var(--leading-small) * .666);\n}\n\n.Prose--medium > * + * {\n  margin-top: calc(var(--leading-medium) * .666);\n}\n\n.Prose--large > * + * {\n  margin-top: calc(var(--leading-large) * .666);\n}\n\n.Prose--huge > * + * {\n  margin-top: calc(var(--leading-huge) * .666);\n}\n\n/**\n * Links.\n */\n\n.Prose a {\n  color: var(--fern-1);\n}\n\n.Prose a:hover {\n  color: var(--fern-2);\n}\n\n.Prose a:active {\n  color: var(--fern-3);\n}\n\n/**\n * Headings.\n *\n * We've only styled three heading levels here, because prose shouldn't use\n * more than that, it's pretty impossible for user to keep track.\n */\n\n.Prose h1,\n.Prose h2,\n.Prose h3,\n.Prose h4,\n.Prose h5,\n.Prose h6 {\n  color: var(--text-emphasized);\n  font-weight: var(--weight-book);\n}\n\n.Prose h1 {\n  font-size: var(--heading-huge);\n  line-height: var(--leading-huge);\n  margin-top: var(--size-huge);\n}\n\n.Prose h2 {\n  font-size: var(--heading-large);\n  line-height: var(--leading-large);\n  margin-top: var(--size-large);\n}\n\n.Prose h3,\n.Prose h4,\n.Prose h5,\n.Prose h6 {\n  margin-top: var(--leading-medium);\n  font-family: var(--text-caps);\n  text-transform: lowercase;\n  margin-bottom: calc(-1 * var(--leading-small));\n}\n\n.Prose h1 a,\n.Prose h2 a,\n.Prose h3 a,\n.Prose h4 a,\n.Prose h5 a,\n.Prose h6 a {\n  color: inherit;\n}\n\n/**\n * Formatting.\n */\n\n.Prose strong,\n.Prose b {\n  color: var(--text-emphasized);\n  font-weight: var(--weight-book);\n}\n\n.Prose em,\n.Prose i {\n  font-style: italic;\n}\n\n.Prose del,\n.Prose s {\n  text-decoration: strikethrough;\n  color: var(--text-secondary);\n}\n\n.Prose ins {\n  border-bottom: 1px dotted var(--text-primary);\n}\n\n.Prose mark {\n  padding: 0 .2em;\n  background-color: color(var(--banana-1) alpha(0.2));\n}\n\n/**\n * Small text.\n */\n\n.Prose small {\n  display: block;\n  color: var(--text-secondary);\n}\n\n.Prose small strong,\n.Prose small b {\n  color: inherit;\n}\n\n.Prose--medium small {\n  margin-top: calc(var(--leading-small) / 3);\n  font-size: var(--text-small);\n  line-height: var(--leading-small);\n}\n\n.Prose--large small {\n  margin-top: calc(var(--leading-medium) / 3);\n  font-size: var(--text-medium);\n  line-height: var(--leading-medium);\n}\n\n/**\n * Images.\n */\n\n.Prose img {\n  max-width: 100%;\n  margin-right: auto;\n  margin-left: auto;\n}\n\n.Prose img + img {\n  margin-top: var(--size-smaller);\n}\n\n/**\n * Blockquotes.\n */\n\n.Prose blockquote {\n  position: relative;\n  padding-left: var(--size-medium);\n  color: var(--text-secondary);\n}\n\n.Prose blockquote::after {\n  content: '';\n  position: absolute;\n  left: 0;\n  top: .33em;\n  bottom: .33em;\n  border-left: 4px solid color(var(--text-secondary) alpha(0.8));\n}\n\n.Prose blockquote small {\n  display: block;\n}\n\n.Prose blockquote small::before {\n  content: '— ';\n}\n\n/**\n * Lists.\n */\n\n.Prose ul,\n.Prose ol {\n  padding-left: var(--size-medium);\n  list-style-position: outside;\n}\n\n.Prose ul {\n  list-style-type: disc;\n}\n\n.Prose ul ul {\n  list-style-type: circle;\n}\n\n.Prose ul ul ul {\n  list-style-type: square;\n}\n\n.Prose ol {\n  list-style-type: decimal;\n}\n\n.Prose ol ol {\n  list-style-type: lower-alpha;\n}\n\n.Prose ol ol ol {\n  list-style-type: lower-roman;\n}\n\n.Prose--medium ul,\n.Prose--medium ol {\n  font-size: var(--text-small);\n  line-height: var(--leading-small);\n}\n\n.Prose--large ul,\n.Prose--large ol {\n  font-size: var(--text-medium);\n  line-height: var(--leading-medium);\n}\n\n.Prose--huge ul,\n.Prose--huge ol {\n  font-size: var(--text-large);\n  line-height: var(--leading-large);\n}\n\n.Prose li {\n  margin-bottom: .5em;\n}\n\n/**\n * Code.\n */\n\n.Prose code {\n  font-family: var(--text-mono);\n}\n\n.Prose :not(pre) > code,\n.Prose pre {\n  background-color: var(--ground-secondary);\n  border: 1px solid var(--birch-35);\n  border-radius: var(--size-radius);\n}\n\n.Prose :not(pre) > code {\n  display: inline-block;\n  line-height: 1.4;\n  font-size: .6em;\n  position: relative;\n  top: -1px;\n  padding: 0 .333em;\n}\n\n.Prose pre {\n  font-size: 14px;\n  line-height: 18px;\n  padding: var(--size-small);\n  overflow-x: auto;\n  white-space: pre;\n}\n\n/**\n * Horizontal rules.\n */\n\n.Prose hr {\n  width: var(--size-column);\n  margin: 3em auto;\n  border: none;\n  border-bottom: 2px solid var(--text-tertiary);\n}\n",
+    "deps": {}
+  },
+  "client/ui/lib/typography/index.css": {
+    "id": "client/ui/lib/typography/index.css",
+    "type": "css",
+    "mtime": 1427397209000,
+    "src": "\n/**\n * Typefaces.\n */\n\n@import './freight-sans';\n\n/**\n * Stacks.\n */\n\n:root {\n  --text-sans: 'Freight Sans', 'Verdana', 'Geneva', sans-serif;\n  --text-caps: 'Freight Sans Small Caps', 'Verdana', 'Geneva', sans-serif;\n  --text-mono: 'Inconsolata', monospace;\n}\n/**\n * Sizes.\n */\n\n:root {\n  --text-small: 18px;\n  --text-medium: 20px;\n  --text-large: 24px;\n  --text-huge: 30px;\n}\n\n/**\n * Headings.\n */\n\n:root {\n  --heading-small: 18px;\n  --heading-medium: 20px;\n  --heading-large: 30px;\n  --heading-huge: 42px;\n}\n\n/**\n * Leadings.\n */\n\n:root {\n  --leading-small: 22px;\n  --leading-medium: 30px;\n  --leading-large: 36px;\n  --leading-huge: 44px;\n}\n\n/**\n * Weights.\n */\n\n:root {\n  --weight-light: 300;\n  --weight-book: 400;\n  --weight-medium: 500;\n  --weight-bold: 600;\n}",
+    "deps": {
+      "./freight-sans": "client/ui/lib/typography/freight-sans/index.css"
+    }
+  },
+  "client/ui/lib/typography/freight-sans/index.css": {
+    "id": "client/ui/lib/typography/freight-sans/index.css",
+    "type": "css",
+    "mtime": 1427345794000,
+    "src": "\n/**\n * Light.\n */\n\n@font-face {\n  font-family: 'Freight Sans';\n  src: url('./woff/freight-sans-light.woff') format('woff');\n  font-style: normal;\n  font-weight: 200;\n}\n\n@font-face {\n  font-family: 'Freight Sans Small Caps';\n  src: url('./woff/freight-sans-light-small-caps.woff') format('woff');\n  font-style: normal;\n  font-weight: 200;\n}\n\n/**\n * Book.\n */\n\n@font-face {\n  font-family: 'Freight Sans';\n  src: url('./woff/freight-sans-book.woff') format('woff');\n  font-style: normal;\n  font-weight: 400;\n}\n\n@font-face {\n  font-family: 'Freight Sans';\n  src: url('./woff/freight-sans-book-italic.woff') format('woff');\n  font-style: italic;\n  font-weight: 400;\n}\n\n@font-face {\n  font-family: 'Freight Sans Small Caps';\n  src: url('./woff/freight-sans-book-small-caps.woff') format('woff');\n  font-style: normal;\n  font-weight: 400;\n}\n\n/**\n * Medium.\n */\n\n@font-face {\n  font-family: 'Freight Sans';\n  src: url('./woff/freight-sans-medium.woff') format('woff');\n  font-style: normal;\n  font-weight: 500;\n}\n\n@font-face {\n  font-family: 'Freight Sans Small Caps';\n  src: url('./woff/freight-sans-medium-small-caps.woff') format('woff');\n  font-style: normal;\n  font-weight: 500;\n}\n\n/**\n * Bold.\n */\n\n@font-face {\n  font-family: 'Freight Sans';\n  src: url('./woff/freight-sans-bold.woff') format('woff');\n  font-style: normal;\n  font-weight: 700;\n}",
+    "deps": {
+      "./woff/freight-sans-light.woff": "client/ui/lib/typography/freight-sans/woff/freight-sans-light.woff",
+      "./woff/freight-sans-light-small-caps.woff": "client/ui/lib/typography/freight-sans/woff/freight-sans-light-small-caps.woff",
+      "./woff/freight-sans-book.woff": "client/ui/lib/typography/freight-sans/woff/freight-sans-book.woff",
+      "./woff/freight-sans-book-italic.woff": "client/ui/lib/typography/freight-sans/woff/freight-sans-book-italic.woff",
+      "./woff/freight-sans-book-small-caps.woff": "client/ui/lib/typography/freight-sans/woff/freight-sans-book-small-caps.woff",
+      "./woff/freight-sans-medium.woff": "client/ui/lib/typography/freight-sans/woff/freight-sans-medium.woff",
+      "./woff/freight-sans-medium-small-caps.woff": "client/ui/lib/typography/freight-sans/woff/freight-sans-medium-small-caps.woff",
+      "./woff/freight-sans-bold.woff": "client/ui/lib/typography/freight-sans/woff/freight-sans-bold.woff"
+    }
+  },
+  "client/ui/lib/typography/freight-sans/woff/freight-sans-light.woff": {
+    "id": "client/ui/lib/typography/freight-sans/woff/freight-sans-light.woff",
+    "type": "woff",
+    "mtime": 1427344554000
+  },
+  "client/ui/lib/typography/freight-sans/woff/freight-sans-light-small-caps.woff": {
+    "id": "client/ui/lib/typography/freight-sans/woff/freight-sans-light-small-caps.woff",
+    "type": "woff",
+    "mtime": 1427344554000
+  },
+  "client/ui/lib/typography/freight-sans/woff/freight-sans-book.woff": {
+    "id": "client/ui/lib/typography/freight-sans/woff/freight-sans-book.woff",
+    "type": "woff",
+    "mtime": 1427344554000
+  },
+  "client/ui/lib/typography/freight-sans/woff/freight-sans-book-italic.woff": {
+    "id": "client/ui/lib/typography/freight-sans/woff/freight-sans-book-italic.woff",
+    "type": "woff",
+    "mtime": 1427344554000
+  },
+  "client/ui/lib/typography/freight-sans/woff/freight-sans-medium-small-caps.woff": {
+    "id": "client/ui/lib/typography/freight-sans/woff/freight-sans-medium-small-caps.woff",
+    "type": "woff",
+    "mtime": 1427344554000
+  },
+  "client/ui/lib/typography/freight-sans/woff/freight-sans-book-small-caps.woff": {
+    "id": "client/ui/lib/typography/freight-sans/woff/freight-sans-book-small-caps.woff",
+    "type": "woff",
+    "mtime": 1427344554000
+  },
+  "client/ui/lib/typography/freight-sans/woff/freight-sans-medium.woff": {
+    "id": "client/ui/lib/typography/freight-sans/woff/freight-sans-medium.woff",
+    "type": "woff",
+    "mtime": 1427344554000
+  },
+  "client/ui/lib/typography/freight-sans/woff/freight-sans-bold.woff": {
+    "id": "client/ui/lib/typography/freight-sans/woff/freight-sans-bold.woff",
+    "type": "woff",
+    "mtime": 1427344554000
+  },
+  "client/ui/lib/reset/index.css": {
+    "id": "client/ui/lib/reset/index.css",
+    "type": "css",
+    "mtime": 1427398580000,
+    "src": "\n/**\n * Resets.\n */\n\n@import 'necolas/normalize.css';\n@import 'ianstormtaylor/reset';\n\n/**\n * Base.\n */\n\n* {\n  box-sizing: border-box;\n}\n\nhtml {\n  font-size: var(--text-medium);\n  font-family: var(--text-sans);\n  font-weight: var(--weight-light);\n}",
+    "deps": {
+      "necolas/normalize.css": "components/necolas-normalize.css@3.0.2/normalize.css",
+      "ianstormtaylor/reset": "components/ianstormtaylor-reset@0.2.0/index.css"
+    }
+  },
+  "client/components/ianstormtaylor-reset@0.2.0/index.css": {
+    "id": "client/components/ianstormtaylor-reset@0.2.0/index.css",
+    "type": "css",
+    "mtime": 1387252256000,
+    "src": "\n/**\n * Add a few more `block` elements, since they're mostly treated that way.\n */\n\naudio,\ncanvas,\nimg,\nvideo {\n  display: block;\n}\n\n/**\n * Reset line-height, since it makes aligning elements way easier.\n */\n\nhtml {\n  line-height: 1;\n}\n\n/**\n * Remove default heading styles.\n */\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  margin: 0;\n  padding: 0;\n  font-size: inherit;\n  line-height: 1;\n  font-weight: inherit;\n}\n\n/**\n * Remove default link styles, since they get used for buttons, etc.\n */\n\na {\n  color: inherit;\n  text-decoration: none;\n}\n\n/**\n * Remove outline for links. You should style it, but not necessarily outline.\n */\n\na:focus {\n  outline: 0;\n}\n\n/**\n * Remove default paragraph styles.\n */\n\np,\nsmall {\n  margin: 0;\n  padding: 0;\n}\n\n/**\n * Remove default list styles, since they get used for navs, etc.\n */\n\nol,\nul,\nmenu {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n/**\n * Remove default blockquote and quote styles.\n */\n\nblockquote,\nq {\n  margin: 0;\n}\n\n/**\n * Remove default cite styles.\n */\n\ncite {\n  font-style: inherit;\n}\n\n/**\n * Remove default form styles.\n */\n\nform {\n  margin: 0;\n}\n\n/**\n * Remove default fieldset styles.\n */\n\nfieldset {\n  border: none;\n  margin: 0;\n  padding: 0;\n}\n\n/**\n * Remove default pre styles.\n */\n\npre {\n  margin: 0;\n}",
+    "deps": {},
+    "entry": true
+  },
+  "index.js": {
+    "id": "index.js",
+    "type": "js",
+    "mtime": 1427422739000,
+    "src": "\nrequire('segmentio/highlight')()\n  .use(require('segmentio/highlight-bash'))\n  .use(require('segmentio/highlight-csharp'))\n  .use(require('segmentio/highlight-css'))\n  .use(require('segmentio/highlight-go'))\n  .use(require('segmentio/highlight-java'))\n  .use(require('segmentio/highlight-javascript'))\n  .use(require('segmentio/highlight-json'))\n  .use(require('segmentio/highlight-objective-c'))\n  .use(require('segmentio/highlight-php'))\n  .use(require('segmentio/highlight-python'))\n  .use(require('segmentio/highlight-ruby'))\n  .use(require('segmentio/highlight-sql'))\n  .use(require('segmentio/highlight-xml'))\n  .use(require('segmentio/highlight-yaml'))\n  .all();",
+    "deps": {
+      "segmentio/highlight": "components/segmentio-highlight@0.0.2/lib/index.js",
+      "segmentio/highlight-bash": "components/segmentio-highlight-bash@master/index.js",
+      "segmentio/highlight-csharp": "components/segmentio-highlight-csharp@master/index.js",
+      "segmentio/highlight-css": "components/segmentio-highlight-css@0.0.2/lib/index.js",
+      "segmentio/highlight-go": "components/segmentio-highlight-go@0.0.1/lib/index.js",
+      "segmentio/highlight-java": "components/segmentio-highlight-java@master/index.js",
+      "segmentio/highlight-javascript": "components/segmentio-highlight-javascript@0.0.3/lib/index.js",
+      "segmentio/highlight-json": "components/segmentio-highlight-json@master/index.js",
+      "segmentio/highlight-objective-c": "components/segmentio-highlight-objective-c@master/index.js",
+      "segmentio/highlight-php": "components/segmentio-highlight-php@master/index.js",
+      "segmentio/highlight-python": "components/segmentio-highlight-python@0.0.3/index.js",
+      "segmentio/highlight-ruby": "components/segmentio-highlight-ruby@master/index.js",
+      "segmentio/highlight-sql": "components/segmentio-highlight-sql@0.0.1/lib/index.js",
+      "segmentio/highlight-xml": "components/segmentio-highlight-xml@master/lib/index.js",
+      "segmentio/highlight-yaml": "components/segmentio-highlight-yaml@master/index.js"
+    },
+    "entry": true
+  },
+  "index.css": {
+    "id": "index.css",
+    "type": "css",
+    "mtime": 1427415802000,
+    "src": "\n/**\n * Dependencies.\n */\n\n@import './client/ui';\n\n/**\n * Components.\n */\n\n@import './client/lib/layout';\n@import './client/lib/article';\n@import './client/lib/summary';\n@import './client/lib/profile';",
+    "deps": {
+      "./client/ui": "client/ui/index.css",
+      "./client/lib/layout": "client/lib/layout/index.css",
+      "./client/lib/article": "client/lib/article/index.css",
+      "./client/lib/summary": "client/lib/summary/index.css",
+      "./client/lib/profile": "client/lib/profile/index.css"
+    },
+    "entry": true
+  },
+  "client/lib/layout.css": {
+    "id": "client/lib/layout.css",
+    "type": "css",
+    "mtime": 1427410328000,
+    "src": "\n/**\n * Layout.\n */\n\n.Layout {\n  position: relative;\n  overflow: hidden;\n}\n\n.Layout-main,\n.Layout-sidebar {\n  padding: calc(var(--size-huge) * 2) 0;\n}\n\n/**\n * Main.\n */\n\n.Layout-main {\n  width: 100%;\n  padding-right: 25%;\n}\n\n.Layout-main > * {\n  width: var(--size-two-thirds);\n  margin: 0 auto;\n}\n\n/**\n * Sidebar.\n */\n\n.Layout-sidebar {\n  position: fixed;\n  width: 25%;\n  top: 0;\n  right: 0;\n  bottom: 0;\n}\n\n.Layout-sidebar > * {\n  width: var(--size-quarter);\n}\n\n.Layout-sidebar-section + .Layout-sidebar-section {\n  margin-top: var(--size-large);\n}",
+    "deps": {}
+  },
+  "client/lib/summary.css": {
+    "id": "client/lib/summary.css",
+    "type": "css",
+    "mtime": 1427409191000,
+    "src": "\n/**\n * Summaries.\n */\n\n.Summaries-list-item + .Summaries-list-item {\n  margin-top: var(--size-large);\n}\n\n/**\n * Summary.\n */\n\n.Summary-title {\n  position: relative;\n}\n\n.Summary-date {\n  float: left;\n  line-height: var(--leading-medium);\n  color: var(--text-secondary);\n}\n\n.Summary-date::after {\n  content: '—';\n  margin: 0 .3em;\n}\n",
+    "deps": {}
+  },
+  "client/lib/article.css": {
+    "id": "client/lib/article.css",
+    "type": "css",
+    "mtime": 1427395881000,
+    "src": "",
+    "deps": {}
+  },
+  "client/lib/profile.css": {
+    "id": "client/lib/profile.css",
+    "type": "css",
+    "mtime": 1427414852000,
+    "src": "\n/**\n * Profile.\n */\n\n.Profile {\n  position: relative;\n}\n\n.Profile-name {\n  margin-top: calc(-1 * var(--leading-medium));\n}\n\n.Profile-avatar {\n  position: absolute;\n  bottom: 100%;\n  margin-bottom: var(--size-small);\n  width: var(--size-large);\n  height: var(--size-large);\n  border-radius: var(--size-radius);\n}\n\n/**\n * Links.\n */\n\n.Profile-links {\n  font-size: var(--text-small);\n  line-height: var(--leading-medium);\n}\n\n.Profile-link {\n  display: inline-block;\n  text-indent: -9999px;\n  width: var(--text-medium);\n  height: var(--text-medium);\n}\n\n.Profile-github-link {\n\n}",
+    "deps": {}
+  },
+  "client/ui/lib/link/index.css": {
+    "id": "client/ui/lib/link/index.css",
+    "type": "css",
+    "mtime": 1427424780000,
+    "src": "\n/**\n * Links.\n */\n\n.Link {\n  color: var(--fern-1);\n}\n\n.Link:hover {\n  color: var(--fern-2);\n}\n\n.Link:active {\n  color: var(--fern-3);\n}\n",
+    "deps": {}
+  },
+  "client/ui/base/color/index.css": {
+    "id": "client/ui/base/color/index.css",
+    "type": "css",
+    "mtime": 1427397509000,
+    "src": "\n/**\n * Fern.\n */\n\n:root {\n  --fern-1: #70BF5A;\n  --fern-2: #45A13F;\n  --fern-3: #358A2F;\n}\n\n/**\n * Pine.\n */\n\n:root {\n  --pine-1: #089972;\n  --pine-2: #268069;\n  --pine-3: #156B54;\n}\n\n/**\n * Birch.\n */\n\n:root {\n  --birch-1: #FFFFFF;\n  --birch-15: #FCFBF7;\n  --birch-2: #FAF6ED;\n  --birch-25: #F7F2E9;\n  --birch-3: #F2ECDF;\n  --birch-35: #EBE4D3;\n}\n\n/**\n * Wenge.\n */\n\n:root {\n  --wenge-1: #343331;\n  --wenge-15: #403E3C;\n  --wenge-2: #4D4946;\n  --wenge-25: #5A5550;\n  --wenge-3: #6D665C;\n  --wenge-35: #897E70;\n  --wenge-4: #A49581;\n  --wenge-45: #BFB09A;\n  --wenge-5: #CDC0AC;\n  --wenge-55: #DDD0BC;\n}\n\n/**\n * Banana.\n */\n\n:root {\n  --banana-1: #FAC54B;\n  --banana-2: #E8B02E;\n  --banana-3: #D39B18;\n}\n\n/**\n * Tomato.\n */\n\n:root {\n  --tomato-1: #EB5C2D;\n  --tomato-2: #D95026;\n  --tomato-3: #CA461E;\n}\n\n/**\n * Text colors.\n */\n\n:root {\n  --text-emphasized: var(--wenge-2);\n  --text-primary: var(--wenge-3);\n  --text-secondary: var(--wenge-4);\n  --text-tertiary: var(--wenge-5);\n\n  --dark-text-emphasized: var(--birch-2);\n  --dark-text-primary: var(--birch-3);\n  --dark-text-secondary: var(--wenge-4);\n  --dark-text-tertiary: var(--wenge-5);\n}\n\n/**\n * Ground colors.\n */\n\n:root {\n  --ground-primary: var(--birch-1);\n  --ground-secondary: var(--birch-15);\n  --ground-tertiary: var(--birch-2);\n\n  --dark-ground-primary: var(--wenge-1);\n  --dark-ground-secondary: var(--wenge-2);\n  --dark-ground-tertiary: var(--wenge-3);\n}",
+    "deps": {}
+  },
+  "client/ui/base/size/index.css": {
+    "id": "client/ui/base/size/index.css",
+    "type": "css",
+    "mtime": 1427416013000,
+    "src": "\n/**\n * Sizes.\n */\n\n:root {\n  --size-tiny: 10px;\n  --size-smaller: 15px;\n  --size-small: 20px;\n  --size-medium: 30px;\n  --size-large: 60px;\n  --size-larger: 90px;\n  --size-huge: 120px;\n}\n\n/**\n * Grid.\n */\n\n:root {\n  --size-gutter: 60px;\n  --size-column: 210px;\n  --size-column-third: 290px;\n\n  --size-quarter: calc(var(--size-column) * 1 + var(--size-gutter) * 0);\n  --size-two-quarters: calc(var(--size-column) * 2 + var(--size-gutter) * 1);\n  --size-three-quarters: calc(var(--size-column) * 3 + var(--size-gutter) * 2);\n  --size-four-quarters: calc(var(--size-column) * 4 + var(--size-gutter) * 3);\n\n  --size-third: calc(var(--size-column-third) * 1 + var(--size-gutter) * 0);\n  --size-two-thirds: calc(var(--size-column-third) * 2 + var(--size-gutter) * 1);\n  --size-three-thirds: calc(var(--size-column-third) * 3 + var(--size-gutter) * 2);\n}\n\n/**\n * Radius.\n */\n\n:root {\n  --size-radius: 4px;\n}\n",
+    "deps": {}
+  },
+  "client/ui/base/typography/index.css": {
+    "id": "client/ui/base/typography/index.css",
+    "type": "css",
+    "mtime": 1427420197000,
+    "src": "\n/**\n * Typefaces.\n */\n\n@import './freight-sans';\n@import './droid-sans-mono';\n\n/**\n * Stacks.\n */\n\n:root {\n  --text-sans: 'Freight Sans', 'Verdana', 'Geneva', sans-serif;\n  --text-caps: 'Freight Sans Small Caps', 'Verdana', 'Geneva', sans-serif;\n  --text-mono: 'Droid Sans Mono', monospace;\n}\n/**\n * Sizes.\n */\n\n:root {\n  --text-small: 18px;\n  --text-medium: 20px;\n  --text-large: 24px;\n  --text-huge: 30px;\n}\n\n/**\n * Headings.\n */\n\n:root {\n  --heading-small: 18px;\n  --heading-medium: 20px;\n  --heading-large: 30px;\n  --heading-huge: 42px;\n}\n\n/**\n * Leadings.\n */\n\n:root {\n  --leading-small: 22px;\n  --leading-medium: 30px;\n  --leading-large: 36px;\n  --leading-huge: 44px;\n}\n\n/**\n * Weights.\n */\n\n:root {\n  --weight-light: 300;\n  --weight-book: 400;\n  --weight-medium: 500;\n  --weight-bold: 600;\n}",
+    "deps": {
+      "./freight-sans": "client/ui/base/typography/freight-sans/index.css",
+      "./droid-sans-mono": "client/ui/base/typography/droid-sans-mono/index.css"
+    }
+  },
+  "client/ui/base/typography/freight-sans/index.css": {
+    "id": "client/ui/base/typography/freight-sans/index.css",
+    "type": "css",
+    "mtime": 1427419581000,
+    "src": "\n/**\n * Light.\n */\n\n@font-face {\n  font-family: 'Freight Sans';\n  src: url('./woff/freight-sans-light.woff') format('woff');\n  font-style: normal;\n  font-weight: 200;\n}\n\n@font-face {\n  font-family: 'Freight Sans Small Caps';\n  src: url('./woff/freight-sans-light-small-caps.woff') format('woff');\n  font-style: normal;\n  font-weight: 200;\n}\n\n/**\n * Book.\n */\n\n@font-face {\n  font-family: 'Freight Sans';\n  src: url('./woff/freight-sans-book.woff') format('woff');\n  font-style: normal;\n  font-weight: 400;\n}\n\n@font-face {\n  font-family: 'Freight Sans';\n  src: url('./woff/freight-sans-book-italic.woff') format('woff');\n  font-style: italic;\n  font-weight: 400;\n}\n\n@font-face {\n  font-family: 'Freight Sans Small Caps';\n  src: url('./woff/freight-sans-book-small-caps.woff') format('woff');\n  font-style: normal;\n  font-weight: 400;\n}\n\n/**\n * Medium.\n */\n\n@font-face {\n  font-family: 'Freight Sans';\n  src: url('./woff/freight-sans-medium.woff') format('woff');\n  font-style: normal;\n  font-weight: 500;\n}\n\n@font-face {\n  font-family: 'Freight Sans Small Caps';\n  src: url('./woff/freight-sans-medium-small-caps.woff') format('woff');\n  font-style: normal;\n  font-weight: 500;\n}\n\n/**\n * Bold.\n */\n\n@font-face {\n  font-family: 'Freight Sans';\n  src: url('./woff/freight-sans-bold.woff') format('woff');\n  font-style: normal;\n  font-weight: 700;\n}",
+    "deps": {
+      "./woff/freight-sans-light.woff": "client/ui/base/typography/freight-sans/woff/freight-sans-light.woff",
+      "./woff/freight-sans-light-small-caps.woff": "client/ui/base/typography/freight-sans/woff/freight-sans-light-small-caps.woff",
+      "./woff/freight-sans-book.woff": "client/ui/base/typography/freight-sans/woff/freight-sans-book.woff",
+      "./woff/freight-sans-book-italic.woff": "client/ui/base/typography/freight-sans/woff/freight-sans-book-italic.woff",
+      "./woff/freight-sans-book-small-caps.woff": "client/ui/base/typography/freight-sans/woff/freight-sans-book-small-caps.woff",
+      "./woff/freight-sans-medium.woff": "client/ui/base/typography/freight-sans/woff/freight-sans-medium.woff",
+      "./woff/freight-sans-medium-small-caps.woff": "client/ui/base/typography/freight-sans/woff/freight-sans-medium-small-caps.woff",
+      "./woff/freight-sans-bold.woff": "client/ui/base/typography/freight-sans/woff/freight-sans-bold.woff"
+    }
+  },
+  "client/ui/base/typography/freight-sans/woff/freight-sans-light.woff": {
+    "id": "client/ui/base/typography/freight-sans/woff/freight-sans-light.woff",
+    "type": "woff",
+    "mtime": 1427344554000
+  },
+  "client/ui/base/typography/freight-sans/woff/freight-sans-light-small-caps.woff": {
+    "id": "client/ui/base/typography/freight-sans/woff/freight-sans-light-small-caps.woff",
+    "type": "woff",
+    "mtime": 1427344554000
+  },
+  "client/ui/base/typography/freight-sans/woff/freight-sans-book.woff": {
+    "id": "client/ui/base/typography/freight-sans/woff/freight-sans-book.woff",
+    "type": "woff",
+    "mtime": 1427344554000
+  },
+  "client/ui/base/typography/freight-sans/woff/freight-sans-book-italic.woff": {
+    "id": "client/ui/base/typography/freight-sans/woff/freight-sans-book-italic.woff",
+    "type": "woff",
+    "mtime": 1427344554000
+  },
+  "client/ui/base/typography/freight-sans/woff/freight-sans-book-small-caps.woff": {
+    "id": "client/ui/base/typography/freight-sans/woff/freight-sans-book-small-caps.woff",
+    "type": "woff",
+    "mtime": 1427344554000
+  },
+  "client/ui/base/typography/freight-sans/woff/freight-sans-medium.woff": {
+    "id": "client/ui/base/typography/freight-sans/woff/freight-sans-medium.woff",
+    "type": "woff",
+    "mtime": 1427344554000
+  },
+  "client/ui/base/typography/freight-sans/woff/freight-sans-medium-small-caps.woff": {
+    "id": "client/ui/base/typography/freight-sans/woff/freight-sans-medium-small-caps.woff",
+    "type": "woff",
+    "mtime": 1427344554000
+  },
+  "client/ui/base/typography/freight-sans/woff/freight-sans-bold.woff": {
+    "id": "client/ui/base/typography/freight-sans/woff/freight-sans-bold.woff",
+    "type": "woff",
+    "mtime": 1427344554000
+  },
+  "client/ui/base/reset/index.css": {
+    "id": "client/ui/base/reset/index.css",
+    "type": "css",
+    "mtime": 1427398580000,
+    "src": "\n/**\n * Resets.\n */\n\n@import 'necolas/normalize.css';\n@import 'ianstormtaylor/reset';\n\n/**\n * Base.\n */\n\n* {\n  box-sizing: border-box;\n}\n\nhtml {\n  font-size: var(--text-medium);\n  font-family: var(--text-sans);\n  font-weight: var(--weight-light);\n}",
+    "deps": {
+      "necolas/normalize.css": "components/necolas-normalize.css@3.0.2/normalize.css",
+      "ianstormtaylor/reset": "components/ianstormtaylor-reset@0.2.0/index.css"
+    }
+  },
+  "client/ui/lib/copy/index.css": {
+    "id": "client/ui/lib/copy/index.css",
+    "type": "css",
+    "mtime": 1427424406000,
+    "src": "\n/**\n * Copy.\n */\n\n.Copy {\n  color: var(--text-primary);\n}\n\n.Copy--small {\n  font-size: var(--text-small);\n  line-height: var(--leading-small);\n  color: var(--text-secondary);\n}\n\n.Copy--medium {\n  font-size: var(--text-medium);\n  line-height: var(--leading-medium);\n}\n\n.Copy--large {\n  font-size: var(--text-large);\n  line-height: var(--leading-large);\n}\n\n.Copy--huge {\n  font-size: var(--text-huge);\n  line-height: var(--leading-huge);\n}",
+    "deps": {}
+  },
+  "client/ui/lib/format/index.css": {
+    "id": "client/ui/lib/format/index.css",
+    "type": "css",
+    "mtime": 1427424357000,
+    "src": "\n",
+    "deps": {}
+  },
+  "client/lib/elsewhere.css": {
+    "id": "client/lib/elsewhere.css",
+    "type": "css",
+    "mtime": 1427413396000,
+    "src": "\n/**\n * Elsewhere.\n */\n\n.Elsewhere {}\n\n.Elsewhere-list-item {\n  font-size: var(--text-small);\n  line-height: var(--leading-medium);\n}\n\n.Elsewhere-link {\n  display: block;\n}\n\n/**\n * Icons.\n */\n\n.Elsewhere-github-link {\n\n}",
+    "deps": {}
+  },
+  "client/lib/layout/index.css": {
+    "id": "client/lib/layout/index.css",
+    "type": "css",
+    "mtime": 1427417280000,
+    "src": "\n/**\n * Layout.\n */\n\n.Layout {\n  position: relative;\n}\n\n.Layout-main,\n.Layout-sidebar {\n  padding: calc(var(--size-huge) * 2) 0;\n}\n\n/**\n * Main.\n */\n\n.Layout-main {\n  width: 100%;\n  padding-right: 25%;\n}\n\n.Layout-main > * {\n  width: var(--size-two-thirds);\n  margin: 0 auto;\n}\n\n/**\n * Sidebar.\n */\n\n.Layout-sidebar {\n  position: fixed;\n  width: 25%;\n  top: 0;\n  right: 0;\n  bottom: 0;\n}\n\n.Layout-sidebar > * {\n  width: var(--size-quarter);\n}\n\n.Layout-sidebar-section + .Layout-sidebar-section {\n  margin-top: var(--size-large);\n}",
+    "deps": {}
+  },
+  "client/lib/article/index.css": {
+    "id": "client/lib/article/index.css",
+    "type": "css",
+    "mtime": 1427418723000,
+    "src": "\n/**\n * Article.\n */\n\n.Article {\n  position: relative;\n}\n\n.Article-title {\n  position: absolute;\n  bottom: 100%;\n  margin-bottom: var(--size-tiny);\n}\n\n.Article-date {\n  display: block;\n}\n",
+    "deps": {}
+  },
+  "client/lib/summary/index.css": {
+    "id": "client/lib/summary/index.css",
+    "type": "css",
+    "mtime": 1427428773000,
+    "src": "\n/**\n * Summaries.\n */\n\n.Summaries-list-item + .Summaries-list-item {\n  margin-top: var(--size-medium);\n}\n\n/**\n * Summary.\n */\n\n.Summary-title {\n  position: relative;\n}\n\n.Summary-date {\n  float: left;\n  line-height: var(--leading-medium);\n  color: var(--text-secondary);\n}\n\n.Summary-date::after {\n  content: '—';\n  margin: 0 .3em;\n}\n\n.Summary-external-link::after {\n  content: attr(data-domain);\n  font-size: var(--text-small);\n  color: var(--text-secondary);\n  font-weight: var(--weight-light);\n  line-height: 1;\n  font-family: var(--text-caps);\n  display: inline-block;\n  margin-left: .5em;\n  padding-left: 19px;\n  height: 16px;\n  background-image: url('images/link@2x.png');\n  background-size: contain;\n  background-position: left center;\n  background-repeat: no-repeat;\n}\n\n.Summary-external-link[data-domain=\"segment.com\"]::after {\n  color: var(--fern-1);\n  background-image: url('images/link-green@2x.png');\n}",
+    "deps": {
+      "images/link@2x.png": "client/lib/summary/images/link@2x.png",
+      "images/link-green@2x.png": "client/lib/summary/images/link-green@2x.png"
+    }
+  },
+  "client/lib/profile/index.css": {
+    "id": "client/lib/profile/index.css",
+    "type": "css",
+    "mtime": 1427428019000,
+    "src": "\n/**\n * Profile.\n */\n\n.Profile {\n  position: relative;\n}\n\n.Profile-name {\n  position: absolute;\n  bottom: 100%;\n}\n\n.Profile-avatar {\n  position: absolute;\n  bottom: 100%;\n  margin-bottom: 35px;\n  width: var(--size-huge);\n  height: var(--size-huge);\n  border-radius: var(--size-radius);\n}\n\n.Profile-bio {\n  margin-bottom: var(--size-small);\n}\n\n\n/**\n * Twitter button.\n */\n\n.Profile-twitter-button {\n  margin-bottom: var(--size-small);\n}\n\n/**\n * Links.\n */\n\n.Profile-links {\n  margin-bottom: var(--size-small);\n  font-size: var(--text-small);\n  line-height: var(--leading-medium);\n}\n\n.Profile-link {\n  display: inline-block;\n  text-indent: -9999px;\n  width: 26px;\n  height: 26px;\n  background-position: center center;\n  background-repeat: none;\n  background-size: contain;\n  opacity: .75;\n  transition: opacity .2s;\n}\n\n.Profile-link:hover {\n  opacity: 1;\n}\n\n.Profile-link + .Profile-link {\n  margin-left: 3px;\n}\n\n/**\n * Icons.\n */\n\n.Profile-dribbble-link {\n  background-image: url('images/dribbble@2x.png');\n}\n\n.Profile-email-link {\n  background-image: url('images/email@2x.png');\n}\n\n.Profile-facebook-link {\n  background-image: url('images/facebook@2x.png');\n}\n\n.Profile-instagram-link {\n  background-image: url('images/instagram@2x.png');\n}\n\n.Profile-github-link {\n  background-image: url('images/github@2x.png');\n}\n\n.Profile-linkedin-link {\n  background-image: url('images/linkedin@2x.png');\n}\n\n.Profile-rss-link {\n  background-image: url('images/rss@2x.png');\n}\n\n.Profile-tumblr-link {\n  background-image: url('images/tumblr@2x.png');\n}\n\n.Profile-twitter-link {\n  background-image: url('images/twitter@2x.png');\n}",
+    "deps": {
+      "images/dribbble@2x.png": "client/lib/profile/images/dribbble@2x.png",
+      "images/email@2x.png": "client/lib/profile/images/email@2x.png",
+      "images/facebook@2x.png": "client/lib/profile/images/facebook@2x.png",
+      "images/instagram@2x.png": "client/lib/profile/images/instagram@2x.png",
+      "images/github@2x.png": "client/lib/profile/images/github@2x.png",
+      "images/linkedin@2x.png": "client/lib/profile/images/linkedin@2x.png",
+      "images/rss@2x.png": "client/lib/profile/images/rss@2x.png",
+      "images/tumblr@2x.png": "client/lib/profile/images/tumblr@2x.png",
+      "images/twitter@2x.png": "client/lib/profile/images/twitter@2x.png"
+    }
+  },
+  "client/lib/profile/images/github@2x.png": {
+    "id": "client/lib/profile/images/github@2x.png",
+    "type": "png",
+    "mtime": 1427415494000
+  },
+  "client/lib/profile/images/twitter@2x.png": {
+    "id": "client/lib/profile/images/twitter@2x.png",
+    "type": "png",
+    "mtime": 1427415494000
+  },
+  "client/lib/profile/images/rss@2x.png": {
+    "id": "client/lib/profile/images/rss@2x.png",
+    "type": "png",
+    "mtime": 1427415494000
+  },
+  "client/lib/profile/images/dribbble@2x.png": {
+    "id": "client/lib/profile/images/dribbble@2x.png",
+    "type": "png",
+    "mtime": 1427415494000
+  },
+  "client/lib/profile/images/email@2x.png": {
+    "id": "client/lib/profile/images/email@2x.png",
+    "type": "png",
+    "mtime": 1427415494000
+  },
+  "client/lib/profile/images/facebook@2x.png": {
+    "id": "client/lib/profile/images/facebook@2x.png",
+    "type": "png",
+    "mtime": 1427415494000
+  },
+  "client/lib/profile/images/instagram@2x.png": {
+    "id": "client/lib/profile/images/instagram@2x.png",
+    "type": "png",
+    "mtime": 1427416263000
+  },
+  "client/lib/profile/images/linkedin@2x.png": {
+    "id": "client/lib/profile/images/linkedin@2x.png",
+    "type": "png",
+    "mtime": 1427415494000
+  },
+  "client/lib/profile/images/tumblr@2x.png": {
+    "id": "client/lib/profile/images/tumblr@2x.png",
+    "type": "png",
+    "mtime": 1427415494000
+  },
+  "client/ui/base/typography/droid-sans-mono/index.css": {
+    "id": "client/ui/base/typography/droid-sans-mono/index.css",
+    "type": "css",
+    "mtime": 1427419579000,
+    "src": "\n/**\n * Normal.\n *\n * Copied from Google Web Fonts.\n */\n\n@font-face {\n  font-family: 'Droid Sans Mono';\n  src: url('woff/droid-sans-mono.woff2') format('woff2');\n  font-style: normal;\n  font-weight: 400;\n  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;\n}",
+    "deps": {
+      "woff/droid-sans-mono.woff2": "client/ui/base/typography/droid-sans-mono/woff/droid-sans-mono.woff2"
+    }
+  },
+  "client/ui/base/typography/droid-sans-mono/woff/droid-sans-mono.woff2": {
+    "id": "client/ui/base/typography/droid-sans-mono/woff/droid-sans-mono.woff2",
+    "type": "woff2",
+    "mtime": 1427419499000
+  },
+  "client/ui/lib/code/index.css": {
+    "id": "client/ui/lib/code/index.css",
+    "type": "css",
+    "mtime": 1427424871000,
+    "src": "",
+    "deps": {}
+  },
+  "components/segmentio-highlight-go@0.0.1/lib/index.js": {
+    "id": "components/segmentio-highlight-go@0.0.1/lib/index.js",
+    "type": "js",
+    "mtime": 1402979413000,
+    "src": "\n/**\n * Expose `plugin`.\n */\n\nmodule.exports = plugin;\n\n/**\n * Plugin to highlight go code.\n *\n * @param {Highlight} highlight\n */\n\nfunction plugin(highlight){\n  highlight.language('go', grammar);\n}\n\n/**\n * Grammar.\n */\n\nvar grammar = {};\n\n/**\n * Strings.\n */\n\ngrammar.string = /((\"|')(\\\\?.)*?\\2)/;\n\n/**\n * Comments.\n */\n\ngrammar.comment = /(?!\\\\{2})(\\/\\*[\\w\\W]*?\\*\\/|\\/\\/.*?$)/m;\n\n/**\n * Booleans.\n */\n\ngrammar.boolean = /\\b(true|false)\\b/;\n\n/**\n * Keywords.\n */\n\ngrammar.keyword = /\\b(break|default|func|interface|select|case|defer|go|map|struct|chan}else}goto}package|switch|const|fallthrough|if|range|type|continue|for|import|return|var)\\b/;\n\n/**\n * Functions.\n *\n * Children are set separately to maintain ordering.\n */\n\ngrammar.function = {\n  pattern: /(\\w+)\\(/,\n  children: {}\n};\n\ngrammar.function.children.class = /\\b([A-Z]\\w*)\\b/;\ngrammar.function.children.function = /(\\w+)/;\ngrammar.function.children.punctuation = /\\(/;\n\n/**\n * Numbers.\n */\n\ngrammar.number = /\\b-?(0x[\\dA-Fa-f]+|\\d*\\.?\\d+([Ee]-?\\d+)?|NaN|-?Infinity)\\b/;\n\n/**\n * Operators.\n */\n\ngrammar.operator = /([-+]{1,2}|!|&lt;=?|>=?|={1,3}|&lt;{1,2}|>{1,2}|(&amp;){1,2}|\\|{1,2}|\\?|\\*|\\/|\\~|\\^|\\%)/;\n\n/**\n * Punctuation.\n */\n\ngrammar.punctuation = /[{}[\\];(),.:]/;",
+    "deps": {}
+  },
+  "components/segmentio-highlight-objective-c@master/index.js": {
+    "id": "components/segmentio-highlight-objective-c@master/index.js",
+    "type": "js",
+    "mtime": 1423088873000,
+    "src": "\n/**\n * Expose `objectiveC`\n */\n\nmodule.exports = objectiveC;\n\n/**\n * Add `Objective-C` as a plugin.\n *\n * @param {Highlight} highlight\n * @api public\n */\n\nfunction objectiveC(highlight){\n  highlight\n    .language('objective-c', objectiveC)\n    .language('objc', objectiveC);\n}\n\n/**\n * Methods\n */\n\nobjectiveC.method = /\\[\\w+ (\\w+)\\]/;\n\n/**\n * Booleans\n */\n\nobjectiveC.boolean = /\\b(yes|no|true|false)\\b/i;\n\n/**\n * Comments\n */\n\nobjectiveC.comment = /(?!\\\\{2})(\\/\\*[\\w\\W]*?\\*\\/|\\/\\/.*?$)/m;\n\n/**\n * Classes\n */\n\nobjectiveC.class = /@(implementation|interface|class) +(\\w+)/;\nobjectiveC.class.children = { keyword: /@(implementation|interface|class)/ };\n\n/**\n * Keywords\n */\n\nobjectiveC.keyword = /\\b(void|char|short|int|long|float|double|signed|unsigned|id|const|volatile|in|out|inout|bycopy|byref|oneway|self|super)\\b/;\n\n/**\n * Numbers\n */\n\nobjectiveC.number = /\\b@?[-+]?(0x[A-Fa-f0-9]+|\\d+)\\b/;\n\n/**\n * Strings\n */\n\nobjectiveC.string = /(@?\"(\\\\?.)*?\")/;\n\n/**\n * Operator\n */\n\nobjectiveC.operator = /([-+]{1,2}|!|&lt;=?|>=?|={1,3}|&lt;{1,2}|>{1,2}|(&amp;){1,2}|\\|{1,2}|\\?|\\*|\\/|\\~|\\^|\\%)/;\n\n/**\n * Punctuation\n */\n\nobjectiveC.punctuation = /[{}[\\];(),.:]/;",
+    "deps": {}
+  },
+  "components/segmentio-highlight-javascript@0.0.3/lib/index.js": {
+    "id": "components/segmentio-highlight-javascript@0.0.3/lib/index.js",
+    "type": "js",
+    "mtime": 1395862623000,
+    "src": "\n/**\n * Expose `plugin`.\n */\n\nmodule.exports = plugin;\n\n/**\n * Plugin to highlight Javascript code.\n *\n * @param {Highlight} highlight\n */\n\nfunction plugin(highlight){\n  highlight\n    .language('javascript', grammar)\n    .language('js', grammar);\n}\n\n/**\n * Grammar.\n */\n\nvar grammar = {};\n\n/**\n * Comments.\n */\n\ngrammar.comment = /(?!\\\\{2})(\\/\\*[\\w\\W]*?\\*\\/|\\/\\/.*?$)/m;\n\n/**\n * Booleans.\n */\n\ngrammar.boolean = /\\b(true|false)\\b/;\n\n/**\n * Strings.\n */\n\ngrammar.string = /((\"|')(\\\\?.)*?\\2)/;\n\n/**\n * Keywords.\n */\n\ngrammar.keyword = /\\b(break|catch|continue|delete|do|else|finally|for|function|if|in|instanceof|let|new|null|return|this|self|throw|try|typeof|var|while|with|yield)\\b/;\n\n/**\n * Constants.\n */\n\ngrammar.constant = /\\b(document|window|global)\\b/;\n\n/**\n * Functions.\n *\n * Children are set separately to maintain ordering.\n */\n\ngrammar.function = {\n  pattern: /(\\w+)\\(/,\n  children: {}\n};\n\ngrammar.function.children.class = /\\b([A-Z]\\w*)\\b/;\ngrammar.function.children.function = /(\\w+)/;\ngrammar.function.children.punctuation = /\\(/;\n\n/**\n * Numbers.\n */\n\ngrammar.number = /\\b-?(0x[\\dA-Fa-f]+|\\d*\\.?\\d+([Ee]-?\\d+)?|NaN|-?Infinity)\\b/;\n\n/**\n * Operators.\n */\n\ngrammar.operator = /([-+]{1,2}|!|&lt;=?|>=?|={1,3}|&lt;{1,2}|>{1,2}|(&amp;){1,2}|\\|{1,2}|\\?|\\*|\\/|\\~|\\^|\\%)/;\n\n/**\n * Punctuation.\n */\n\ngrammar.punctuation = /[{}[\\];(),.:]/;",
+    "deps": {}
+  },
+  "components/segmentio-highlight-python@0.0.3/index.js": {
+    "id": "components/segmentio-highlight-python@0.0.3/index.js",
+    "type": "js",
+    "mtime": 1395872147000,
+    "src": "\n/**\n * Expose `python`\n */\n\nmodule.exports = python;\n\n/**\n * Add `python` as a language.\n *\n * @param {Highlight} highlight\n * @api public\n */\n\nfunction python(highlight){\n  highlight.language('python', python);\n}\n\n/**\n * Comments\n */\n\npython.comment = /(?!\\\\{2})(#.*?$)/m;\n\n/**\n * Strings\n */\n\npython.string = /((\"\"\"|\"|')(\\\\?.)*?\\2)/;\n\n/**\n * Booleans\n */\n\npython.boolean = /\\b(True|False)\\b/;\n\n/**\n * Keywords\n */\n\npython.keyword = /\\b(and|as|assert|break|class|continue|def|del|elif|else|except|exec|finally|for|from|global|if|import|in|is|lambda|not|or|pass|print|raise|return|try|while|with|yield)\\b/;\n\n\n/**\n * Classes\n */\n\npython.class = /class +(\\w+)/;\npython.class.children = { keyword: /class/ };\n\n/**\n * Functions\n */\n\npython.function = /(\\w+) *\\(/;\npython.function.children = { punctuation: /\\(/ };\n/**\n * Numbers\n */\n\npython.number = /\\b[-+]?(0x[a-fA-F0-9]+|0b[0-1]+|0[0-7]+|[1-9][0-9]*)\\b/;\n\n/**\n * Operators\n */\n\npython.operator = /([-+]{1,2}|!|&lt;=?|>=?|={1,3}|&lt;{1,2}|>{1,2}|(&amp;){1,2}|\\|{1,2}|\\?|\\*|\\/|\\~|\\^|\\%|\\*\\*?=)/;\n\n/**\n * Punctuation\n */\n\npython.punctuation = /[{}[\\];(),.:]/;",
+    "deps": {}
+  },
+  "components/segmentio-highlight-java@master/index.js": {
+    "id": "components/segmentio-highlight-java@master/index.js",
+    "type": "js",
+    "mtime": 1395851277000,
+    "src": "\n/**\n * Expose `java`\n */\n\nmodule.exports = java;\n\n/**\n * Add `java` as a language.\n *\n * @param {Highlight} highlight\n * @api public\n */\n\nfunction java(highlight){\n  highlight.language('java', java);\n}\n\n/**\n * Boolean\n */\n\njava.boolean = /\\b(true|false)\\b/;\n\n/**\n * Comment\n */\n\njava.comment = /(?!\\\\{2})(\\/\\*[\\w\\W]*?\\*\\/|\\/\\/.*?$)/m;\n\n/**\n * Class\n */\n\njava.class = /class +(\\w+)/;\njava.class.children = { keyword: /class/ };\n\n/**\n * Keywords\n */\n\njava.keyword = /\\b(abstract|assert|boolean|break|byte|case|catch|char|class|const|continue|default|do|double|else|enum|extends|final|finally|float|for|goto|if|implements|import|instanceof|int|interface|long|native|new|package|protected|public|return|static|staticfp|super|switch|synchronized|this|throw|throws|transient|try|void|volatile|while)\\b/;\n\n/**\n * Number\n */\n\njava.number = /\\b[-+]?(0[bx][\\da-f]+|\\d*\\.?\\d+(e-?\\d+)?)\\b/;\n\n/**\n * String\n */\n\njava.string = /(\"(\\\\?.)*?\")/;\n\n/**\n * Method\n */\n\njava.method = /(\\w+) *\\(/;\njava.method.children = { punctuation: /\\(/ };\n\n/**\n * Operator\n */\n\njava.operator = /([-+]{1,2}|!|&lt;=?|>=?|={1,3}|&lt;{1,2}|>{1,2}|(&amp;){1,2}|\\|{1,2}|\\?|\\*|\\/|\\~|\\^|\\%)/;\n\n/**\n * Punctuation\n */\n\njava.punctuation = /[{}[\\];(),.:]/;",
+    "deps": {}
+  },
+  "components/segmentio-highlight-csharp@master/index.js": {
+    "id": "components/segmentio-highlight-csharp@master/index.js",
+    "type": "js",
+    "mtime": 1395851707000,
+    "src": "\n/**\n * Expose `csharp`\n */\n\nmodule.exports = csharp;\n\n/**\n * Add `csharp` as a plugin.\n *\n * @param {Highlight} highlight\n * @api public\n */\n\nfunction csharp(highlight){\n  highlight.language('csharp', csharp);\n  highlight.language('c-sharp', csharp);\n  highlight.language('c#', csharp);\n}\n\n/**\n * Booleans\n */\n\ncsharp.boolean = /\\b(true|false)\\b/;\n\n/**\n * Comments\n */\n\ncsharp.comment = /(?!\\\\{2})(\\/\\*[\\w\\W]*?\\*\\/|\\/\\/.*?$)/m;\n\n/**\n * Classes\n */\n\ncsharp.class = /class +(\\w+)/;\ncsharp.class.children = { keyword: /class/ };\n\n/**\n * Strings\n */\n\ncsharp.string = /(\"(\\\\?.)*?\")/\n\n/**\n * Keywords\n */\n\ncsharp.keyword = /\\b(abstract|base|bool|break|byte|case|catch|char|class|const|continue|decimal|default|delegate|do|double|else|enum|event|explicit|extern|finally|fixed|float|for|foreach|goto|if|implicit|in|int|interface|internal|lock|long|namespace|null|object|operator|out|override|params|private|protected|public|readonly|ref|return|sbyte|sealed|short|stackalloc|static|string|struct|switch|this|throw|try|uint|ulong|unsafe|ushort|using|virtual|void|volatile|while)\\b/;\n\n/**\n * Numbers\n */\n\ncsharp.number = /\\b[-+]?(0x[\\da-f]+|\\d*\\.?\\d+(e-?\\d+)?)\\b/;\n\n/**\n * Method\n */\n\ncsharp.method = /(\\w+) *\\(/;\ncsharp.method.children = { punctuation: /\\(/ };\n\n/**\n * Operators\n */\n\ncsharp.operator = /(await|as|is|new|typeof|checked|unchecked|default|delegate|sizeof|->|[-+]{1,2}|!|&lt;=?|>=?|={1,3}|&lt;{1,2}|>{1,2}|(&amp;){1,2}|\\|{1,2}|\\?|\\*|\\/|\\~|\\^|\\%)/;\n\n/**\n * Punctuation\n */\n\ncsharp.punctuation = /[{}[\\];(),.:]/;",
+    "deps": {}
+  },
+  "components/segmentio-highlight-yaml@master/index.js": {
+    "id": "components/segmentio-highlight-yaml@master/index.js",
+    "type": "js",
+    "mtime": 1395966864000,
+    "src": "\n/**\n * Expose `yaml`\n */\n\nmodule.exports = yaml;\n\n/**\n * Add `yaml` as a language.\n *\n * @param {Highlight} highlight\n * @api public\n */\n\nfunction yaml(highlight){\n  highlight.language('yml', yaml);\n  highlight.language('yaml', yaml);\n}\n\n/**\n * Boolean\n */\n\nyaml.boolean = /\\b(Yes|No)\\b/;\n\n/**\n * Numbers\n */\n\nyaml.number = /\\b(\\d*\\.\\d+)\\b/;\n\n/**\n * Comments\n */\n\nyaml.comment = /(#[^\\n]*)/;\n\n/**\n * Keywords\n */\n\nyaml.keyword = /(\\w+):/;\nyaml.keyword.children = { punctuation: /:/ };\n\n/**\n * Punctuation\n */\n\nyaml.punctuation = /([:|>?])/;\n\n/**\n * Strings\n */\n\nyaml.string = /((\"|')(\\\\?.)*?\\2)/;\n",
+    "deps": {}
+  },
+  "components/segmentio-highlight-json@master/index.js": {
+    "id": "components/segmentio-highlight-json@master/index.js",
+    "type": "js",
+    "mtime": 1395967442000,
+    "src": "\n/**\n * Expose `json`\n */\n\nmodule.exports = json;\n\n/**\n * Add `json` as a language.\n *\n * @param {Highlight} highlight\n * @api public\n */\n\nfunction json(highlight){\n  highlight.language('json', json);\n}\n\n/**\n * Booleans\n */\n\njson.boolean = /\\b(true|false)\\b/;\n\n/**\n * Strings\n */\n\njson.string = /(\"(\\\\?.)*\")/;\n\n/**\n * Punctuation\n */\n\njson.punctuation = /[{}[\\]:]/;\n\n/**\n * Numbers\n */\n\njson.number = /\\b-?(\\d+\\.?\\d*([eE]-?\\d+)?)\\b/;",
+    "deps": {}
+  },
+  "components/segmentio-highlight-bash@master/index.js": {
+    "id": "components/segmentio-highlight-bash@master/index.js",
+    "type": "js",
+    "mtime": 1395927443000,
+    "src": "\n/**\n * Expose `bash`\n */\n\nmodule.exports = bash;\n\n/**\n * Add `bash` as a language.\n *\n * @param {Highlight} highlight\n * @api public\n */\n\nfunction bash(highlight){\n  highlight.language('sh', bash);\n  highlight.language('bash', bash);\n  highlight.language('shellscript', bash);\n}\n\n/**\n * Comments\n */\n\nbash.comment = /(#.*?$)/m\n\n/**\n * Strings\n */\n\nbash.string = /((\"|')(\\\\?.)*?\\2)/;\n\n/**\n * Keywords\n */\n\nbash.keyword = /\\b(if|then|else|elif|fi|for|in|do|done|select|case|continue|esac|while|until|return|export|declare|typeset|local|readonly)\\b/;\n\n/**\n * Operators\n */\n\nbash.operator = /(;|&&?|\\|\\||=[=~]?|!=?|&lt;|&gt;|\\|)/;\n\n/**\n * Builtins\n */\n\nbash.builtin = /\\b(alias|bg|bind|break|builtin|caller|cd|command|compgen|complete|dirs|disown|echo|enable|eval|exec|exit|false|fc|fg|getopts|hash|help|history|jobs|kill|let|logout|popd|printf|pushd|pwd|read|readonly|set|shift|shopt|source|suspend|test|times|trap|true|type|ulimit|umask|unalias|unset|wait)\\b/;",
+    "deps": {}
+  },
+  "components/segmentio-highlight-ruby@master/index.js": {
+    "id": "components/segmentio-highlight-ruby@master/index.js",
+    "type": "js",
+    "mtime": 1396903416000,
+    "src": "\n/**\n * Expose `ruby`\n */\n\nmodule.exports = ruby;\n\n/**\n * Add `ruby` as a language.\n *\n * @param {Highlight} highlight\n * @api public\n */\n\nfunction ruby(highlight){\n  highlight.language('ruby', ruby);\n}\n\n/**\n * Booleans\n */\n\nruby.boolean = /\\b(true|false)\\b/;\n\n/**\n * Strings\n */\n\nruby.string = /((\"|')(\\\\?.)*?\\2)/;\n\n/**\n * Comments\n */\n\nruby.comment = /(?!\\\\{2})(#.*?$)/m;\n\n/**\n * Classes\n */\n\nruby.class = /class +(\\w+)/;\nruby.class.children = { keyword: /class/ };\n\n/**\n * Keywords\n */\n\nruby.keyword = /\\b(alias|and|begin|break|case|catch|class|def|do|elsif|else|fail|ensure|for|end|if|in|module|next|not|or|raise|redo|rescue|retry|return|then|throw|super|unless|undef|until|when|while|yield)\\b/;\n\n/**\n * Numbers\n */\n\nruby.number = /\\b[-+]?(0x[a-fA-F0-9]+|0b[0-1_]+|0[0-7]*|[1-9][0-9_eE.]*)\\b/;\n\n/**\n * Functions\n */\n\nruby.function = /(\\w+) *\\(/;\nruby.function.children = { punctuation: /\\(/ };\n\n/**\n * Operator\n */\n\nruby.operator = /([-+]{1,2}|!|&lt;=?|>=?|={1,3}|&lt;{1,2}|>{1,2}|(&amp;){1,2}|\\|{1,2}|\\?|\\*|\\/|\\~|\\^|\\%)/;\n\n/**\n * Punctuation\n */\n\nruby.punctuation = /[{}[\\];(),.:]/;\n",
+    "deps": {}
+  },
+  "components/segmentio-highlight-php@master/index.js": {
+    "id": "components/segmentio-highlight-php@master/index.js",
+    "type": "js",
+    "mtime": 1395842252000,
+    "src": "\n/**\n * Expose `php`\n */\n\nmodule.exports = php;\n\n/**\n * Add `php` as a language.\n *\n * @param {Highlight} highlight\n * @api public\n */\n\nfunction php(highlight){\n  highlight.language('php', php);\n  highlight.language('PHP', php);\n}\n\n/**\n * Booleans\n */\n\nphp.boolean = /\\b(true|false)\\b/;\n\n/**\n * Comments\n */\n\nphp.comment = /(?!\\\\{2})(\\/\\*[\\w\\W]*?\\*\\/|\\/\\/.*?$|#.*?$)/m;\n\n/**\n * Classes\n */\n\nphp.class = /class +(\\w+)/;\nphp.class.children = { keyword: /class/ };\n\n/**\n * Keywords\n */\n\nphp.keyword = /\\b(__halt_compiler|abstract|and|array|as|break|callable|case|catch|class|clone|const|continue|declare|default|die|do|echo|else|elseif|empty|enddeclare|endfor|endforeach|endif|endswitch|endwhile|eval|exit|extends|final|finally|for|foreach|function|global|goto|if|implements|include|include_once|instanceof|insteadof|interface|isset|list|namespace|new|or|print|private|protected|public|require|require_once|return|static|switch|throw|trait|try|unset|use|var|while|xor|yield)\\b/;\n\n/**\n * Numbers\n */\n\nphp.number = /\\b[-+]?(0x[0-9a-fA-F]|0[0-7]+|0b[01]+|[1-9][0-9]*)\\b/;\n\n/**\n * String\n */\n\nphp.string = /((\"|')(\\\\?.)*?\\2)/;\n\n/**\n * Functions\n */\n\nphp.function = /(\\w+) *\\(/;\nphp.function.children = { punctuation: /\\(/ };\n\n/**\n * Operators\n */\n\nphp.operator = /([-+]{1,2}|!|&lt;=?|>=?|={1,3}|&lt;{1,2}|>{1,2}|(&amp;){1,2}|\\|{1,2}|\\?|\\*|\\/|\\~|\\^|\\%)/;\n\n/**\n * Punctuation\n */\n\nphp.punctuation = /[{}[\\];(),.]/;",
+    "deps": {}
+  },
+  "components/segmentio-highlight-xml@master/lib/index.js": {
+    "id": "components/segmentio-highlight-xml@master/lib/index.js",
+    "type": "js",
+    "mtime": 1392954311000,
+    "src": "\n/**\n * Expose `plugin`.\n */\n\nmodule.exports = plugin;\n\n/**\n * Plugin to highlight XML code.\n *\n * @param {Highlight} highlight\n */\n\nfunction plugin(highlight){\n  highlight\n    .language('xml', grammar)\n    .language('html', grammar);\n}\n\n/**\n * Grammar.\n */\n\nvar grammar = {};\n\n/**\n * Comments.\n */\n\ngrammar.comment = /<!--[\\w\\W]*?-->/m;\n\n/**\n * Entities.\n */\n\ngrammar.entity = /&#?[\\dA-Za-z]{1,8};/;\n\n/**\n * Doctypes.\n */\n\ngrammar.doctype = /<!DOCTYPE.+?>/i;\n\n/**\n * CDATA.\n */\n\ngrammar.cdata = /<!\\[CDATA\\[[\\w\\W]*?]]>/i;\n\n/**\n * Prologs.\n */\n\ngrammar.prolog = /<\\?.+?\\?>/;\n\n/**\n * Tags. Children declared separately to maintain order.\n */\n\nvar children = {\n  string: /('|\")[\\w\\W]*?\\1/,\n  punctuation: /(^<\\/?|\\/?>$|=)/,\n  name: /^[\\w:-]+/,\n  attribute: /[\\w:-]+/\n};\n\ngrammar.tag = {\n  pattern: /<\\/?[\\w:-]+\\s*(\\s+[\\w:-]+(=((\"|')[\\w\\W]*\\4|[^\\s'\">=]+))?\\s*)*\\/?>/,\n  children: children\n};",
+    "deps": {}
+  },
+  "components/segmentio-highlight-sql@0.0.1/lib/index.js": {
+    "id": "components/segmentio-highlight-sql@0.0.1/lib/index.js",
+    "type": "js",
+    "mtime": 1418240629000,
+    "src": "\n/**\n * Expose `plugin`.\n */\n\nmodule.exports = plugin;\n\n/**\n * Plugin to highlight SQL code.\n *\n * @param {Highlight} highlight\n */\n\nfunction plugin(highlight){\n  highlight.language('sql', grammar);\n}\n\n/**\n * Grammar.\n */\n\nvar grammar = {};\n\n/**\n * Comments.\n */\n\ngrammar.comment = /--.*$|\\/\\*[\\s\\S]*?\\*\\/|(\\/\\/)[\\s\\S]*?$/m;\n\n/**\n * Strings.\n */\n\ngrammar.string = /(\"|').*?\\1/;\n\n/**\n * Keywords.\n */\n\ngrammar.keyword = /\\b(and|as|begin|body|boolean|by|char|clob|commit|constant|count|cursor|date|default|delete|distinct|double|else|elsif|end|exception|exception_init|exists|float|for|from|function|group|if|in|inner|insert|int|integer|into|is|join|long|loop|matched|merge|nextval|not|number|on|order|others|out|outer|package|pragma|procedure|raise|return|rollback|rownum|rowtype|select|sequence|set|sysdate|table|then|timestamp|type|union|update|using|values|values|varchar|varchar2|when|where|while|xmltype)\\b/i;\n\n/**\n * Numbers.\n */\n\ngrammar.number = /\\b[0-9]*\\.?[0-9]+([eE][-+]?[0-9]+)?\\b/;\n\n/**\n * Operators.\n */\n\ngrammar.operator = /[=+!*|><&-]/;\n\n/**\n * Constant.\n */\n\ngrammar.constant = /\\b(false|null|true)\\b/i;\n\n/**\n * Function.\n */\n\ngrammar.function = {\n  pattern: /(\\w+)\\(/,\n  children: {\n    function: /(\\w+)/,\n    punctuation: /\\(/\n  }\n};\n\n/**\n * Punctuation.\n */\n\ngrammar.punctuation = /[,.()]/;",
+    "deps": {}
+  },
+  "components/segmentio-highlight@0.0.2/lib/index.js": {
+    "id": "components/segmentio-highlight@0.0.2/lib/index.js",
+    "type": "js",
+    "mtime": 1394008782000,
+    "src": "\nvar escape = require('escape-html');\n\n/**\n * Expose `Highlight`.\n */\n\nmodule.exports = Highlight;\n\n/**\n * Initialize a new `Highlight` instance.\n */\n\nfunction Highlight(){\n  if (!(this instanceof Highlight)) return new Highlight();\n  this.languages = {};\n  this.prefix('Highlight-');\n}\n\n/**\n * Use a `plugin` function.\n *\n * @param {Function} plugin\n * @return {Highlight}\n */\n\nHighlight.prototype.use = function(plugin){\n  plugin(this);\n  return this;\n};\n\n/**\n * Get or set the highlighted class `prefix`.\n *\n * @param {String} prefix\n * @return {Highlight or String}\n */\n\nHighlight.prototype.prefix = function(prefix){\n  if (!arguments.length) return this._prefix;\n  this._prefix = prefix;\n  return this;\n}\n\n/**\n * Define a new `language` with a `grammar`.\n *\n * @param {String} language\n * @param {Object} grammar\n * @return {Highlight}\n */\n\nHighlight.prototype.language = function(language, grammar){\n  this.languages[language] = grammar;\n  return this;\n};\n\n/**\n * Highlight an HTML `string` of a given `language`.\n *\n * @param {String} string\n * @param {String} language\n * @return {String}\n */\n\nHighlight.prototype.string = function(string, language){\n  var ast = this.parse(string, language);\n  var str = this.stringify(ast);\n  return str;\n};\n\n/**\n * Highlight an `el`, with optional `language`.\n *\n * @param {Element or String} el\n * @param {String} language (optional)\n */\n\nHighlight.prototype.element = function(el, language){\n  if ('string' == typeof el) el = document.querySelector(el);\n  var str = this.string(el.textContent, language || lang(el));\n  el.innerHTML = str;\n};\n\n/**\n * Highlight an array of `els`, with optional `language`.\n *\n * @param {Array or String} els\n * @param {String} language (optional)\n */\n\nHighlight.prototype.elements = function(els, language){\n  if ('string' == typeof els) els = document.querySelectorAll(els);\n  for (var i = 0, el; el = els[i]; i++) this.element(el, language);\n};\n\n/**\n * Highlight all elements in the DOM with language attributes.\n */\n\nHighlight.prototype.all = function(){\n  this.elements(document.querySelectorAll('[data-language]'));\n  this.elements(document.querySelectorAll('[class*=\"language-\"]'));\n  this.elements(document.querySelectorAll('[class*=\"lang-\"]'));\n};\n\n/**\n * Parse a `string` with a given language's `grammar`, returning an AST.\n *\n * @param {String} string\n * @param {String or Object} grammar\n * @return {Array}\n */\n\nHighlight.prototype.parse = function(string, grammar){\n  if ('string' == typeof grammar) {\n    var lang = grammar;\n    grammar = this.languages[lang];\n    if (!grammar) throw new Error('unknown language \"' + lang + '\"');\n  }\n\n  if (!grammar) throw new Error('must provide a grammar');\n  if (!string) return [];\n  var ret = [string];\n\n  for (var key in grammar) {\n    var rule = grammar[key];\n    var regexp = rule.pattern || rule;\n\n    for (var i = 0; i < ret.length; i++) {\n      var str = ret[i];\n      if ('object' == typeof str) continue;\n      var m = regexp.exec(str);\n      if (!m) continue;\n\n      var contents = m[0];\n      var before = str.slice(0, m.index);\n      var after = str.slice(m.index + contents.length);\n      var args = [i, 1];\n      var token = {\n        type: key,\n        value: rule.children ? this.parse(contents, rule.children) : contents\n      };\n\n      if (before) args.push(before);\n      args.push(token);\n      if (after) args.push(after);\n      ret.splice.apply(ret, args);\n    }\n  }\n\n  return ret;\n}\n\n/**\n * Stringify a given `ast`.\n *\n * @param {Array} ast\n * @return {String}\n */\n\nHighlight.prototype.stringify = function(ast){\n  var prefix = this.prefix();\n  var self = this;\n\n  return ast.map(function(t){\n    if ('string' == typeof t) return escape(t);\n    var type = t.type;\n    var value = 'object' == typeof t.value\n      ? self.stringify(t.value)\n      : escape(t.value);\n    return '<span class=\"' + prefix + type + '\">' + value + '</span>';\n  }).join('');\n};\n\n/**\n * Language class matcher.\n */\n\nvar matcher = /\\blang(?:uage)?-(\\w+)\\b/i;\n\n/**\n * Get the code language for a given `el`. First look for a `data-language`\n * attribute, then a `language-*` class, then search up the DOM tree for them.\n *\n * @param {Element} el\n * @return {String}\n */\n\nfunction lang(el){\n  if (!el) return;\n  var m;\n  if (el.hasAttribute('data-language')) return el.getAttribute('data-language');\n  if (m = matcher.exec(el.className)) return m[1];\n  return language(el.parentNode);\n}",
+    "deps": {
+      "escape-html": "components/component-escape-html@1.0.1/index.js"
+    }
+  },
+  "components/component-escape-html@1.0.1/index.js": {
+    "id": "components/component-escape-html@1.0.1/index.js",
+    "type": "js",
+    "mtime": 1387580294000,
+    "src": "/**\n * Escape special characters in the given string of html.\n *\n * @param  {String} html\n * @return {String}\n * @api private\n */\n\nmodule.exports = function(html) {\n  return String(html)\n    .replace(/&/g, '&amp;')\n    .replace(/\"/g, '&quot;')\n    .replace(/'/g, '&#39;')\n    .replace(/</g, '&lt;')\n    .replace(/>/g, '&gt;');\n}\n",
+    "deps": {}
+  },
+  "components/segmentio-highlight-css@0.0.2/lib/index.js": {
+    "id": "components/segmentio-highlight-css@0.0.2/lib/index.js",
+    "type": "js",
+    "mtime": 1408504362000,
+    "src": "\n/**\n * Expose `plugin`.\n */\n\nmodule.exports = plugin;\n\n/**\n * Plugin to highlight CSS code.\n *\n * @param {Highlight} highlight\n */\n\nfunction plugin(highlight){\n  highlight.language('css', grammar);\n}\n\n/**\n * Grammar.\n */\n\nvar grammar = {};\n\n/**\n * Comments.\n */\n\ngrammar.comment = /\\/\\*[\\w\\W]*?\\*\\//m;\n\n/**\n * Strings.\n */\n\ngrammar.string = /(\"|').*?\\1/;\n\n/**\n * @-rules.\n */\n\ngrammar['at-rule'] = /@[\\w-]+\\b/;\n\n/**\n * Selectors.\n */\n\ngrammar.selector = {\n  pattern: /[^\\{\\}\\s][^\\{\\};]*?\\{/,\n  children: {\n    class: /\\.[-.\\w]+/,\n    id: /#[-\\w]+/,\n    'pseudo-element': /:(after|before|first-letter|first-line|selection)|::[-\\w]+/,\n    'pseudo-class': /:[-\\w]+(\\(.*\\))?/,\n    punctuation: /\\{/\n  }\n};\n\n/**\n * Functions.\n */\n\ngrammar.function = {\n  pattern: /[\\w-]+\\(/,\n  children: {\n    punctuation: /\\(/\n  }\n};\n\n/**\n * Properties.\n */\n\ngrammar.property = /[\\w-]+(?=\\s*:)/;\n\n/**\n * Keywords.\n */\n\ngrammar.keyword = /[\\b|!]important|initial|inherit|none|transparent\\b/;\n\n/**\n * Numbers.\n */\n\ngrammar.number = /(#[A-Fa-f\\d]{3,8}|\\b\\d*\\.?\\d+)/;\n\n/**\n * Operators.\n */\n\ngrammar.operator = /[-+\\/*%^]/;\n\n/**\n * Punctuation.\n */\n\ngrammar.punctuation = /[{}(),:;]/;\n\n/**\n * Constant.\n */\n\ngrammar.constant = /(?!\\d)(ch|cm|deg|dpcm|dpi|dppx|em|ex|grad|Hz|kHz|in|mm|pc|pt|px|rad|rem|s|ms|turn|vh|vmax|vmin|vw)\\b/;\n",
+    "deps": {}
+  },
+  "client/ui/lib/highlight/index.css": {
+    "id": "client/ui/lib/highlight/index.css",
+    "type": "css",
+    "mtime": 1427424863000,
+    "src": "\n/**\n * Highlighting.\n */\n\n.Highlight-at-rule,\n.Highlight-keyword {\n  color: var(--fern-1);\n}\n\n.Highlight-class {\n  color: var(--tomato-1);\n}\n\n.Highlight-constant {\n  color: #268bd2;\n}\n\n.Highlight-boolean,\n.Highlight-number {\n  color: #6c71c4;\n}\n\n.Highlight-string {\n  color: var(--banana-2);\n}\n\n.Highlight-comment {\n  color: var(--text-tertiary);\n}\n\n.Highlight-punctuation,\n.Highlight-operator {\n  color: var(--text-primary);\n}",
+    "deps": {}
+  },
+  "client/lib/summary/images/link@2x.png": {
+    "id": "client/lib/summary/images/link@2x.png",
+    "type": "png",
+    "mtime": 1427428347000
+  },
+  "client/lib/summary/images/link-green@2x.png": {
+    "id": "client/lib/summary/images/link-green@2x.png",
+    "type": "png",
+    "mtime": 1427428347000
+  }
+}

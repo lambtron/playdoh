@@ -1,0 +1,41 @@
+
+/**
+ * Sizes.
+ */
+
+:root {
+  --size-tiny: 10px;
+  --size-smaller: 15px;
+  --size-small: 20px;
+  --size-medium: 30px;
+  --size-large: 60px;
+  --size-larger: 90px;
+  --size-huge: 120px;
+}
+
+/**
+ * Grid.
+ */
+
+:root {
+  --size-gutter: 60px;
+  --size-column: 210px;
+  --size-column-third: 290px;
+
+  --size-quarter: calc(var(--size-column) * 1 + var(--size-gutter) * 0);
+  --size-two-quarters: calc(var(--size-column) * 2 + var(--size-gutter) * 1);
+  --size-three-quarters: calc(var(--size-column) * 3 + var(--size-gutter) * 2);
+  --size-four-quarters: calc(var(--size-column) * 4 + var(--size-gutter) * 3);
+
+  --size-third: calc(var(--size-column-third) * 1 + var(--size-gutter) * 0);
+  --size-two-thirds: calc(var(--size-column-third) * 2 + var(--size-gutter) * 1);
+  --size-three-thirds: calc(var(--size-column-third) * 3 + var(--size-gutter) * 2);
+}
+
+/**
+ * Radius.
+ */
+
+:root {
+  --size-radius: 4px;
+}

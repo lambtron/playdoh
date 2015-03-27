@@ -1,0 +1,18 @@
+
+/**
+ * Article.
+ */
+
+.Article {
+  position: relative;
+}
+
+.Article-title {
+  position: absolute;
+  bottom: 100%;
+  margin-bottom: var(--size-tiny);
+}
+
+.Article-date {
+  display: block;
+}

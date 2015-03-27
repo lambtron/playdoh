@@ -1,0 +1,52 @@
+#!/usr/bin/env node
+
+var logger = require('../lib/logger');
+var Metalsmith = require('metalsmith');
+var plugins = require('../lib/plugins');
+var program = require('commander');
+var resolve = require('path').resolve;
+
+/**
+ * Program.
+ */
+
+program
+  .option('-c, --config <file>', 'the configuration yaml file', 'config.yml')
+  .option('-S, --source <dir>', 'the source directory to build from', 'articles')
+  .option('-D, --destination <dir>', 'the destination directory to build to', 'build')
+  .option('-d, --drafts', 'whether to include drafts in the output', false)
+  .parse(process.argv);
+
+/**
+ * Settings.
+ */
+
+var cwd = process.cwd();
+var src = program.source;
+var dest = program.destination;
+
+/**
+ * Metalsmith.
+ */
+
+var metalsmith = new Metalsmith(cwd)
+  .source(src)
+  .destination(dest);
+
+/**
+ * Plugins.
+ */
+
+plugins.forEach(function(plugin){
+  var fn = plugin(program);
+  metalsmith.use(fn);
+});
+
+/**
+ * Build.
+ */
+
+metalsmith.build(function(err){
+  if (err) logger.fatal(err, err.stack);
+  logger.success('Success! Built your blog to: ' + resolve(cwd, dest));
+});

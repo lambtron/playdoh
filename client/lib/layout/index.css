@@ -1,0 +1,47 @@
+
+/**
+ * Layout.
+ */
+
+.Layout {
+  position: relative;
+}
+
+.Layout-main,
+.Layout-sidebar {
+  padding: calc(var(--size-huge) * 2) 0;
+}
+
+/**
+ * Main.
+ */
+
+.Layout-main {
+  width: 100%;
+  padding-right: 25%;
+}
+
+.Layout-main > * {
+  width: var(--size-two-thirds);
+  margin: 0 auto;
+}
+
+/**
+ * Sidebar.
+ */
+
+.Layout-sidebar {
+  position: fixed;
+  width: 25%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.Layout-sidebar > * {
+  width: var(--size-quarter);
+}
+
+.Layout-sidebar-section + .Layout-sidebar-section {
+  margin-top: var(--size-large);
+}

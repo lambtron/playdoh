@@ -1,0 +1,61 @@
+
+/**
+ * Columns container.
+ */
+
+.Columns {
+  width: 100%;
+  max-width: calc(var(--size-column) * 4 + var(--size-gutter) * 3);
+  margin: 0 auto;
+  padding: 0 calc(var(--size-gutter) / 2);
+}
+
+/**
+ * Column.
+ */
+
+.Column {
+  float: left;
+  width: 100%;
+  margin-right: 60px;
+}
+
+.Column:last-child {
+  margin-right: none;
+}
+
+/**
+ * By 4.
+ */
+
+.Column--1 {
+  max-width: var(--size-quarter);
+}
+
+.Column--2 {
+  max-width: var(--size-two-quarters);
+}
+
+.Column--3 {
+  max-width: var(--size-three-quarters);
+}
+
+.Column--4 {
+  max-width: var(--size-four-quarters);
+}
+
+/**
+ * By 3.
+ */
+
+.Column--13 {
+  max-width: var(--size-third);
+}
+
+.Column--23 {
+  max-width: var(--size-two-thirds);
+}
+
+.Column--33 {
+  max-width: var(--size-three-thirds);
+}

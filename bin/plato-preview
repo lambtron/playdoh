@@ -1,0 +1,62 @@
+#!/usr/bin/env node
+
+var express = require('express');
+var program = require('commander');
+var logger = require('../lib/logger');
+var exec = require('child_process').exec;
+var resolve = require('path').resolve;
+
+/**
+ * Program.
+ */
+
+program
+  .option('-p, --port <port>', 'the port to run the server on', 4242)
+  .option('-d, --directory <dir>', 'the directory to serve built files from', 'build')
+  .parse(process.argv);
+
+/**
+ * Settings.
+ */
+
+var dir = resolve(process.cwd(), program.directory);
+var port = program.port;
+
+/**
+ * Server.
+ */
+
+express()
+  .use(build)
+  .use(express.static(dir))
+  .listen(port, log);
+
+/**
+ * Rebuild on HTML requests.
+ *
+ * @param {Request} req
+ * @param {Response} res
+ * @param {Function} next
+ */
+
+function build(req, res, next) {
+  var accept = req.get('accept');
+  if (0 != accept.indexOf('text/html')) return next();
+
+  var cmd = resolve(__dirname, 'plato-build');
+  var opts = { cwd: process.cwd };
+  exec(cmd, opts, function(err){
+    if (err) return next(err);
+    next();
+  });
+}
+
+/**
+ * Log when the server starts.
+ */
+
+function log() {
+  logger.log('Success! You can preview your blog at: http://localhost:' + port);
+  console.log();
+  console.log();
+}

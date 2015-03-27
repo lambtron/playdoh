@@ -1,0 +1,13 @@
+<div class="Summary">
+  <h3 class="Summary-title Heading Heading--medium">
+    {{#if link}}
+    <a class="Summary-link Summary-external-link" href="{{link}}" data-domain="{{domain link}}">{{title}}</a>
+    {{else}}
+    <a class="Summary-link" href="/{{path}}">{{title}}</a>
+    {{/if}}
+  </h3>
+  <time class="Summary-date" datetime="{{timestamp date}}">{{date date "MMMM YYYY"}}</time>
+  <div class="Summary-excerpt Prose Prose--medium">
+    {{{excerpt}}}
+  </div>
+</div>
