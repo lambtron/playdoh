@@ -70,6 +70,26 @@
 }
 
 /**
+ * Eggplant.
+ */
+
+:root {
+  --eggplant-1: #6050C6;
+  --eggplant-2: #5142B3;
+  --eggplant-3: #433896;
+}
+
+/**
+ * Blueberry.
+ */
+
+:root {
+  --blueberry-1: #258BD2;
+  --blueberry-2: #1976B6;
+  --blueberry-3: #10659F;
+}
+
+/**
  * Text colors.
  */
 
