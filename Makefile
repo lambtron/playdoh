@@ -3,21 +3,29 @@
 DUO = node_modules/.bin/duo --quiet --copy
 MYTH = node_modules/.bin/myth
 
-# Build Javascript and CSS.
-support: support/index.js support/index.css
-
-# Build Javascript files with Duo.
-support/%.js: index.js $(shell find client -name '*.js')
-	@$(DUO) --output support --stdout index.js > $@
-
-# Build CSS files with Duo and Myth.
-support/%.css: index.css $(shell find client)
-	@$(DUO) --output support --stdout index.css | $(MYTH) > $@
+# Install Plato on your machine.
+install: node_modules
+	@npm link
+	@echo
+	@echo "\x1B[97m  plato \x1B[90m·\x1B[39m Successfully installed Plato!"
+	@echo "\x1B[97m        \x1B[90m·\x1B[39m Run \`plato\` for a list of commands."
+	@echo
 
 # Install node modules with npm.
 node_modules: package.json
 	@npm install
 	@touch node_modules
+
+# Build Javascript and CSS.
+support: support/index.js support/index.css
+
+# Build Javascript files with Duo.
+support/%.js: node_modules index.js $(shell find client -name '*.js')
+	@$(DUO) --output support --stdout index.js > $@
+
+# Build CSS files with Duo and Myth.
+support/%.css: node_modules index.css $(shell find client)
+	@$(DUO) --output support --stdout index.css | $(MYTH) > $@
 
 # Preview the test blog.
 test: support node_modules
@@ -28,4 +36,5 @@ test-build: support node_modules
 	@bin/plato build --directory test
 
 # Phony targets.
+.PHONY: install
 .PHONY: test

@@ -3,7 +3,7 @@
 # Config.
 #
 
-url: {{ url }}
+url: http://{{ url }}
 writeKey: {{ writeKey }}
 
 #
