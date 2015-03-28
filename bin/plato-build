@@ -44,7 +44,9 @@ plugins.forEach(function(plugin){
  * Build.
  */
 
+logger.log('Building your blog...');
+
 metalsmith.build(function(err){
-  if (err) logger.fatal(err, err.stack);
-  logger.success('Success! Built your blog to: ' + resolve(dir, dest));
+  if (err) logger.fatal(err);
+  logger.log('Built successfully! To preview, run `plato preview`.');
 });

@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+var config = require('../lib/config');
 var deploy = require('gh-pages').publish;
 var exec = require('child_process').exec;
 var logger = require('../lib/logger');
@@ -18,6 +19,7 @@ program
  * Settings.
  */
 
+var conf = config();
 var branch = program.branch;
 var dir = resolve(process.cwd(), 'build');
 
@@ -30,7 +32,13 @@ var opts = {
   message: 'plato deploy'
 };
 
-deploy(dir, opts, function(err){
-  if (err) logger.fatal(err, err.stack);
-  logger.success('Success! Deploy your blog to GitHub!');
+logger.log('Deploying your blog to GitHub...');
+
+exec('plato build', { cwd: process.cwd }, function(err){
+  if (err) logger.fatal(err);
+
+  deploy(dir, opts, function(err){
+    if (err) logger.fatal(err);
+    logger.log('Deployed successfully! You can see it live at ' + conf.url);
+  });
 });

@@ -23,13 +23,23 @@ var branch = program.branch;
  */
 
 var cmds = [
-  'git checkout ' + branch,
+  '[[ $(git rev-parse --abbrev-ref HEAD) == "dev" ]] || git checkout dev',
   'git add .',
   'git commit -am "plato save"',
   'git push origin ' + branch
 ];
 
-exec(cmds.join(' && '), { cwd: process.cwd() }, function(err){
-  if (err) logger.fatal(err, err.stack);
-  logger.success('Success! Saved your blog to GitHub.');
+logger.log('Saving your work to GitHub...');
+
+exec(cmds.join(' && '), { cwd: process.cwd() }, function(err, stdout, stderr){
+  if (err) {
+    if (~stdout.indexOf('nothing to commit')) {
+      logger.log('You have no changes to save!');
+      process.exit(0);
+    }
+
+    logger.fatal(err);
+  }
+
+  logger.log('Saved successfully!');
 });

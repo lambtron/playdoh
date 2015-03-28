@@ -23,5 +23,9 @@ node_modules: package.json
 test: support node_modules
 	@bin/plato preview --directory test --rebuild
 
+# Build the test blog.
+test-build: support node_modules
+	@bin/plato build --directory test
+
 # Phony targets.
 .PHONY: test

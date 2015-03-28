@@ -37,6 +37,12 @@ program.parse(process.argv);
 if (!program.args.length) program.help();
 
 /**
+ * Ensure.
+ */
+
+if (!exists('config.yaml')) logger.fatal('No `config.yaml` found. Is this a Plato directory?');
+
+/**
  * Settings.
  */
 
@@ -44,7 +50,11 @@ var cmd = program.args[0];
 var args = process.argv.slice(3);
 var bin = resolve(__dirname, 'plato-' + cmd);
 
-if (!exists(bin)) logger.fatal('The "%s" command does not exist.', cmd);
+if (!exists(bin)) {
+  logger.log('There is no `%s` command.', cmd);
+  console.log();
+  program.help();
+}
 
 /**
  * Spawn a new, forwarded child process for the subcommand.
