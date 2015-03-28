@@ -1,0 +1,42 @@
+#!/usr/bin/env node
+
+var logger = require('../lib/logger');
+var Khaos = require('khaos');
+var program = require('commander');
+var resolve = require('path').resolve;
+var read = require('read-metadata').sync;
+
+/**
+ * Program.
+ */
+
+program
+  .usage('<directory>')
+  .parse(process.argv);
+
+/**
+ * Settings.
+ */
+
+var dest = resolve(program.args[0]);
+var template = resolve(__dirname, '../lib/create/template');
+var opts = read(resolve(__dirname, '../lib/create/schema.yaml'));
+
+/**
+ * Khaos.
+ */
+
+var khaos = new Khaos(template, dest, opts);
+
+/**
+ * Run.
+ */
+
+logger.log('Answer a few questions to create your blog...');
+console.log();
+
+khaos.run(function(err){
+  if (err) logger.fatal(err);
+  console.log();
+  logger.log('Successfully created your blog!');
+});

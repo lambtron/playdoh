@@ -1,0 +1,21 @@
+
+#
+# Config.
+#
+
+url: {{ url }}
+writeKey: {{ writeKey }}
+
+#
+# Bio.
+#
+
+name: {{ name }}
+role: {{ role }}
+
+#
+# Social.
+#
+
+twitter: {{ twitter }}
+github: {{ github }}

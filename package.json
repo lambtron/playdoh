@@ -10,6 +10,7 @@
     "handlebars": "^3.0.1",
     "helper-date": "^0.2.1",
     "indent": "0.0.1",
+    "khaos": "^0.7.1",
     "koa": "^0.18.0",
     "koa-static": "^1.4.9",
     "marked": "^0.3.3",

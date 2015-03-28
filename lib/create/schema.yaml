@@ -1,0 +1,41 @@
+
+#
+# Order.
+#
+
+order:
+  - name
+  - role
+  - url
+  - writeKey
+
+#
+# Schema.
+#
+
+schema:
+
+  name:
+    label: What's your full name?
+    hint: (eg. Steve Brule)
+    required: true
+
+  role:
+    label: What's your role?
+    hint: (eg. _______ at Segment)
+    required: true
+
+  url:
+    label: What will your blog\'s URL be?
+    hint: (eg. http://ianstormtaylor.com)
+    required: true
+
+  writeKey:
+    label: What's the Write Key of your blog\'s Segment project?
+    required: true
+
+  twitter:
+    label: If you want a link to your Twitter what's your username?
+
+  github:
+    label: If you want a link to your GitHub what's your username?

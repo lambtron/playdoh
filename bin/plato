@@ -37,12 +37,6 @@ program.parse(process.argv);
 if (!program.args.length) program.help();
 
 /**
- * Ensure.
- */
-
-if (!exists('config.yaml')) logger.fatal('No `config.yaml` found. Is this a Plato directory?');
-
-/**
  * Settings.
  */
 
@@ -54,6 +48,14 @@ if (!exists(bin)) {
   logger.log('There is no `%s` command.', cmd);
   console.log();
   program.help();
+}
+
+/**
+ * Ensure.
+ */
+
+if ('create' != cmd && !exists('config.yaml')) {
+  logger.fatal('No `config.yaml` found. Is this a Plato directory?');
 }
 
 /**
