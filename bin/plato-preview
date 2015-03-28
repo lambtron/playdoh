@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+var config = require('../lib/config');
 var express = require('express');
 var program = require('commander');
 var logger = require('../lib/logger');
@@ -16,11 +17,14 @@ program
   .option('-r, --rebuild', 'whether to rebuild the components', false)
   .parse(process.argv);
 
+logger.log('Starting the preview server...');
+
 /**
  * Settings.
  */
 
 var dir = program.directory;
+var conf = config(dir);
 var port = program.port;
 var rebuild = program.rebuild;
 var dest = program.destination = resolve(dir, 'build');
@@ -28,8 +32,6 @@ var dest = program.destination = resolve(dir, 'build');
 /**
  * Server.
  */
-
-logger.log('Starting the preview server...');
 
 express()
   .use(build)

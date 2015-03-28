@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 
+var config = require('../lib/config');
 var logger = require('../lib/logger');
 var Metalsmith = require('metalsmith');
-var plugins = require('../lib/plugins');
+var plugins = require('../lib/build/plugins');
 var program = require('commander');
 var resolve = require('path').resolve;
 
@@ -14,12 +15,14 @@ program
   .option('-d, --directory <dir>', 'the blog\'s root directory', process.cwd())
   .parse(process.argv);
 
+logger.log('Building your blog...');
+
 /**
  * Settings.
  */
 
 var dir = program.directory;
-var conf = program.config = 'config.yaml';
+var conf = program.config = config(dir);
 var src = program.source = 'articles';
 var dest = program.destination = 'build';
 
@@ -43,8 +46,6 @@ plugins.forEach(function(plugin){
 /**
  * Build.
  */
-
-logger.log('Building your blog...');
 
 metalsmith.build(function(err){
   if (err) logger.fatal(err);

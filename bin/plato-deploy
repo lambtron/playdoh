@@ -15,6 +15,8 @@ program
   .option('-b, --branch <name>', 'the branch to deploy to', 'master')
   .parse(process.argv);
 
+logger.log('Deploying your blog to GitHub...');
+
 /**
  * Settings.
  */
@@ -31,8 +33,6 @@ var opts = {
   branch: branch,
   message: 'plato deploy'
 };
-
-logger.log('Deploying your blog to GitHub...');
 
 exec('plato build', { cwd: process.cwd }, function(err){
   if (err) logger.fatal(err);

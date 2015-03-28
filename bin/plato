@@ -22,8 +22,8 @@ program.on('--help', function(){
   console.log('  Commands:');
   console.log();
   console.log('    plato build        compile the blog articles');
-  console.log('    plato deploy       deploy the blog to github');
   console.log('    plato create       create a blog for the first time');
+  console.log('    plato deploy       deploy the blog to github');
   console.log('    plato preview      start a server to preview your blog');
   console.log('    plato save         save your current progress to github');
   console.log();
@@ -48,14 +48,6 @@ if (!exists(bin)) {
   logger.log('There is no `%s` command.', cmd);
   console.log();
   program.help();
-}
-
-/**
- * Ensure.
- */
-
-if ('create' != cmd && !exists('config.yaml')) {
-  logger.fatal('No `config.yaml` found. Is this a Plato directory?');
 }
 
 /**

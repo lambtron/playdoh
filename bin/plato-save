@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+var config = require('../lib/config');
 var exec = require('child_process').exec;
 var logger = require('../lib/logger');
 var program = require('commander');
@@ -12,10 +13,13 @@ program
   .option('-b, --branch <name>', 'the branch to save to', 'dev')
   .parse(process.argv);
 
+logger.log('Saving your work to GitHub...');
+
 /**
  * Settings.
  */
 
+var conf = config();
 var branch = program.branch;
 
 /**
@@ -28,8 +32,6 @@ var cmds = [
   'git commit -am "plato save"',
   'git push origin ' + branch
 ];
-
-logger.log('Saving your work to GitHub...');
 
 exec(cmds.join(' && '), { cwd: process.cwd() }, function(err, stdout, stderr){
   if (err) {
