@@ -12,10 +12,11 @@
 
 * {
   box-sizing: border-box;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 html {
   font-size: var(--text-medium);
-  font-family: var(--text-sans);
+  font-family: var(--family-sans);
   font-weight: var(--weight-light);
 }

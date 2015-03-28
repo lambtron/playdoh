@@ -11,9 +11,9 @@
  */
 
 :root {
-  --text-sans: 'Freight Sans', 'Verdana', 'Geneva', sans-serif;
-  --text-caps: 'Freight Sans Small Caps', 'Verdana', 'Geneva', sans-serif;
-  --text-mono: 'Droid Sans Mono', monospace;
+  --family-sans: 'Freight Sans', 'Verdana', 'Geneva', sans-serif;
+  --family-caps: 'Freight Sans Small Caps', 'Verdana', 'Geneva', sans-serif;
+  --family-mono: 'Droid Sans Mono', monospace;
 }
 /**
  * Sizes.

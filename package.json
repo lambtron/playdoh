@@ -13,7 +13,7 @@
     "koa": "^0.18.0",
     "koa-static": "^1.4.9",
     "marked": "^0.3.3",
-    "metalsmith": "^1.4.2",
+    "metalsmith": "^1.4.5",
     "metalsmith-build-date": "^0.1.0",
     "metalsmith-collections": "^0.7.0",
     "metalsmith-drafts": "0.0.1",

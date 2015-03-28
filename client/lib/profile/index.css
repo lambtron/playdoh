@@ -53,7 +53,7 @@
 .Profile-role {
   display: block;
   font-size: var(--text-small);
-  font-family: var(--text-caps);
+  font-family: var(--family-caps);
   text-transform: lowercase;
   color: var(--text-secondary);
   margin-bottom: var(--size-small);

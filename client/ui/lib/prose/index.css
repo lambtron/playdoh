@@ -113,7 +113,7 @@
 .Prose h4,
 .Prose h5,
 .Prose h6 {
-  font-family: var(--text-caps);
+  font-family: var(--family-caps);
   text-transform: lowercase;
 }
 
@@ -217,7 +217,7 @@
 .Prose blockquote::after {
   content: '';
   position: absolute;
-  left: 0;
+  left: 1px;
   top: .33em;
   bottom: .33em;
   border-left: 1px solid var(--text-secondary);
@@ -274,7 +274,7 @@
  */
 
 .Prose code {
-  font-family: var(--text-mono);
+  font-family: var(--family-mono);
 }
 
 .Prose :not(pre) > code,
@@ -310,4 +310,16 @@
   margin: 3em auto;
   border: none;
   border-bottom: 1px solid var(--text-tertiary);
+}
+
+/**
+ * Labels.
+ */
+
+.Prose label {
+  display: block;
+  font-size: var(--text-small);
+  font-family: var(--family-caps);
+  text-transform: lowercase;
+  color: var(--text-secondary);
 }

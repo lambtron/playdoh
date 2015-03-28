@@ -15,7 +15,7 @@
 .Heading--small {
   font-size: var(--text-medium);
   line-height: var(--leading-small);
-  font-family: var(--text-caps);
+  font-family: var(--family-caps);
   text-transform: lowercase;
 }
 
