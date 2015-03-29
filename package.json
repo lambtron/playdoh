@@ -5,7 +5,9 @@
     "plato": "bin/plato"
   },
   "dependencies": {
+    "chalk": "^1.0.0",
     "commander": "^2.6.0",
+    "express": "^4.12.3",
     "gh-pages": "^0.2.0",
     "handlebars": "^3.0.1",
     "helper-date": "^0.2.1",
@@ -13,6 +15,7 @@
     "khaos": "^0.7.1",
     "koa": "^0.18.0",
     "koa-static": "^1.4.9",
+    "lodash": "^3.6.0",
     "marked": "^0.3.3",
     "metalsmith": "^1.4.5",
     "metalsmith-build-date": "^0.1.0",
