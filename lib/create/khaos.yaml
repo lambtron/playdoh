@@ -26,12 +26,12 @@ schema:
     required: true
 
   url:
-    label: What will your blog\'s URL be?
+    label: What will your blog's URL be?
     hint: (eg. ianstormtaylor.com)
     required: true
 
   writeKey:
-    label: What's the Write Key of your blog\'s Segment project?
+    label: What's the Write Key of your blog's Segment project?
     required: true
 
   twitter:

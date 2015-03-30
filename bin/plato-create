@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 
-var logger = require('../lib/logger');
+var chalk = require('chalk');
 var Khaos = require('khaos');
+var logger = require('../lib/logger');
 var program = require('commander');
-var resolve = require('path').resolve;
 var read = require('read-metadata').sync;
+var resolve = require('path').resolve;
 
 /**
  * Program.
@@ -14,28 +15,47 @@ program
   .usage('<directory>')
   .parse(process.argv);
 
-logger.log('Answer a few questions to create your blog...');
-console.log();
+/**
+ * Settings.
+ */
+
+var dest = program.args[0];
+if (!dest) {
+  logger.log('Pass the name of the directory to create your blog in.');
+  logger.log('Run `plato create --help` for more information.');
+  return;
+}
 
 /**
  * Settings.
  */
 
-var dest = resolve(program.args[0]);
+dest = resolve(dest);
 var template = resolve(__dirname, '../lib/create/template');
-var opts = read(resolve(__dirname, '../lib/create/schema.yaml'));
+var settings = read(resolve(__dirname, '../lib/create/khaos.yaml'));
 
 /**
  * Khaos.
  */
 
-var khaos = new Khaos(template, dest, opts);
+var khaos = new Khaos(template)
+  .schema(settings.schema)
+  .order(settings.order)
+  .format({
+    pad: false,
+    separator: ' ',
+    prefix: '        ' + chalk.gray('·') + ' '
+  });
+
 
 /**
  * Run.
  */
 
-khaos.run(function(err){
+logger.log('Answer a few questions to create your blog...');
+console.log();
+
+khaos.generate(dest, function(err){
   if (err) logger.fatal(err);
   console.log();
   logger.log('Successfully created your blog!');
