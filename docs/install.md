@@ -69,6 +69,8 @@ Now that you have a GitHub repository, and your blog's new directory created, yo
 
 ```shell
 git init
+git add .
+git commit -m 'first commit'
 git remote add origin git@github.com:YOURUSERNAME/YOURUSERNAME.github.com.git
 git push -u origin master
 git checkout -b dev
