@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node --harmony
 
 var exists = require('fs').existsSync;
 var logger = require('../lib/logger');

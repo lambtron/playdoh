@@ -21,11 +21,11 @@ support: support/index.js support/index.css
 
 # Build Javascript files with Duo.
 support/%.js: node_modules index.js $(shell find client -name '*.js')
-	@$(DUO) --output support --stdout index.js > $@
+	@$(DUO) --output support index.js > $@
 
 # Build CSS files with Duo and Myth.
 support/%.css: node_modules index.css $(shell find client)
-	@$(DUO) --output support --stdout index.css | $(MYTH) > $@
+	@$(DUO) --output support index.css | $(MYTH) > $@
 
 # Preview the test blog.
 test: support node_modules
