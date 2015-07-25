@@ -1,0 +1,325 @@
+
+/**
+ * Prose.
+ *
+ * This should only be used for longer sections of running text, especially
+ * when you want to present Markdown-formatted content, where people have no
+ * control over classes.
+ *
+ * We purposely duplicate styles between other resuable classes and the `.Prose`
+ * class, because it has slightly different cases, and re-using isn't worth it.
+ */
+
+.Prose {
+  color: var(--text-primary);
+}
+
+/**
+ * Sizes.
+ *
+ * The basic idea here is that whatever size we choose, all of the child
+ * elements should render nicely.
+ */
+
+.Prose--small {
+  font-size: var(--text-small);
+  line-height: var(--leading-small);
+}
+
+.Prose--medium {
+  font-size: var(--text-medium);
+  line-height: var(--leading-medium);
+}
+
+/**
+ * Spacing.
+ */
+
+.Prose--small > * + * {
+  margin-top: calc(var(--leading-small) * .666);
+}
+
+.Prose--medium > * + * {
+  margin-top: calc(var(--leading-medium) * .666);
+}
+
+/**
+ * Links.
+ */
+
+.Prose a {
+  color: var(--fern-1);
+}
+
+.Prose a:hover {
+  color: var(--fern-2);
+}
+
+.Prose a:active {
+  color: var(--fern-3);
+}
+
+/**
+ * Headings.
+ *
+ * We've only styled three heading levels here, because prose shouldn't use
+ * more than that, it's pretty impossible for user to keep track.
+ */
+
+.Prose h1,
+.Prose h2,
+.Prose h3,
+.Prose h4,
+.Prose h5,
+.Prose h6 {
+  color: var(--text-emphasized);
+  font-weight: var(--weight-book);
+}
+
+.Prose h1 a,
+.Prose h2 a,
+.Prose h3 a,
+.Prose h4 a,
+.Prose h5 a,
+.Prose h6 a {
+  color: inherit;
+}
+
+.Prose--small h1 {
+  font-size: var(--text-large);
+  line-height: var(--leading-large);
+  margin-top: calc(var(--leading-small) * 1.5);
+}
+
+.Prose--medium h1 {
+  font-size: var(--text-huge);
+  line-height: var(--leading-huge);
+  margin-top: calc(var(--leading-medium) * 1.5);
+}
+
+.Prose--small h2 {
+  font-size: var(--text-medium);
+  line-height: var(--leading-medium);
+  margin-top: calc(var(--leading-small) * 1.5);
+}
+
+.Prose--medium h2 {
+  font-size: var(--text-large);
+  line-height: var(--leading-large);
+  margin-top: calc(var(--leading-medium) * 1.5);
+}
+
+.Prose h3,
+.Prose h4,
+.Prose h5,
+.Prose h6 {
+  font-family: var(--family-caps);
+  text-transform: lowercase;
+}
+
+.Prose > h3 + *,
+.Prose > h4 + *,
+.Prose > h5 + *,
+.Prose > h6 + * {
+  margin-top: 0;
+}
+
+.Prose--small h3,
+.Prose--small h4,
+.Prose--small h5,
+.Prose--small h6 {
+  font-size: var(--text-medium);
+  margin-top: var(--leading-small);
+}
+
+.Prose--medium h3,
+.Prose--medium h4,
+.Prose--medium h5,
+.Prose--medium h6 {
+  font-size: var(--text-large);
+  margin-top: var(--leading-medium);
+}
+
+/**
+ * Formatting.
+ */
+
+.Prose strong,
+.Prose b {
+  color: var(--text-emphasized);
+  font-weight: var(--weight-book);
+}
+
+.Prose em,
+.Prose i {
+  font-style: italic;
+}
+
+.Prose del,
+.Prose s {
+  text-decoration: strikethrough;
+  color: var(--text-secondary);
+}
+
+.Prose ins {
+  border-bottom: 1px dotted var(--text-primary);
+}
+
+.Prose mark {
+  padding: 0 .2em;
+  background-color: color(var(--banana-1) alpha(0.2));
+}
+
+/**
+ * Small text.
+ */
+
+.Prose small {
+  display: block;
+  color: var(--text-secondary);
+}
+
+.Prose small strong,
+.Prose small b {
+  color: inherit;
+}
+
+.Prose--medium small {
+  margin-top: calc(var(--leading-small) / 3);
+  font-size: var(--text-small);
+  line-height: calc(var(--leading-medium) * 0.85);
+}
+
+/**
+ * Images.
+ */
+
+.Prose img {
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.Prose img + img {
+  margin-top: var(--size-smaller);
+}
+
+/**
+ * Blockquotes.
+ */
+
+.Prose blockquote {
+  position: relative;
+  padding-left: var(--size-medium);
+  color: var(--text-secondary);
+}
+
+.Prose blockquote::after {
+  content: '';
+  position: absolute;
+  left: 1px;
+  top: .33em;
+  bottom: .33em;
+  border-left: 1px solid var(--text-secondary);
+}
+
+.Prose blockquote small {
+  display: block;
+}
+
+.Prose blockquote small::before {
+  content: '— ';
+}
+
+/**
+ * Lists.
+ */
+
+.Prose ul,
+.Prose ol {
+  padding-left: var(--size-medium);
+  list-style-position: outside;
+}
+
+.Prose ul {
+  list-style-type: disc;
+}
+
+.Prose ul ul {
+  list-style-type: circle;
+}
+
+.Prose ul ul ul {
+  list-style-type: square;
+}
+
+.Prose ol {
+  list-style-type: decimal;
+}
+
+.Prose ol ol {
+  list-style-type: lower-alpha;
+}
+
+.Prose ol ol ol {
+  list-style-type: lower-roman;
+}
+
+.Prose li {
+  margin-bottom: .5em;
+}
+
+/**
+ * Code.
+ */
+
+.Prose code {
+  font-family: var(--family-mono);
+}
+
+.Prose :not(pre) > code,
+.Prose pre {
+  background-color: var(--ground-secondary);
+  border: 1px solid var(--birch-35);
+  border-radius: var(--border-radius);
+}
+
+.Prose :not(pre) > code {
+  display: inline-block;
+  line-height: 1.4;
+  font-size: .6em;
+  position: relative;
+  top: -1px;
+  padding: 0 .333em;
+}
+
+.Prose pre {
+  font-size: 14px;
+  line-height: 18px;
+  padding: var(--size-small);
+  overflow-x: auto;
+  white-space: pre;
+}
+
+/**
+ * Horizontal rules.
+ */
+
+.Prose hr {
+  width: calc(var(--size-huge));
+  margin: 3em auto;
+  border: none;
+  border-bottom: 1px solid var(--text-tertiary);
+}
+
+/**
+ * Labels.
+ */
+
+.Prose label {
+  display: block;
+  font-size: var(--text-small);
+  font-family: var(--family-caps);
+  text-transform: lowercase;
+  color: var(--text-secondary);
+}

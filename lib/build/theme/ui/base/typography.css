@@ -1,0 +1,49 @@
+
+/**
+ * Typefaces.
+ */
+
+@import './freight-sans';
+@import './droid-sans-mono';
+
+/**
+ * Stacks.
+ */
+
+:root {
+  --family-sans: 'Freight Sans', 'Verdana', 'Geneva', sans-serif;
+  --family-caps: 'Freight Sans Small Caps', 'Verdana', 'Geneva', sans-serif;
+  --family-mono: 'Droid Sans Mono', monospace;
+}
+/**
+ * Sizes.
+ */
+
+:root {
+  --text-small: 18px;
+  --text-medium: 20px;
+  --text-large: 24px;
+  --text-huge: 36px;
+}
+
+/**
+ * Leadings.
+ */
+
+:root {
+  --leading-small: 22px;
+  --leading-medium: 30px;
+  --leading-large: 36px;
+  --leading-huge: 44px;
+}
+
+/**
+ * Weights.
+ */
+
+:root {
+  --weight-light: 300;
+  --weight-book: 400;
+  --weight-medium: 500;
+  --weight-bold: 600;
+}

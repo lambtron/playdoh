@@ -1,0 +1,75 @@
+
+/**
+ * Layout.
+ */
+
+.Layout {
+  box-sizing: content-box;
+}
+
+.Layout-main,
+.Layout-nav {
+  width: 100%;
+}
+
+.Layout-main {
+  max-width: var(--column-two-thirds);
+  margin: 0 auto;
+}
+
+/**
+ * Tiny screens.
+ */
+
+@media (--tiny) {
+  .Layout {
+    padding: var(--size-medium);
+  }
+}
+
+/**
+ * Small screens.
+ */
+
+@media (--small) {
+  .Layout {
+    padding: var(--size-large);
+  }
+}
+
+/**
+ * Medium screens.
+ */
+
+@media (--medium) {
+  .Layout {
+    padding: var(--size-large);
+  }
+}
+
+/**
+ * Large screens.
+ */
+
+@media (--large-and-above) {
+  .Layout {
+    width: 100%;
+    margin: 0 auto;
+    max-width: var(--column-whole);
+    padding: var(--size-huge);
+  }
+
+  .Layout-main {
+    max-width: var(--column-two-thirds);
+    margin: 0;
+  }
+
+  .Layout-nav {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: calc(var(--column-two-thirds) / 3);
+    margin-top: calc(-1 * var(--size-huge) / 2);
+    max-width: var(--column-third);
+  }
+}

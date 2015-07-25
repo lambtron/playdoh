@@ -1,0 +1,16 @@
+
+/**
+ * Links.
+ */
+
+.Link {
+  color: var(--fern-1);
+}
+
+.Link:hover {
+  color: var(--fern-2);
+}
+
+.Link:active {
+  color: var(--fern-3);
+}

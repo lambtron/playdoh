@@ -1,0 +1,37 @@
+
+/**
+ * Heading.
+ */
+
+.Heading {
+  color: var(--text-emphasized);
+  font-weight: var(--weight-book);
+}
+
+/**
+ * Sizes.
+ */
+
+.Heading--small {
+  font-size: var(--text-medium);
+  line-height: var(--leading-small);
+  font-family: var(--family-caps);
+  text-transform: lowercase;
+}
+
+.Heading--medium {
+  font-size: var(--text-medium);
+  line-height: var(--leading-medium);
+}
+
+.Heading--large {
+  font-size: var(--text-large);
+  line-height: var(--leading-large);
+  margin-bottom: calc(0.6 * var(--leading-large));
+}
+
+.Heading--huge {
+  font-size: var(--text-huge);
+  line-height: var(--leading-huge);
+  margin-bottom: calc(0.6 * var(--leading-huge));
+}

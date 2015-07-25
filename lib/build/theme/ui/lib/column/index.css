@@ -1,0 +1,55 @@
+
+/**
+ * Columns container.
+ */
+
+.Columns {
+  box-sizing: content-box;
+  width: 100%;
+  max-width: var(--column-whole);
+  margin: 0 auto;
+  padding: 0 calc(var(--column-gutter) / 2);
+}
+
+/**
+ * Column.
+ */
+
+.Column {
+  float: left;
+  width: 100%;
+  margin-right: 60px;
+  position: relative;
+}
+
+.Column:last-child {
+  margin-right: 0;
+}
+
+/**
+ * Sizes.
+ */
+
+.Column--whole {
+  max-width: var(--column-whole);
+}
+
+.Column--half {
+  max-width: var(--column-half);
+}
+
+.Column--third {
+  max-width: var(--column-third);
+}
+
+.Column--two-thirds {
+  max-width: var(--column-two-thirds);
+}
+
+.Column--quarter {
+  max-width: var(--column-quarter);
+};
+
+.Column--three-quarters {
+  max-width: var(--column-three-quarters);
+}

@@ -1,0 +1,35 @@
+
+/**
+ * Highlighting.
+ */
+
+.Highlight-at-rule,
+.Highlight-keyword {
+  color: var(--fern-1);
+}
+
+.Highlight-class {
+  color: var(--tomato-1);
+}
+
+.Highlight-constant {
+  color: #268bd2;
+}
+
+.Highlight-boolean,
+.Highlight-number {
+  color: #6c71c4;
+}
+
+.Highlight-string {
+  color: var(--banana-2);
+}
+
+.Highlight-comment {
+  color: var(--text-tertiary);
+}
+
+.Highlight-punctuation,
+.Highlight-operator {
+  color: var(--text-primary);
+}

@@ -1,0 +1,150 @@
+
+/**
+ * Profile.
+ */
+
+.Profile {
+  text-align: center;
+  margin-bottom: var(--size-medium);
+}
+
+@media (--medium-and-above) {
+  .Profile {
+    margin-bottom: var(--size-large);
+  }
+}
+
+/**
+ * Avatar.
+ */
+
+.Profile-avatar {
+  display: inline-block;
+  width: var(--size-large);
+  height: var(--size-large);
+  border-radius: var(--size-large);
+  background: url('/avatar.png');
+  background-size: contain;
+  box-shadow: inset 2px 2px 4px rgba(0,0,0,.5);
+}
+
+@media (--small) {
+  .Profile-avatar {
+    width: var(--size-larger);
+    height: var(--size-larger);
+    border-radius: var(--size-larger);
+  }
+}
+
+@media (--medium-and-above) {
+  .Profile-avatar {
+    width: var(--size-huge);
+    height: var(--size-huge);
+    border-radius: var(--size-huge);
+  }
+}
+
+/**
+ * Name & role.
+ */
+
+.Profile-name {}
+
+.Profile-role {
+  display: block;
+  font-size: var(--text-small);
+  font-family: var(--family-caps);
+  text-transform: lowercase;
+  color: var(--text-secondary);
+  margin-bottom: var(--size-small);
+}
+
+/**
+ * Twitter button.
+ */
+
+.Profile-twitter-button {
+  margin-bottom: var(--size-small);
+}
+
+@media (--medium-and-below) {
+  .Profile-twitter-button {
+    display: none;
+  }
+}
+
+/**
+ * Links.
+ */
+
+.Profile-links {
+  margin-bottom: var(--size-small);
+  font-size: var(--text-small);
+  line-height: var(--leading-medium);
+}
+
+@media (--medium-and-below) {
+  .Profile-links {
+    display: none;
+  }
+}
+
+.Profile-link {
+  display: inline-block;
+  text-indent: -9999px;
+  width: 26px;
+  height: 26px;
+  background-position: center center;
+  background-repeat: none;
+  background-size: contain;
+  opacity: .7;
+  transition: opacity .2s;
+}
+
+.Profile-link:hover {
+  opacity: 1;
+}
+
+.Profile-link + .Profile-link {
+  margin-left: 3px;
+}
+
+/**
+ * Icons.
+ */
+
+.Profile-dribbble-link {
+  background-image: url('images/dribbble@2x.png');
+}
+
+.Profile-email-link {
+  background-image: url('images/email@2x.png');
+}
+
+.Profile-facebook-link {
+  background-image: url('images/facebook@2x.png');
+}
+
+.Profile-instagram-link {
+  background-image: url('images/instagram@2x.png');
+}
+
+.Profile-github-link {
+  background-image: url('images/github@2x.png');
+}
+
+.Profile-linkedin-link {
+  background-image: url('images/linkedin@2x.png');
+}
+
+.Profile-rss-link {
+  background-image: url('images/rss@2x.png');
+}
+
+.Profile-tumblr-link {
+  background-image: url('images/tumblr@2x.png');
+}
+
+.Profile-twitter-link {
+  background-image: url('images/twitter@2x.png');
+}

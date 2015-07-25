@@ -1,0 +1,84 @@
+
+/**
+ * Summaries.
+ */
+
+.Summaries-list-item + .Summaries-list-item {
+  margin-top: var(--size-medium);
+}
+
+@media (--medium-and-above) {
+  .Summaries-list-item + .Summaries-list-item {
+    margin-top: var(--size-large);
+  }
+}
+
+/**
+ * Summary.
+ */
+
+.Summary {}
+
+/**
+ * Title.
+ */
+
+.Summary-title {
+  position: relative;
+}
+
+/**
+ * Date.
+ */
+
+.Summary-date {
+  float: left;
+  line-height: var(--leading-medium);
+  color: var(--text-secondary);
+}
+
+.Summary-date::after {
+  content: '·';
+  margin: 0 .3em;
+}
+
+/**
+ * Link.
+ */
+
+.Summary-external-link::after {
+  content: attr(data-domain);
+  font-size: var(--text-small);
+  color: var(--text-secondary);
+  font-weight: var(--weight-light);
+  line-height: 1;
+  font-family: var(--family-caps);
+  display: inline-block;
+  padding-left: 25px;
+  height: 16px;
+  background-image: url('images/link@2x.png');
+  background-size: contain;
+  background-position: 7px center;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+}
+
+@media (--medium),
+@media (--large) {
+  .Summary-external-link:hover::after {
+    text-indent: 0px;
+  }
+}
+
+.Summary-external-link[data-domain="segment.com"]::after {
+  color: var(--fern-1);
+  background-image: url('images/link-green@2x.png');
+}
+
+/**
+ * Excerpt.
+ */
+
+.Summary-excerpt p a {
+  color: inherit;
+}
